@@ -4,7 +4,7 @@
 }
 
 .realcontainer{
-  background-image: url("../img/vetorial.png");
+  background-image: url("../img/vetorialdog.png");
 }
 
 .container {
@@ -12,7 +12,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
- 
+  overflow: hidden
 }
 
 .title{
@@ -26,13 +26,38 @@
   width: 70%;
 }
 
+.arrows{
+  width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.arrowContainer{
+  cursor: pointer;
+  transition: 0.5s all ease;
+}
+
 .wrapper {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  transition: all 1.5s ease-in-out ;
 }
+.wrapper2 {
+  width: 147vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin-left: 48vw;
+    transition: all 1.5s ease-in-out ;
+}
+
+
 
 @media screen and (max-width: 480px) {
   .title {

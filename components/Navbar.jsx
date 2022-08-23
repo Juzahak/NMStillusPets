@@ -74,12 +74,12 @@ const pedidinho = data? `/orders/${data}` : `/orderCheck`;
             
         <ul className={styles.list}>
           <Link href="/" passHref >
-          <div className={styles.menus2}>Menu</div>
+          <div className={styles.menus2}>Home</div>
           </Link>
           
           <div className={styles.logotipo}>
             
-          <Image src="/img/ALimentoeArtelogo.png" alt="" width="600px" height="170px"/>
+          <Image src="/img/NMLogo.png" alt="" width="300px" height="300px"/>
           </div>
           
           <Link href={pedidinho} passHref >

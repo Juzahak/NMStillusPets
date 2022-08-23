@@ -5,7 +5,7 @@ const ProductSchema = new mongoose.Schema(
     title: {
       type: String,
       required: true,
-      maxlength: 60,
+      maxlength: 80,
     },
     listName: {
       type: String,
@@ -15,9 +15,13 @@ const ProductSchema = new mongoose.Schema(
     desc: {
       type: String,
       required: true,
-      maxlength: 200,
+      maxlength: 2000,
     },
     img: {
+      type: String,
+      required: true,
+    },
+    img2: {
       type: String,
       required: true,
     },

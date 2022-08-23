@@ -13,7 +13,7 @@
 
 .container {
   height: calc(110vh - 100px);
-  background: linear-gradient(#bbb19d, #dad2c1);
+  background: linear-gradient(#9e9dbb, #6e707e);
     display: flex;
 }
 

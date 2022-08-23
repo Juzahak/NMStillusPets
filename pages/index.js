@@ -33,11 +33,11 @@ export default function Home({admin}) {
   const {data: pizzaList} = useSwr("/api/products", fetcher);
   const {data: lista} = useSwr("/api/lists", fetcher);
   console.log(lista);
-  if(admin === false){
+  if(admin === true){
     return (
       <div className={styles.container}>
         <Head>
-          <title>Alimento e Arte</title>
+          <title>N&M Stillus Pets</title>
           <meta name="description" content="" />
           <link rel="icon" href="/favicon.ico" />
         </Head>

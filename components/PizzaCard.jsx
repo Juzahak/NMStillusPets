@@ -10,7 +10,7 @@ const PizzaCard = ({pizza}) => {
       <div className={styles.imagefood}>
       <Link href={`/product/${pizza._id}`} passHref>
       <a>
-      <Image src={pizza.img} alt="" width="500" height="500" />
+      <Image src={pizza.img} alt="" width="500" height="700" />
       </a>
       </Link>
       </div>
@@ -24,13 +24,7 @@ const PizzaCard = ({pizza}) => {
       <span className={styles.price}>R$ {pizza.prices[0]}.00</span>
       </a>
       </Link>
-      <Link href={`/product/${pizza._id}`} passHref>
-      <a>
-      <h2 className={styles.desc}>
-        {pizza.desc}
-      </h2>
-      </a>
-      </Link>
+      
       
     </div>
   );

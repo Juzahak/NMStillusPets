@@ -21,7 +21,7 @@ const Pratododia = ({ pizza }) => {
       <div className={styles.apresentacao}>
         <Link href={`/product/${pizza._id}`} passHref>
         <a>
-          <Image src="/img/ornamentosuperior.png" alt="" width="500" height="100" />
+          <Image src="/img/ornamentosuperior.png" alt="" width="526" height="100" />
           </a>
           </Link>
           <div className={styles.titext}>
@@ -39,28 +39,28 @@ const Pratododia = ({ pizza }) => {
                 <Link href={`/product/${pizza._id}`} passHref>
                 <a>
                   <h2 className={styles.desc}>
-                    Venha conhecer o verdadeiro sabor,
+                    Venha conhecer nossa alfaiataria,
                   </h2>
                   </a>
                   </Link>
                   <Link href={`/product/${pizza._id}`} passHref>
                   <a>
                   <h2 className={styles.desc}>
-                    Alimento e Arte!
+                    N&M Stillus Pets
                   </h2>
                   </a>
                   </Link>
                   <Link href={`/product/${pizza._id}`} passHref>
                   <a>
                   <h2 className={styles.desc}>
-                    Alimento saúdavel e Delicioso!      </h2>
+                    Criando para você!      </h2>
                     </a>
                 </Link>
               </div>
           </div>
           <Link href={`/product/${pizza._id}`} passHref>
           <a>
-          <Image src="/img/ornamentoinferior.png" alt="" width="500" height="100" />
+          <Image src="/img/ornamentoinferior.png" alt="" width="526" height="100" />
           </a>
           </Link>
       </div>

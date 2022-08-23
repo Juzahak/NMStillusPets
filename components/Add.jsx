@@ -7,9 +7,10 @@ import useSwr, {mutate} from 'swr'
 
 const Add = ({ setClose, lista }) => {
   const [file, setFile] = useState(null);
+  const [file2, setFile2] = useState(null);
   const [title, setTitle] = useState(null);
   const [list, setList] = useState(null);
-  const [listName, setName] = useState("");
+  const [listName, setName] = useState("Principal");
   
   
   const [desc, setDesc] = useState(null);
@@ -69,14 +70,26 @@ const Add = ({ setClose, lista }) => {
     const data = new FormData();
     data.append("file", file);
     data.append("upload_preset", "uploads");
+
+    const data2 = new FormData();
+    data2.append("file", file2);
+    data2.append("upload_preset", "uploads2");
+
     try {
       const uploadRes = await axios.post(
-        "https://api.cloudinary.com/v1_1/dsy2z7f4h/image/upload",
+        "https://api.cloudinary.com/v1_1/n-mstilluspets/image/upload",
         data
-      );
         
-      const { url } = uploadRes.data;
-
+      );
+      const uploadRes2 = await axios.post(
+        "https://api.cloudinary.com/v1_1/n-mstilluspets/image/upload",
+        data2
+      );
+      
+        
+      const  url  = await uploadRes.data;
+      const  url2  = await uploadRes2.data;
+        console.log(url.url, url2.url);
       const newProduct = {
         title,
         desc,
@@ -85,7 +98,8 @@ const Add = ({ setClose, lista }) => {
         refri,
         extraOptions,
         extraOptions2,
-        img: url,
+        img: url.url,
+        img2: url2.url,
       };
 
       await axios.post("/api/products", newProduct);
@@ -120,16 +134,7 @@ const Add = ({ setClose, lista }) => {
           X
         </span>
         <h1>Adicionar novo item!</h1>
-        <div className={styles.item}>
-          <label className={styles.label}>Escolha uma imagem</label>
-          <input type="file" onChange={(e) => setFile(e.target.files[0])} />
-        </div>
-
-       
-        
-    
-
-        <div className={styles.bebida}>Sub-Menu
+        <div className={styles.bebida}>Listas
           <input type="checkbox" 
           className={styles.inputinho} 
           checked={refri} 
@@ -139,6 +144,19 @@ const Add = ({ setClose, lista }) => {
 
           </input>
         </div>
+        <div className={styles.item}>
+          <label className={styles.label}>Escolha uma imagem</label>
+          <input type="file" onChange={(e) => setFile(e.target.files[0])} />
+        </div>
+        <div className={styles.item}>
+          <input type="file" onChange={(e) => setFile2(e.target.files[0])} />
+        </div>
+
+       
+        
+    
+
+        
     {refri ? 
         <div className={styles.extraButton4}>
           <input 
@@ -187,33 +205,26 @@ const Add = ({ setClose, lista }) => {
           />
         </div>
         <div className={styles.item}>
-          <label className={styles.label}>Valores</label>
+          <label className={styles.label}>Valor</label>
           <div className={styles.priceContainer}>
             <input
               className={`${styles.input} ${styles.inputSm}`}
               type="number"
-              placeholder="Sem salada OU Suco/Sopa"
+              placeholder="Valor do ITEM"
               onChange={(e) => changePrice(e, 0)}
             />
-            { !refri &&
-              <input
-              className={`${styles.input} ${styles.inputSm}`}
-              type="number"
-              placeholder="Com salada OU Deixar vazio"
-              onChange={(e) => changePrice(e, 1)}
-              />
-            }
+            
             
           </div>
         </div>
         <div className={styles.item}>
           
-          <label className={styles.label}>Pratos</label>
+          <label className={styles.label}>Opções</label>
           <div className={styles.extra}>
            <input
               className={`${styles.input} ${styles.inputSm}`}
               type="text"
-              placeholder="Item/Sabor"
+              placeholder="Categoria"
               name="text"
               onChange={handleExtraInput}
             />
@@ -238,38 +249,7 @@ const Add = ({ setClose, lista }) => {
           </div>
         </div>
 
-        <div className={styles.item}>
-        { !refri &&
-           <>
-          <label className={styles.label}>Acompanhamentos</label>
-          <div className={styles.extra}>
-            <input
-              className={`${styles.input} ${styles.inputSm}`}
-              type="text"
-              placeholder="Item OU deixar vazio"
-              name="text"
-              onChange={handleExtraInput2}
-            />
-            <input
-              className={`${styles.input} ${styles.inputSm}`}
-              type="number"
-              placeholder="Valor OU deixar vazio"
-              name="price"
-              onChange={handleExtraInput2}
-            />
-            <button className={styles.extraButton} onClick={handleExtra2}>
-              Adicionar
-            </button>
-          </div>
-          </> }
-          <div className={styles.extraItems}>
-            {extraOptions2.map((option) => (
-              <span key={option.text} className={styles.extraItem}>
-                {option.text}
-              </span>
-            ))}
-          </div>
-        </div>
+        
         <button className={styles.addButton} onClick={handleCreate}>
           Criar item!
         </button>
