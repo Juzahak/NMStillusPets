@@ -33,7 +33,7 @@ export default function Home({admin}) {
   const {data: pizzaList} = useSwr("/api/products", fetcher);
   const {data: lista} = useSwr("/api/lists", fetcher);
   console.log(lista);
-  if(admin === true){
+  if(admin === false){
     return (
       <div className={styles.container}>
         <Head>
