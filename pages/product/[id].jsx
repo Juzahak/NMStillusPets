@@ -38,9 +38,12 @@ const Product = ({ productId }) => {
   const handleChange = (e, option) => {
     const checked = e.target.checked;
 
-    if (pizza.refri == true && qtd <= 1) {
+    
+    if (pizza.refri == true && qtd <= 1 ) {
       setQtd(qtd + 1)
       changePrice(option.price);
+      setExtras(extras.filter(extras => extras !== 'P'));
+
       setExtras((prev) => [...prev, option.text]);
     }
     if (pizza.refri == true && qtd == 2 && e.target.checked == true) {
@@ -65,6 +68,7 @@ const Product = ({ productId }) => {
 
       setQtd(qtd + 1)
       changePrice(option.price);
+      setExtras(extras.filter(extras => extras !== 'P'));
       setExtras((prev) => [...prev, option.text]);
 
     }

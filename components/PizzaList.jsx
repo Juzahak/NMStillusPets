@@ -51,10 +51,11 @@ console.log(name);
       <div className={styles.container}>
         
       {lista.map((listt) => (
-        <>
-          <h1 className={styles.title}>{listt.list}</h1>
+        <div key={listt.list}>
+        
+          <h1 className={styles.title} key={listt._id}>{listt.list}</h1>
           
-        <div className={styles.wrapper2} key={listt.list} style={{transform:`translateX(${-100*index}vw)`}}>
+        <div className={styles.wrapper2} style={{transform:`translateX(${-100*index}vw)`}}>
           {pizzaList.map((pizza) => (
 
             pizza.refri == true && pizza.listName === listt.list ?
@@ -72,7 +73,7 @@ console.log(name);
         <Image src="/img/arrowr.png" width="120px" height="120px" alt=""/>
       </div>
         </div>
-        </>
+        </div>
       ))}
       
       </div>

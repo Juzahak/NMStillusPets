@@ -60,10 +60,10 @@ console.log(lista[0]);
         
       {lista.map((listt) => (
         name === listt.list ?
-        <>
+        <div key={listt._id}>
           <h1 className={styles.title}>{listt.list}</h1>
           
-        <div className={styles.wrapper2} key={listt.list}>
+        <div className={styles.wrapper2}>
           {pizzaList.map((pizza) => (
 
             pizza.refri == true && pizza.listName === listt.list?
@@ -73,9 +73,9 @@ console.log(lista[0]);
           ))}
         </div>
         
-        </>
+        </div>
       :
-      <span key={listt}></span>
+      <span key={listt._id}></span>
     
       ))}
       </div>

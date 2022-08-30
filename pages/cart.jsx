@@ -100,7 +100,7 @@ const Cart = () => {
               <span className={styles.extras}>
                 
                 {product.extras.map((extra) => 
-                  <span key={extra} >{extra} </span>
+                  <span key={extra._id} >{extra} </span>
                   )}
                 {product.refri && <></>}
               </span>
