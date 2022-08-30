@@ -22,6 +22,7 @@
 .title{
   font-family: system-ui;
   font-size: 45px;
+  text-align: center;
 }
 
 .desc {
@@ -51,16 +52,16 @@
   transition: all 1.5s ease-in-out ;
 }
 .wrapper2 {
-  width: auto;
-  height: 31vw;
-  position: relative;
+  width: 100vw;
+    height: 34vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    flex-direction: row;
 
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  transition: all 1.5s ease-in-out;
+    transition: all 1.5s ease-in-out;
 }
 
 
