@@ -46,7 +46,7 @@
     font-weight: bold;
     color: rgb(82, 82, 82);
     position: relative;
-    bottom: 20px;
+
   }
   
   .desc {
@@ -62,7 +62,7 @@
     }
   
     .title {
-      font-size: 30px;
+      font-size: 50px;
     }
   
     .price,
@@ -77,11 +77,11 @@
     
     .titulomob{
       text-align: center;
-    margin: 15px 10px 131px;
-    font-family: 'Quicken';
+    margin: 45px 10px 131px;
+    font-family: revert;
     font-size: 50px;
     text-shadow: 1px 15px 15px grey;
-    color: #812121;
+    color: #000000;
     display: block;
     }
   }

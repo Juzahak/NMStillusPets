@@ -12,12 +12,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
-  width: auto;
-  
+  overflow: hidden
 }
 
-
+.menus{
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+  
+}
+.menu{
+  background: black;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer; 
+}
 
 .title{
   font-family: system-ui;
@@ -51,16 +68,13 @@
   transition: all 1.5s ease-in-out ;
 }
 .wrapper2 {
-  width: auto;
-  height: 31vw;
-  position: relative;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  transition: all 1.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    transition: all 1.5s ease-in-out;
+    align-content: center;
 }
 
 
@@ -69,15 +83,12 @@
   .title {
     text-align: center;
   }
-  .container{
-    padding: 0;
-  }
-  .wrapper2{
-    height: 80vw;
-  }
 
   .desc {
     width: 90%;
     text-align: center;
+  }
+  .container{
+    padding: 20px 0;
   }
 }

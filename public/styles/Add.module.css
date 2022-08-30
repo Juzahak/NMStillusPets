@@ -25,6 +25,7 @@
     font-family: sans-serif;
     font-weight: 700;
     margin-bottom: 10px;
+    flex-wrap: wrap;
 }
 
   .bebida {
@@ -49,12 +50,18 @@
     border-radius: 10px;
   }
   .extraButton4 {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    margin-top: 20px;
   }
 
   .inputinho {
     width: 20px;
     height: 20px;
+  }
+
+  .button{
+    width: 25px;
+    height: 25px;
   }
 
 .container {

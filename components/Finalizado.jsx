@@ -53,7 +53,7 @@ const Finalizado = ({ setClose, orders }) => {
               <tbody key={Index} className={styles.tbTitle}>
                 
                 <tr className={styles.trTitle}>
-                  <td className={styles.tdTitle}>{order.customer}</td>
+                  <td className={styles.tdTitle}>{order.customer}, {order.telefone}</td>
                   <td className={styles.tdTitle}>
                     {order.produto.map((sla, Index) =>
                       
@@ -69,9 +69,9 @@ const Finalizado = ({ setClose, orders }) => {
 
 
 
-                  <td className={styles.tdTitle}>R${order.total + order.price}.00</td>
+                  <td className={styles.tdTitle}>R${order.total}.00</td>
                   <td className={styles.tdTitle}>
-                    {order.method === 0 ? <span>Dinheiro, ({order.troco}R$)</span> : <span>Cartão</span>}
+                    {order?.metodo === 1 ? <span>Dinheiro/Cartão ({order?.troco}R$)</span> : <span>Mercado Livre</span>}
                   </td>
                   
                   <td className={styles.tdTitle}>

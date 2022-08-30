@@ -12,14 +12,14 @@ const Footer = () => {
       <div className={styles.item}>
         <div className={styles.card}>
           <h2 className={styles.motto}>
-            Obrigado por visitar nosso menu,
+            Obrigado por visitar nosso ateliê,
             <br />
             <br />
-             Nossa alegria é te servir bem!
+             Nossa alegria é transformar sonhos em realidade!
           </h2>
         </div>
         <div className={styles.card}>
-          <h1 className={styles.title}>LOCAL DO RESTAURANTE</h1>
+          <h1 className={styles.title}>LOCAL DO ATELIÊ</h1>
           <div className={styles.text}>
            
             Rua Sete de Setembro 228, 

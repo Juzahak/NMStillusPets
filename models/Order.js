@@ -7,6 +7,11 @@ const OrderSchema = new mongoose.Schema(
       required: true,
       maxlength: 60,
     },
+    bairro: {
+      type: String,
+      required: true,
+      maxlength: 60,
+    },
     address: {
       type: String,
       required: true,
@@ -21,20 +26,12 @@ const OrderSchema = new mongoose.Schema(
       type: String,
       maxlength: 200,
     },
-    select: {
-      type: String,
-      required: true,
-    },
     produto: {
       type: [],
       default: undefined,  
     },
   
     total: {
-      type: Number,
-      required: true,
-    },
-    price: {
       type: Number,
       required: true,
     },

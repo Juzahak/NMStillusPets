@@ -23,6 +23,10 @@
   display: none;
 }
 
+.tr{
+  text-align: center;
+}
+
 .left {
   flex: 2;
 }
@@ -35,6 +39,7 @@
   width: 100px;
   height: 100px;
   position: relative;
+  margin: 0 auto;
 }
 
 .table {
@@ -93,6 +98,14 @@
 
   .imgContainer{
     margin-top: 20px;
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+  }
+
+  .table{
+    border-spacing: 0px;
+    margin-bottom: 20px;
   }
 
   .tr {
@@ -132,7 +145,10 @@
     content: "Total: ";
     font-weight: 500;
   }
-
+  .price{
+    margin: 10px;
+    
+  }
   .row:last-child {
     width: 100%;
     flex-direction: row;
@@ -169,9 +185,28 @@
     border-color: lightblue;
     border-radius: 20px;
 }
+.payButton2{
+  padding: 10px 5px;
+    cursor: pointer;
+    display: flex;
+    margin-bottom: 5px;
+    background-color: rgb(255, 253, 113);
+    color: #6d8e99;
+    font-weight: bold;
+    border-color: lightblue;
+    border-radius: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 22px;
+}
 
 .payButton:hover {
   background-color: lightblue;
+  color: #333;
+  transition: all 0.5s ease;
+}
+.payButton2:hover {
+  background-color: rgb(255, 254, 179);
   color: #333;
   transition: all 0.5s ease;
 }

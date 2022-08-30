@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../public/styles/PizzaCard.module.css";
+import styles from "../public/styles/PizzaCard2.module.css";
 import Link from "next/link";
 
 const PizzaCard = ({pizza}) => {

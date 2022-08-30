@@ -34,6 +34,7 @@
 .menumob{
   display: flex;
   width: 100%;
+  height: 10vw;
 }
 
 .titulomob{
@@ -41,18 +42,38 @@
 }
 
 .menus{
-  font-family: 'Quicken';
-  font-size: 40px;
+  font-family: fantasy;
+  font-size: 45px;
   cursor: pointer;
   color: #fff4f5;
   text-shadow: 5px 4px 5px black;
 }
 .menus2{
-  font-family: 'Quicken';
-  font-size: 40px;
+  font-family: fantasy;
+  font-size: 45px;
   cursor: pointer;
   color: #fff4f5;
   text-shadow: 5px 4px 5px black;
+}
+.menus3{
+  font-family: fantasy;
+  font-size: 52px;
+  cursor: pointer;
+  color: #fff4f5;
+  text-shadow: 5px 4px 5px black;
+}
+
+.menus:hover{
+  transition: 0.5s all ease;
+  color: rgb(224, 227, 255);
+}
+.menus2:hover{
+  transition: 0.5s all ease;
+  color: rgb(224, 227, 255);
+}
+.menus3:hover{
+  transition: 0.5s all ease;
+  color: rgb(224, 227, 255);
 }
 
 .logotipo{
@@ -66,7 +87,19 @@
   align-items: center;
 }
 
-
+.callButton2{
+  position: fixed;
+    width: 70px;
+    height: 70px;
+    bottom: 40px;
+    right: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.callButton2:hover{
+  transition: 0.5s all ease;
+  background: rgb(0 0 0 / 25%);
+}
 
 .item:last-child {
   justify-content: flex-end;
@@ -91,10 +124,12 @@
 
 .list {
   padding: 0;
+  width: 55vw;
   display: flex;
   align-items: center;
   list-style: none;
   color: white;
+  justify-content: space-around;
 }
 
 .listItem {
@@ -134,43 +169,74 @@
   }
 
   .container{
-    height: 150px;
-    padding: 0px 30px
+    height: 160px;
+    padding: 0px 30px;
+    margin-bottom: 15px;
   }
   
-  .item:nth-child(1) {
-    display: none;
-  }
   
   .logotipo{
     display: none;
   }
   .texts{display: none;}
-
+  
+  .callButton{
+    display: none;
+  }
+  .callButton2{
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
   .logotipomob{
     position: absolute;
     display: block;
-    top: 10px;
-    width: 45%;
+    top: 0;
     margin: 0 auto;
-    left: 0;
+    left: 34vw;
     right: 0;
   }
 
   .menumob{
     display: flex;
-    margin-top: 70px;
+    margin-top: 55px;
     width: 100%;
   }
 
   .list{
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
-    margin-top: 0;
-    margin-left: -10px;
+    position: relative;
+    top: 60px;
+  }
+  .menus{
+    font-size: 35px;
+    width: 30vw;
+    text-align: center;
   }
   .menus2{
-    font-size: 45px;
+    font-size: 35px;
+    width: 30vw;
+    text-align: center;
   }
+  .menus3{
+    font-size: 35px;
+    width: 30vw;
+    text-align: center;
+  }
+  .item{
+    height: 0vw;
+    flex: none;
+    position: absolute;
+    right: 0vw;
+    top: 15vw;
+  }
+ .cart{
+  right: 5vw;
+    bottom: 3vw;
+ }
 }

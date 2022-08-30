@@ -40,9 +40,9 @@ const Order = ({ orderId }) => {
 const checked = () => {
   if(order?.metodo == 1) {
    
-    return (<div className={styles.totalTextTitle}>MÉTODO: Cartão de Créd./Deb.</div>)
+    return (<div className={styles.totalTextTitle}>MÉTODO: Cartão Ou Dinheiro</div>)
   }else{
-    return (<div className={styles.totalTextTitle}>MÉTODO: Dinheiro</div>)
+    return (<div className={styles.totalTextTitle}>MÉTODO: Mercado Livre</div>)
   }
 }
 
@@ -61,19 +61,15 @@ const checked = () => {
             <thead>
             <tr className={styles.trTitle}>
               <th>CLIENTE</th>
-              <th>PRODUTOS</th>
-              <th>PRATOS</th>
-              <th>ACOMPAN.</th>
+              <th>PRODUTO</th>
+              <th>TAMANHO</th>
+              <th>OBS</th>
               <th>VALORES</th>
               <th>TOTAL</th>
             </tr>
             </thead>
             <tbody>
-            <tr className={styles.tr}>
-              <td className={styles.address3}>
-                <span className={styles.id}>{order?.customer}</span>
-              </td>
-              </tr>
+            
               
               
              
@@ -84,8 +80,9 @@ const checked = () => {
                   <Image
                     src={produto?.img}
                     alt="oi"
-                    width="100%"
-                    height="100%"
+                    width="240"
+                    height="300"
+                    className={styles.imgContainer2}
                   />
                 </div>
               </td>
@@ -100,7 +97,7 @@ const checked = () => {
                 <span className={styles.extras}>
                   <span></span>
                   {produto?.extras.map((extra) => 
-                    <span key={extra}>{extra}, </span>
+                    <span key={extra}>{extra} </span>
                     )}
                   {produto?.refri && <></>}
                 </span>
@@ -110,9 +107,7 @@ const checked = () => {
                 <span className={styles.extras}>
                 <span></span>
   
-                  {produto?.extras2.map((extra2) => 
-                    <span key={extra2}>{extra2}, </span>
-                    )}
+                  {produto.descri}
                   {produto?.refri && <></>}
                 </span>
               </td>
@@ -132,7 +127,10 @@ const checked = () => {
             </tr>
               )}
               <tr className={styles.tr}>
-
+              
+              <td className={styles.address3}>
+                <span className={styles.id4}>{order?.customer}</span>
+              </td>
               <td className={styles.address3}>
                 <span className={styles.id3}>{order?.address}</span>
               </td>
@@ -159,7 +157,7 @@ const checked = () => {
             </div>
           </div>
           <div className={statusClass(1)}>
-            <Image src="/img/bake.png" width={30} height={30} alt="" />
+            <Image src="/img/caixa.png" width={30} height={30} alt="" />
             <span>Preparando</span>
             <div className={styles.checkedIcon}>
               <Image
@@ -172,7 +170,7 @@ const checked = () => {
             </div>
           </div>
           <div className={statusClass(2)}>
-            <Image src="/img/bike.png" width={30} height={30} alt="" />
+            <Image src="/img/transporte.png" width={30} height={30} alt="" />
             <span>A caminho</span>
             <div className={styles.checkedIcon}>
               <Image
@@ -185,7 +183,7 @@ const checked = () => {
             </div>
           </div>
           <div className={statusClass(3)}>
-            <Image src="/img/delivered.png" width={30} height={30} alt="" />
+            <Image src="/img/entregue.png" width={30} height={30} alt="" />
             <span>Entregue</span>
             <div className={styles.checkedIcon}>
               <Image
@@ -216,7 +214,13 @@ const checked = () => {
             <b className={styles.totalTextTitle}>TROCO PARA:</b>R${order?.troco}.00
           </div>
           <div className={styles.totalText}>
-            <b className={styles.totalTextTitle}>TOTAL:</b>R${order?.total + order?.price}.00
+            <b className={styles.totalTextTitle}>TOTAL:</b>R${order?.total }.00
+          </div>
+          <div className={styles.totalText}>
+            <b className={styles.totalTextTitle}>MSG:</b> Seu pedido foi recebido, em breve entraremos em contato!
+          </div>
+          <div className={styles.totalText}>
+            Caso tenha escolhido o metodo mercado livre, entraremos em contato para realização do pedido!
           </div>
           <button disabled className={styles.button}>
             PEDIDO RECEBIDO!

@@ -33,7 +33,7 @@ const pedidinho = data? `/orders/${data}` : `/orderCheck`;
       return ( <Link href="/cart" passHref>    
       <div className={styles.item}>
         <div className={styles.cart}>
-          <Image src="/img/cestinha.png" alt="" width="70px" height="70px" />
+          <Image src="/img/carticon1.png" alt="" width="70px" height="70px" />
           <div className={styles.counter}>{quantity}</div>
         </div>
       </div>
@@ -44,7 +44,7 @@ const pedidinho = data? `/orders/${data}` : `/orderCheck`;
      return ( <Link href="/cart" passHref>
       <div className={styles.item}>
         <div className={styles.cart}>
-          <Image src="/img/cestavazia.png" alt="" width="70px" height="70px" />
+          <Image src="/img/carticon2.png" alt="" width="70px" height="70px" />
           <div className={styles.counter}>{quantity}</div>
         </div>
       </div>
@@ -57,30 +57,33 @@ const pedidinho = data? `/orders/${data}` : `/orderCheck`;
       <div className={styles.container}>
         <div className={styles.logotipomob}>
             
-            <Image src="/img/ALimentoeArtelogo.png" alt="" width="600px" height="170px"/>
+            <Image src="/img/NMLogo.png" alt="" width="150px" height="120px"/>
             </div>
             
             <div className={styles.menumob}>
       <div className={styles.item}>
+        <Link href="https://web.whatsapp.com/send?phone=5514996528505" passHref>
+        <div className={styles.callButton2}>
+          <Image src="/img/whatss.png" alt="" width="500" height="500" />
+        </div>
+        </Link>
         <div className={styles.callButton}>
-          <Image src="/img/logow.png" alt="" width="55" height="55" />
+          <Image src="/img/NMLogo.png" alt="" width="220" height="200" />
         </div>
-        <div className={styles.texts}>
-          <div className={styles.text}>WhatssApp</div>
-          <div className={styles.text}>(XX)XXXXX-XXXX</div>
-        </div>
+        
       </div>
       <div className={styles.item}>
             
         <ul className={styles.list}>
+          <Link href="/produtos/[id].jsx" passHref >
+          <div className={styles.menus2}>Produtos</div>
+          </Link>
+
           <Link href="/" passHref >
-          <div className={styles.menus2}>Home</div>
+          <div className={styles.menus3}>Home</div>
           </Link>
           
-          <div className={styles.logotipo}>
-            
-          <Image src="/img/NMLogo.png" alt="" width="300px" height="300px"/>
-          </div>
+          
           
           <Link href={pedidinho} passHref >
             

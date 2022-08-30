@@ -27,7 +27,7 @@ const Index = () => {
 
  
    
-    console.log(orders)
+    console.log(products)
  
 
   const status = ["Preparando", "A Caminho!", "Entregue!"];
@@ -85,8 +85,8 @@ const Index = () => {
             <tr className={styles.title}>
               <th>CLIENTE</th>
               <th>PRODUTOS</th>
-              <th>PRATOS</th>
-              <th>ACOMP.</th>
+              <th>TAMANHO</th>
+              <th>OBS.</th>
               <th>TOTAL</th>
               <th>MÉTODO/TROCO</th>
               <th>STATUS</th>
@@ -112,11 +112,16 @@ const Index = () => {
                   <td className={styles.tdTitle}>
                     {order?.produto.map((sla, Index) =>
                       <div key={Index}>
-                        <div className={styles.spanTitle}>{sla?.title}
-                        {sla?.size == 1 && (
-
-                          <div className={styles.name}>COM SALADA!</div>
-                        )}
+                        <div className={styles.spanTitle}>
+                        <Image
+                    src={sla?.img}
+                    width={100}
+                    height={160}
+                    objectFit="cover"
+                    alt=""
+                  />
+                          {sla?.title}
+                        
                         </div>
                       </div>
                     )}
@@ -129,9 +134,9 @@ const Index = () => {
                     {order?.produto.map((sla, Index) =>
                       <div className={styles.span3Title} key={Index}>
                         {sla?.extras.map((sla2, Index) =>
-                          <span key={Index}>{sla2}, </span>
+                          <span key={Index}>{sla2} </span>
                         )}
-                        {sla?.refri && '*************'}
+                        
 
                       </div>
                     )}
@@ -142,10 +147,8 @@ const Index = () => {
                   <td className={styles.td2Title}>
                     {order?.produto.map((sla, Index) =>
                       <div className={styles.span2Title} key={Index}>
-                        {sla?.extras2.map((sla2, Index) =>
-                          <span key={Index}>{sla2}, </span>
-                        )}
-                        {sla?.refri && '*************'}
+                       
+                        {sla?.descri}
 
                       </div>
                     )}
@@ -154,9 +157,9 @@ const Index = () => {
 
 
 
-                  <td className={styles.totalTitle}>R${order?.total + order?.price}.00</td>
+                  <td className={styles.totalTitle}>R${order?.total}.00</td>
                   <td className={styles.metodoTitle}>
-                    {order?.metodo === 0 ? <span>--Dinheiro-- ({order?.troco}R$)</span> : <span>--Cartão--</span>}
+                    {order?.metodo === 1 ? <span>Dinheiro/Cartão ({order?.troco}R$)</span> : <span>Mercado Livre</span>}
                   </td>
                   <td className={styles.tdTitle}>
                     <div className={styles.statinho}>{status[order?.status]}</div>
@@ -185,6 +188,7 @@ const Index = () => {
             <tr className={styles.title}>
               <th>IMAGEM</th>
               <th>TITULO</th>
+              <th>QTD</th>
               <th>PREÇO</th>
               <th>EDITAR</th>
               <th>EXCLUIR</th>
@@ -203,12 +207,18 @@ const Index = () => {
                   />
                 </td>
                 <td className={styles.tdTitle}>{product?.title}</td>
+                <td className={styles.tdTitle}>QTD: {product?.estoque}</td>
                 <td className={styles.tdTitle}>R${product?.prices[0]}.00</td>
                 <td className={styles.tdTitle} >
                   <button onClick={() => setIde(product?._id)}>
                 {<Edit setClose2={setClose2} />}
 
-                  {!close2 && <Editar setClose2={setClose2} pizzaList={products} extras={product?.extraOptions} extras2={product?.extraOptions2} products={products} pizzaId={Ide}/>}
+                  {!close2 && <Editar setClose2={setClose2} 
+                 
+                  pizzaList={products} 
+                  extras={product?.extraOptions} 
+                  products={products} 
+                  pizzaId={Ide}/>}
                   </button>
                   </td>
                   <td>

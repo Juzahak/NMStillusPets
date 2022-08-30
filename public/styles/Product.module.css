@@ -10,6 +10,19 @@
 
 }
 
+.desc{
+  font-size: 20px;
+}
+
+.textarea{
+  width: 45vw;
+    height: 10vw;
+}
+
+.arrowContainer{
+  cursor: pointer;
+}
+
 .imgg{
   margin-bottom: 25px;
 }
@@ -33,10 +46,22 @@ font-family: 'Quicken';
 .left {
   flex: 1;
   height: 70%;
+  max-width: 50vw;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
+.left2 {
+
+  display: flex;
+  width: 100%;
+    justify-content: space-evenly;
+}
+
+
+
+
 
 .right {
   flex: 1;
@@ -47,6 +72,9 @@ font-family: 'Quicken';
   width: 80%;
   height: 80%;
   position: relative;
+}
+.imgContainer3 {
+  border-radius: 5px;
 }
 
 .price {
@@ -105,7 +133,7 @@ font-family: 'Quicken';
 
 .ingredients {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin-bottom: 30px;
 }
 
@@ -167,7 +195,7 @@ font-family: 'Quicken';
 
   .choose{
     font-size: 35px;
-    margin-bottom: 55px;
+    margin-bottom: 40px;
   }
 
   .sizes {
@@ -196,7 +224,10 @@ font-family: 'Quicken';
   }
 
   .ingredients {
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
   }
 
   .option {
@@ -209,6 +240,13 @@ font-family: 'Quicken';
     height: 25px;
   }
 
+  .left{
+    max-width: none;
+  }
+  .textarea{
+    width: 85vw;
+    height: 35vw;
+  }
   .quantity,
   .button {
     height: 50px;

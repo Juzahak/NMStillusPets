@@ -1,18 +1,18 @@
-import styles from "../public/styles/PizzaList.module.css";
-import PizzaCard from "./PizzaCard"
+import styles from "../public/styles/PizzaList2.module.css";
+import PizzaCard from "./PizzaCard2"
 import Pratododia from "./Pratododia"
 import useSwr, {isValidating} from 'swr'
 import axios from 'axios'
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-const PizzaList = ({ pizzaList, lista, verdade }) => {
+const PizzaList2 = ({ pizzaList, lista, verdade }) => {
 
   
   
   
   const [index, setIndex] = useState(0);
-  const [name, setName] = useState("");
+  const [name, setName] = useState("Tamanho P");
   
 
   const handleArrow = (direction) =>{
@@ -28,7 +28,7 @@ const PizzaList = ({ pizzaList, lista, verdade }) => {
 
 
   
-console.log(name);
+console.log(lista[0]);
 
   
   
@@ -38,46 +38,49 @@ console.log(name);
         <div className={styles.wrapper}>
           {pizzaList.map((pizza) => (
             pizza.refri == false ?
-              <Pratododia key={pizza._id} pizza={pizza} />
+              <Pratododia key={pizza._id} pizza={pizza} verdade={verdade}/>
               :
               <span key={pizza._id}></span>
           ))}
         </div>
       </div>
       
-      
+      {verdade && 
+      <div className={styles.menus}>
+      {lista.map((listtt) => 
+    
+     <button key={listtt._id} className={styles.menu} onClick={(e) => setName(listtt.list)}>{listtt.list}</button>
+    
+     )}
+     </div>
+      }
 
 
       <div className={styles.container}>
         
       {lista.map((listt) => (
+        name === listt.list ?
         <>
           <h1 className={styles.title}>{listt.list}</h1>
           
-        <div className={styles.wrapper2} key={listt.list} style={{transform:`translateX(${-100*index}vw)`}}>
+        <div className={styles.wrapper2} key={listt.list}>
           {pizzaList.map((pizza) => (
 
-            pizza.refri == true && pizza.listName === listt.list ?
+            pizza.refri == true && pizza.listName === listt.list?
               <PizzaCard key={pizza._id} pizza={pizza} />
               :
               <span key={pizza._id}></span>
           ))}
         </div>
-        <div className={styles.arrows}>
-
-        <div className={styles.arrowContainer} style={{ left: 0 }} onClick={()=>handleArrow("l")}>
-        <Image src="/img/arrowl.png" alt="" width="120px" height="120px"/>
-      </div>
-        <div className={styles.arrowContainer} style={{ right: 0 }} onClick={()=>handleArrow("r")}>
-        <Image src="/img/arrowr.png" width="120px" height="120px" alt=""/>
-      </div>
-        </div>
+        
         </>
+      :
+      <span key={listt}></span>
+    
       ))}
-      
       </div>
     </div>
   );
 };
 
-export default PizzaList;
+export default PizzaList2;

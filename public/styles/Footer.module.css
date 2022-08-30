@@ -12,7 +12,7 @@
 }
 
 .container {
-  height: calc(110vh - 100px);
+  height: calc(95vh - 100px);
   background: linear-gradient(#9e9dbb, #6e707e);
     display: flex;
 }
@@ -44,7 +44,7 @@
 
 .title {
   font-size: 18px;
-  color: #f9d993;
+  color: #efb63a;;
 }
 
 .text {
@@ -54,7 +54,7 @@
 }
 
 .motto {
-  color: #d1411e;
+  color: #FFFFFF;
 }
 
 @media screen and (max-width: 480px) {

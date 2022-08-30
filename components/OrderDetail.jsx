@@ -1,28 +1,50 @@
 import { useState } from "react";
 import styles from "../public/styles/OrderDetail.module.css";
 import { useDispatch } from 'react-redux';
+import useSwr, {mutate} from 'swr';
+import axios from "axios";
 
+const fetcher = (url) => fetch(url).then((res) => res.json())
 
-const OrderDetail = ({ total, createOrder, produto, setCash, price, metodo, select }) => {
+const OrderDetail = ({ total, createOrder, produto, setCash, metodo }) => {
   const [customer, setCustomer] = useState("");
   const [address, setAddress] = useState("");
   const [troco, setTroco] = useState("");
   const [obs, setObs] = useState("");
   const [telefone, setTelefone] = useState("");
-  
+  const [bairro, setBairro] = useState("");
+  const {data: products} =  useSwr(`/api/products`, fetcher);
 
   
 
   console.log(produto)
 
 
-  const handleClick = () => {
+  const handleClick = async () => {
 
-
-    createOrder({ customer, troco, address, total, produto, price, select, obs, metodo, telefone });
+    produto.map(prod => {
+        const id = prod._id;
+        
+        try {
+          const res = axios.put("/api/products/" + id, {
+            estoque: prod.estoque - prod.quantity,
+          });
+          mutate(`/api/products`);
     
+          
+        } catch (err) {
+          console.log(err);
+        }
+    })
+
+    createOrder({ customer, troco, address, total, produto, obs, metodo, telefone, bairro });
+    
+    return
   };
 
+
+
+      
 
 
   return (
@@ -34,6 +56,7 @@ const OrderDetail = ({ total, createOrder, produto, setCash, price, metodo, sele
         </span>
         <h1 className={styles.title}>INFORMAÇÕES DE ENTREGA</h1>
         </div>
+        
         <div className={styles.item}>
           <label className={styles.label}>Nome</label>
           <input
@@ -52,7 +75,7 @@ const OrderDetail = ({ total, createOrder, produto, setCash, price, metodo, sele
             onChange={(e) => setTelefone(e.target.value)}
           />
         </div>
-        {!metodo && (
+        {metodo === 1 ?
         <div className={styles.item}>
           <label className={styles.label}>Precisa de troco?</label>
           <div className={styles.troquinho}>
@@ -65,7 +88,18 @@ const OrderDetail = ({ total, createOrder, produto, setCash, price, metodo, sele
           <div className={styles.spancents}>,00</div>
           </div>
         </div>
-        )}
+        :
+        <></>
+        }
+        <div className={styles.item}>
+        <label className={styles.label}>Bairro</label>
+          <input
+            placeholder="BAIRRO"
+            type="text"
+            className={styles.input}
+            onChange={(e) => setBairro(e.target.value)}
+          />
+        </div>
         <div className={styles.item}>
           <label className={styles.label}>Endereço</label>
           <textarea

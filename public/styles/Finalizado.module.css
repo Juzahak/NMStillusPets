@@ -64,6 +64,7 @@
     background: white;
     border-color: red;
     color: red;
+    cursor: pointer;
   }
 
   .delete:hover {
@@ -154,6 +155,7 @@
     border: 2px solid black;
     background: lavender;
     text-align: center;
+    height: 40px;
   }
   .divTitle {
     height: 10px;
