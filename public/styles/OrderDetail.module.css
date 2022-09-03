@@ -118,8 +118,16 @@
 
   }
   .input2 {
-    height: 40px;
     width: 80%;
-    font-size: 20px;
+    height: 2rem;
+    font-size: 15px;
+  }
+  .input1 {
+    width: 80%;
+    height: 2rem;
+    font-size: 15px;
+  }
+  .title{
+    font-size: 1.44rem;
   }
 }
