@@ -42,21 +42,21 @@
 }
 
 .menus{
-  font-family: fantasy;
+  font-family: auto;
   font-size: 2.5rem;
   cursor: pointer;
   color: #fff4f5;
   text-shadow: 5px 4px 5px black;
 }
 .menus2{
-  font-family: fantasy;
+  font-family: auto;
   font-size: 2.5rem;
   cursor: pointer;
   color: #fff4f5;
   text-shadow: 5px 4px 5px black;
 }
 .menus3{
-  font-family: fantasy;
+  font-family: auto;
   font-size: 3rem;
   cursor: pointer;
   color: #fff4f5;
