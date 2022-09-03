@@ -168,6 +168,10 @@
   color: #d1411e;
 }
 
+.dropdown{
+  display: none;
+}
+
 @media screen and (max-width:480px) {
  
   .item:nth-child(2) {
@@ -181,7 +185,9 @@
     padding: 0px 30px;
     margin-bottom: 15px;
   }
-  
+  .dropdown{
+    display: block;
+  }
   
   .logotipo{
     display: none;

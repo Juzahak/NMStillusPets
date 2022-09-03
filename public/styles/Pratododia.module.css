@@ -32,7 +32,7 @@
   }
   .title {
     font-family: auto;
-    font-size: 70px;
+    font-size: 3.2rem;
     font-weight: bold;
     color: #347bfc;
    
@@ -75,12 +75,12 @@
     
     .titulomob{
       text-align: center;
-    margin: 45px 0px 131px;
-    font-family: revert;
-    font-size: 2rem;
-    text-shadow: 1px 15px 15px grey;
-    color: #000000;
-    display: block;
+      margin: 5rem 0 6rem;
+      font-family: revert;
+      font-size: 2rem;
+      text-shadow: 1px 15px 15px grey;
+      color: #000;
+      display: block;
     }
   }
   

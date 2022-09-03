@@ -235,7 +235,7 @@ console.log(extras)
 
             <div className={styles.position}>
               <div className={styles.margem}>
-                <h3 className={styles.choose}>Selecione o Tamanho</h3>
+                <h3 className={styles.choose2}>Selecione o Tamanho</h3>
                 <div className={styles.ingredients} name='form1'>
 
                   {pizza?.extraOptions.map((option) => (

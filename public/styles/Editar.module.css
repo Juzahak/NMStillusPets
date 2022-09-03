@@ -74,17 +74,17 @@
       }
 
     .container {
-      height: 60vh; 
-      width: 90vw;
-      border-radius: 10px;
-      position: fixed;
-      top: 0;
-      margin: 13vw -51vw auto;
-      z-index: 999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: row-reverse;
+      height: 60vh;
+    width: 90vw;
+    border-radius: 10px;
+    position: fixed;
+    top: 0;
+    margin: 17vw -58vw auto;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
     }
     
     .wrapper {

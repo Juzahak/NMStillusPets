@@ -5,6 +5,7 @@ import useSwr, {isValidating} from 'swr'
 import axios from 'axios'
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const PizzaList = ({ pizzaList, lista, verdade }) => {
 
@@ -69,6 +70,10 @@ console.log(name);
         <div className={styles.arrowContainer} style={{ left: 0 }} onClick={()=>handleArrow("l")}>
         <Image src="/img/arrowl.png" alt="" width="120px" height="120px"/>
       </div>
+            
+            <Link href="/produtos/[id].jsx" passHref >
+              <div className={styles.vertodos}>VER TODOS</div>
+            </Link>
         <div className={styles.arrowContainer} style={{ right: 0 }} onClick={()=>handleArrow("r")}>
         <Image src="/img/arrowr.png" width="120px" height="120px" alt=""/>
       </div>

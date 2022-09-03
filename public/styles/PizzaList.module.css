@@ -23,6 +23,7 @@
   font-family: system-ui;
   font-size: 45px;
   text-align: center;
+  margin-bottom: 3rem;
 }
 
 .desc {
@@ -33,9 +34,10 @@
 
 .arrows{
   width: 100vw;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  align-items: center;
 }
 
 .arrowContainer{
@@ -63,7 +65,14 @@
 
     transition: all 1.5s ease-in-out;
 }
-
+.vertodos{
+  color: #00c0ff;
+  font-family: auto;
+  font-weight: 700;
+  text-shadow: 0px 0px 2px black;
+  font-size: 2rem;
+  cursor: pointer;
+}
 
 
 @media screen and (max-width: 480px) {
@@ -80,5 +89,16 @@
   .desc {
     width: 90%;
     text-align: center;
+  }
+  .arrowContainer{
+    width: 5rem;
+  }
+  .vertodos{
+    color: #00c0ff;
+    font-family: auto;
+    font-weight: 700;
+    text-shadow: 0px 0px 2px black;
+    font-size: 2rem;
+    cursor: pointer;
   }
 }

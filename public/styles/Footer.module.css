@@ -55,6 +55,7 @@
 
 .motto {
   color: #FFFFFF;
+  font-size: 1.2rem;
 }
 
 @media screen and (max-width: 480px) {
@@ -75,6 +76,7 @@
 
   .motto{
     display: none;
+    
   }
 
   .item:first-child {
@@ -83,6 +85,13 @@
 
   .item {
     flex-direction: column;
+    padding: 20px;
+  }
+
+  .item:last-child {
+    flex: 2;
+    padding: 20px;
+    justify-content: space-between;
   }
 
   .title {
