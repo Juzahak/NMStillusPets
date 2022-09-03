@@ -73,7 +73,7 @@ const Navbar = () => {
             </div>
           </Link>
           <div className={styles.callButton}>
-            <Image src="/img/NMLogo.png" alt="" width="220" height="200" />
+            <Image src="/img/NMLogo.png" alt="" width="180" height="150" />
           </div>
 
         </div>
