@@ -46,10 +46,10 @@
     margin-left: 20px;
     margin-top: 20px;
     border-radius: 10px;
-    height: 520px;
-    width: 361px;
-    min-width: 361px;
-    min-height: 520px;
+    height: 30rem;
+    width: 18rem;
+    min-width: 18rem;
+    min-height: 30rem;
     background: #f0f8ff8f;
   }
   
@@ -97,7 +97,6 @@
 
 
     .imagefood{
-      width: 9rem;
       height: 13rem;
       
     }
