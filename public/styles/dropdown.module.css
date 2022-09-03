@@ -1,10 +1,10 @@
 .container{
-position: relative;
+    z-index: 999;
+    margin: 0 auto;
 }
 
 .container .dropBtn {
-    padding: 10px;
-    background: #fff;
+    background: #fff0;
     box-shadow: 3px 3px 10px 6px tgba(0, 0, 0, 0.06);
     font-weight: bold;
     color: #333;
@@ -12,8 +12,7 @@ position: relative;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    width: 3rem;
 }
 
 .container .dropCont {

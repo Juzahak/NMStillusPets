@@ -1,20 +1,21 @@
 import styles from "../public/styles/dropdown.module.css";
 import { useState } from "react";
 import ReactDOM from 'react-dom'
+import Image from "next/image";
 
-function Dropdown({ select, setSelect, price, setPrice }) {
+function Dropdown({ select, setSelect, price, setPrice, pedidinho }) {
     const [ativo, setAtivo] = useState(false);
     const opcoes = [
         {
-            bairro: 'Alto das Palmeiras',
-            preco: 8,
+            bairro: 'Home',
+            destino: '/',
         },
         {
-            bairro: 'Centro',
-            preco: 5
+            bairro: 'Produtos',
+            destino: '/produtos/[id].jsx',
         }, {
-            bairro: 'São Luiz',
-            preco: 7
+            bairro: 'Pedido',
+            destino: `${pedidinho}`,
         }];
     const frete = [8, 5, 7];
     
@@ -22,7 +23,7 @@ function Dropdown({ select, setSelect, price, setPrice }) {
         <div className={styles.container}>
             <div className={styles.icon}>
                 <div className={styles.dropBtn} onClick={(e) => setAtivo(!ativo)}>{select}
-                    <span src="../public/img/icondown.png" alt="icon">▼</span>
+                    <Image src="/img/Tbars.png" alt="" width="70px" height="70px" />
                 </div>
             </div>
             {ativo && (
@@ -30,8 +31,8 @@ function Dropdown({ select, setSelect, price, setPrice }) {
                 <div className={styles.dropCont}>
                     {opcoes.map((opt) => 
                         <span key={opt.bairro}>
-                        <div onClick={(e) => { setSelect(opt.bairro); setAtivo(false); setPrice(opt.preco); }} className={styles.dropsItem}>
-                            {opt.bairro}
+                        <div  className={styles.dropsItem}>
+                           <a href={opt.destino}> {opt.bairro}</a>
                             
                         </div>
                         </span>

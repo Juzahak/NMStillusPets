@@ -1,101 +1,107 @@
 import Image from "next/image";
 import styles from "../public/styles/Navbar.module.css";
-import {useSelector} from "react-redux";
-import {useState, useEffect} from "react";
+import { useSelector } from "react-redux";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import Dropdown from "../components/Dropdown";
 
 
 const Navbar = () => {
   const [data, setData] = useState();
   const quantity = useSelector((state) => state.cart.quantity);
-  
+
 
 
   useEffect(() => {
-    
-  
-    let data = JSON.parse( localStorage.getItem('produto'));
+
+
+    let data = JSON.parse(localStorage.getItem('produto'));
     console.log(data)
     setData(data);
     return;
-    
+
   }, []);
 
-const pedidinho = data? `/orders/${data}` : `/orderCheck`;
+  const pedidinho = data ? `/orders/${data}` : `/orderCheck`;
 
 
 
   const teste = () => {
-   
-    if(quantity > 0) {
-      
 
-      return ( <Link href="/cart" passHref>    
-      <div className={styles.item}>
-        <div className={styles.cart}>
-          <Image src="/img/carticon1.png" alt="" width="70px" height="70px" />
-          <div className={styles.counter}>{quantity}</div>
+    if (quantity > 0) {
+
+
+      return (<Link href="/cart" passHref>
+        <div className={styles.item2}>
+          <div className={styles.cart}>
+            <Image src="/img/carticon1.png" alt="" width="70px" height="70px" />
+            <div className={styles.counter}>{quantity}</div>
+          </div>
         </div>
-      </div>
       </Link>
       )
     }
-    if(quantity == 0 ) {
-     return ( <Link href="/cart" passHref>
-      <div className={styles.item}>
-        <div className={styles.cart}>
-          <Image src="/img/carticon2.png" alt="" width="70px" height="70px" />
-          <div className={styles.counter}>{quantity}</div>
+    if (quantity == 0) {
+      return (<Link href="/cart" passHref>
+        <div className={styles.item2}>
+          <div className={styles.cart}>
+            <Image src="/img/carticon2.png" alt="" width="70px" height="70px" />
+            <div className={styles.counter}>{quantity}</div>
+          </div>
         </div>
-      </div>
       </Link>
-   ) }
+      )
+    }
   }
-  
- 
-    return (
-      <div className={styles.container}>
-        <div className={styles.logotipomob}>
-            
-            <Image src="/img/NMLogo.png" alt="" width="150px" height="120px"/>
+
+
+  return (
+    <div className={styles.container}>
+      <div className={styles.dropdown}>
+        <Dropdown pedidinho={pedidinho}/>
+      </div>
+      <div className={styles.logotipomob}>
+
+        <Image src="/img/NMLogo.png" alt="" width="150px" height="120px" />
+      </div>
+
+      <div className={styles.menumob}>
+        <div className={styles.item2}>
+          <Link href="https://web.whatsapp.com/send?phone=5514996528505" passHref>
+            <div className={styles.callButton2}>
+              <Image src="/img/whatss.png" alt="" width="500" height="500" />
             </div>
-            
-            <div className={styles.menumob}>
-      <div className={styles.item}>
-        <Link href="https://web.whatsapp.com/send?phone=5514996528505" passHref>
-        <div className={styles.callButton2}>
-          <Image src="/img/whatss.png" alt="" width="500" height="500" />
-        </div>
-        </Link>
-        <div className={styles.callButton}>
-          <Image src="/img/NMLogo.png" alt="" width="220" height="200" />
-        </div>
-        
-      </div>
-      <div className={styles.item}>
-            
-        <ul className={styles.list}>
-          <Link href="/produtos/[id].jsx" passHref >
-          <div className={styles.menus2}>Produtos</div>
           </Link>
+          <div className={styles.callButton}>
+            <Image src="/img/NMLogo.png" alt="" width="220" height="200" />
+          </div>
 
-          <Link href="/" passHref >
-          <div className={styles.menus3}>Home</div>
-          </Link>
-          
-          
-          
-          <Link href={pedidinho} passHref >
-            
-          <div className={styles.menus} >Pedido</div>    
-          </Link>
+        </div>
+        <div className={styles.item}>
 
-        </ul>
+          <ul className={styles.list}>
+            <Link href="/produtos/[id].jsx" passHref >
+              <div className={styles.menus2}>Produtos</div>
+            </Link>
+
+            <Link href="/" passHref >
+              <div className={styles.menus3}>Home</div>
+            </Link>
+
+
+
+            <Link href={pedidinho} passHref >
+
+              <div className={styles.menus} >Pedido</div>
+            </Link>
+
+          </ul>
+        </div>
+        {teste()}
       </div>
-      {teste()}
-      </div>
+
     </div>
-    )
-  }
-  
+  )
+}
+
 export default Navbar
