@@ -88,16 +88,13 @@ const checked = () => {
               </td>
               <td className={styles.name}>
                 <span className={styles.name}>{produto?.title} </span>
-                {produto.size == 1 && (
-  
-                  <span className={styles.name}> COM SALADA!</span>
-                )}
+                
               </td>
               <td>
                 <span className={styles.extras}>
                   <span></span>
                   {produto?.extras.map((extra) => 
-                    <span key={extra}>{extra} </span>
+                    <span key={extra}>Tamanho: {extra} </span>
                     )}
                   {produto?.refri && <></>}
                 </span>
@@ -113,7 +110,7 @@ const checked = () => {
               </td>
               <td className={styles.carttd}>
                 <span className={styles.price}>R${produto?.price}.00  </span>
-                <div className={styles.quantity}>QTD: {produto?.quantity}</div>
+                <div className={styles.quantity}>Quantidade: {produto?.quantity}</div>
               </td>
               <td className={styles.cartdt}>
                 <span className={styles.price}>R${produto?.price}.00</span>

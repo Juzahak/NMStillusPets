@@ -248,7 +248,8 @@ text-align: center;
     font-weight: 500;
   }
   .address3{
-    height: 10vw;
+    height: 4rem;
+    display: flex;
   }
   .row:last-child {
     width: 100%;

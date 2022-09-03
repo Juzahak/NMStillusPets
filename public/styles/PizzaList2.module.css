@@ -91,4 +91,7 @@
   .container{
     padding: 20px 0;
   }
+  .menu{
+    font-size: 0.9rem;
+  }
 }

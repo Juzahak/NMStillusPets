@@ -78,33 +78,33 @@
   
   @media screen and (max-width: 480px) {
     .container {
-        width: 45%;
-        flex-direction: column;
-        display: flex;
-        justify-content: center;
-        padding: 20px;
-        box-shadow: 0px 0px 7px black;
-        border-radius: 10px;
-        flex-wrap: wrap;
-        margin-left: 10px;
-        margin-right: 10px;
-        height: 419px;
-        min-width: auto; 
-         min-height: auto;
+      width: 10rem;
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      box-shadow: 0px 0px 7px black;
+      border-radius: 10px;
+      flex-wrap: wrap;
+      margin-left: 10px;
+      margin-right: 10px;
+      height: 419px;
+      min-width: auto;
+      min-height: auto;
+      align-items: center;
   }
 
 
 
     .imagefood{
-        width: 170px;
-        height: 240px;
+      width: 9rem;
+      height: 13rem;
       
     }
   
     .title {
       font-size: 20px;
       text-align: center;
-      width: 155px;
       font-family: 'Quicken';
     }
   
