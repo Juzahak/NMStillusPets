@@ -41,7 +41,7 @@ const Pratododia = ({ pizza, verdade }) => {
                 <Link href={`/product/${pizza._id}`} passHref>
                 <a>
                   <h2 className={styles.desc}>
-                    Venha conhecer nossa alfaiataria,
+                    Venha conhecer nosso Atelie,
                   </h2>
                   </a>
                   </Link>
