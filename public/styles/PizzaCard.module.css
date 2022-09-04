@@ -77,13 +77,14 @@
 
 @media screen and (max-width: 480px) {
   .container {
-    width: 45vw;
+    width: 46vw;
     min-width: auto;
     flex-direction: column;
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    margin-right: 12px;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
     box-shadow: 0px 0px 7px black;
     border-radius: 10px;
     align-content: flex-start;
@@ -104,12 +105,15 @@
 
   .price
    {
-    font-size: 20px;
+    font-size: 15px;
     width: 100px;
     text-align: center;
   }
 
   .desc{
     display: none;
+  }
+  .comprar{
+    font-size: 1rem;
   }
 }
