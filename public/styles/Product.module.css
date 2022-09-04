@@ -184,8 +184,8 @@ font-family: auto;
   }
 
   .imgContainer {
-    width: 70vw;
-    height: 70vw;
+    width: 75vw;
+    height: 50vh;
   }
 
   .title {
@@ -195,7 +195,7 @@ font-family: auto;
 
   .choose{
     font-size: 1.4rem;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
   .choose2{
     font-size: 1.4rem;
@@ -213,7 +213,8 @@ font-family: auto;
   }
   
   .desc{
-    font-size: 1.1rem;
+    text-align: start;
+    font-size: 1rem;
   
   }
 

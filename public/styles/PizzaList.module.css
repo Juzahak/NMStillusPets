@@ -66,12 +66,16 @@
     transition: all 1.5s ease-in-out;
 }
 .vertodos{
-  color: #00c0ff;
+  color: #005e7c;
   font-family: auto;
   font-weight: 700;
   text-shadow: 0px 0px 2px black;
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
+  border: 2px solid #00c0ff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: white;
 }
 
 
@@ -83,7 +87,7 @@
     padding: 0;
   }
   .wrapper2{
-    height: 80vw;
+    height: 45vh;
   }
 
   .desc {
@@ -94,11 +98,15 @@
     width: 5rem;
   }
   .vertodos{
-    color: #00c0ff;
+    color: #005e7c;
     font-family: auto;
     font-weight: 700;
     text-shadow: 0px 0px 2px black;
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
+    border: 2px solid #00c0ff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: white;
   }
 }
