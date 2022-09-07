@@ -67,9 +67,14 @@ const Navbar = () => {
 
       <div className={styles.menumob}>
         <div className={styles.item2}>
-          <Link href="https://web.whatsapp.com/send?phone=5514996528505" passHref>
+          <Link href="https://www.mercadolivre.com.br/" passHref>
+            <div className={styles.callButton3}>
+              <Image src="/img/mercadolivre.png" alt="" width="400" height="300" />
+            </div>
+          </Link>
+          <Link href="https://web.whatsapp.com/send?phone=5513991553318" passHref>
             <div className={styles.callButton2}>
-              <Image src="/img/whatss.png" alt="" width="500" height="500" />
+              <Image src="/img/whatss.png" alt="" width="100" height="100" />
             </div>
           </Link>
           <div className={styles.callButton}>

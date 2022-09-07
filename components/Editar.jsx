@@ -11,7 +11,7 @@ const Editar = ({ setClose2, pizzaId, products, extras, }) => {
   const [prices, setPrices] = useState();
   const [extra, setExtra] = useState([extras]);
   
-  const [extraOptions, setExtraOptions] = useState();
+  const [extraOptions, setExtraOptions] = useState([]);
   
   const [desc, setDesc] = useState();
   const [esto, setEsto] = useState();

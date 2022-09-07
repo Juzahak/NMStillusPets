@@ -15,6 +15,7 @@ const fetcher = (url) => fetch(url).then((res) => res.json())
 const Product = ({ productId }) => {
   const { data: pizza } = useSwr(`/api/products/${productId}`, fetcher)
 
+  const [close, setClose] = useState(true);
   const [price, setPrice] = useState(0);
   const [descri, setDescri] = useState("Loja");
   const [qtd, setQtd] = useState(1);
@@ -26,20 +27,19 @@ const Product = ({ productId }) => {
   useEffect(() => {
     if (!pizza) return;
     setPrice(pizza?.prices[0]);
-    setExtras([pizza?.extraOptions[0].text]);
   }, [pizza]);
 
   const changePrice = (number) => {
     setPrice(price + number);
   };
 
-
+  console.log(extras)
 
   const handleChange = (e, option) => {
     const checked = e.target.checked;
 
-    
-    if (pizza.refri == true && qtd <= 1 ) {
+
+    if (pizza.refri == true && qtd <= 1) {
       setQtd(qtd + 1)
       changePrice(option.price);
       setExtras(extras.filter(extras => extras !== 'P'));
@@ -92,8 +92,8 @@ const Product = ({ productId }) => {
 
 
   const handleClick = () => {
-    if (extras == "") {
-      alert('Escolha uma caixa');
+    if (qtd === 1) {
+      alert('Escolha um Tamanho');
       return
     }
     if (pizza.refri == false && qtd >= 1 && quantity <= pizza?.estoque) {
@@ -108,20 +108,88 @@ const Product = ({ productId }) => {
 
       return
     }
-    
+
     if (quantity > pizza?.estoque) {
       if (pizza?.estoque === 0) {
         alert('Produto sem estoque!');
-      }else{alert('Quantidade maior que estoque!');}
-      
+      } else { alert('Quantidade maior que estoque!'); }
+
     }
   }
 
-console.log(extras)
+  console.log(extras)
+
+  const teste = () => {
+
+    if (close === true) {
 
 
+      return (
+        <>
+          <div className={styles.imgContainer2} onClick={() => setClose(false)}>
+            <Image src={pizza.img2} alt="" layout="fill" objectFit="contain" className={styles.imgContainer3} />
+          </div>
+          <div className={styles.popup}>
+            <span className={styles.popupclose}>X</span>
+            <div className={styles.popupimg}>
+              <Image src={pizza.img2} alt="" width="1000px" height="1000px" />
+            </div>
+          </div>
+        </>
+      )
+    }
+    if (close === false) {
+      return (
+        <>
+          <div className={styles.imgContainer2} >
+            <Image src={pizza.img2} alt="" layout="fill" objectFit="contain" className={styles.imgContainer3} />
+          </div>
+          <div className={styles.popupshow}>
+            <span className={styles.popupclose} onClick={() => setClose(true)}>X</span>
+            <div className={styles.popupimg}>
+              <Image src={pizza.img2} alt="" width="1000px" height="1400px" />
+            </div>
+          </div>
+        </>
+      )
+    }
+  }
+
+  const teste2 = () => {
+
+    if (close === true) {
 
 
+      return (
+        <>
+          <div className={styles.imgContainer2 } onClick={() => setClose(false)}>
+            <Image src={pizza.img} alt="" layout="fill" objectFit="contain" className={styles.imgContainer3} />
+          </div>
+          <div className={styles.popup}>
+            <span className={styles.popupclose}>X</span>
+            <div className={styles.popupimg}>
+              <Image src={pizza.img} alt="" width="1000px" height="1000px" />
+            </div>
+          </div>
+        </>
+      )
+    }
+    if (close === false) {
+      return (
+        <>
+          <div className={styles.imgContainer2} >
+            <Image src={pizza.img} alt="" layout="fill" objectFit="contain" className={styles.imgContainer3} />
+          </div>
+          <div className={styles.popupshow}>
+            <span className={styles.popupclose} onClick={() => setClose(true)}>X</span>
+            <div className={styles.popupimg}>
+              <Image src={pizza.img} alt="" width="1000px" height="1400px" />
+            </div>
+          </div>
+        </>
+      )
+    }
+  }
 
   return (
     <div className={styles.container}>
@@ -133,24 +201,20 @@ console.log(extras)
 
             <div className={styles.wrapperr}>
               {trocaimgg === "l" ?
-              <>
-              <div className={styles.imgContainer2} >
-              <Image src={pizza.img} alt="" layout="fill" objectFit="contain" className={styles.imgContainer3}/>
-               </div>
-               
-               </>
-               :
-               <></>
-              }           
-                {trocaimgg === "r" ?
                 <>
-                <div className={styles.imgContainer2} >
-               <Image src={pizza.img2} alt="" layout="fill" objectFit="contain" className={styles.imgContainer3}/>
-               </div>
-               
+                  {teste2()}
+
                 </>
-               :
-               <></>
+                :
+                <></>
+              }
+              {trocaimgg === "r" ?
+                <>
+                  {teste()}
+
+                </>
+                :
+                <></>
               }
             </div>
 
@@ -185,20 +249,8 @@ console.log(extras)
                 <div className={styles.ingredients} name='form1'>
 
                   {pizza?.extraOptions.map((option) => (
-                    pizza?.extraOptions[0] ?
+
                     <div className={styles.option} key={option._id}>
-                      <input
-                        type="checkbox"
-                        checked={true}
-                        id={option.text}
-                        name={option.text}
-                        className={styles.checkbox}
-                        onChange={(e) => handleChange(e, option)}
-                      />
-                      <label htmlFor="double">{option.text}</label>
-                    </div>
-                      :
-                      <div className={styles.option} key={option._id}>
                       <input
                         type="checkbox"
                         id={option.text}
@@ -259,10 +311,15 @@ console.log(extras)
         )}
         <div className={styles.add}>
           <input onChange={(e) => setQuantity(e.target.value)} type="number" defaultValue={1} className={styles.quantity} />
-
-          <Link href="/" passHref >
-            <button className={styles.button} onClick={handleClick}>ADICIONAR</button>
-          </Link>
+          {pizza?.estoque === 0 ?
+            <Link href="https://web.whatsapp.com/send?phone=5513991553318" passHref >
+              <button className={styles.button} onClick={handleClick}>ENCOMENDAR</button>
+            </Link>
+            :
+            <Link href="/" passHref >
+              <button className={styles.button} onClick={handleClick}>ADICIONAR</button>
+            </Link>
+          }
 
         </div>
       </div>

@@ -69,9 +69,10 @@
   transition: all 1.5s ease-in-out ;
 }
 .wrapper2 {
+  width: 100vw;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     flex-direction: row;
     transition: all 1.5s ease-in-out;
@@ -95,4 +96,24 @@
   .menu{
     font-size: 0.9rem;
   }
+
+
+  .title {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .container{
+    padding: 0;
+  }
+  .wrapper2{
+    flex-wrap: wrap;
+    overflow: hidden;
+    width: 101vw;
+  }
+
+  .desc {
+    width: 90%;
+    text-align: center;
+  }
+  
 }

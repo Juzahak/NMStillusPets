@@ -1,63 +1,60 @@
-@font-face {
+
+  @font-face {
     font-family: 'Quicken';
     src: url('../fonts/Quicken.ttf');
   }
   
-  .container {
-    
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 40px;
-    cursor: pointer;
-    box-shadow: 0px 0px 5px black;
-    margin-left: px;
-  }
-  .comprar{
+  
+  .comprar {
     width: 100%;
-      height: 10%;
-      border: 1px solid black;
-      color: white;
-      display: flex;
-      cursor: pointer;
-      margin-top: 15px;
-      border-radius: 10px;
-      background: rgb(0 78 253 / 40%);
-      justify-content: center;
-      align-items: center;
-      font-size: 30px;
-      font-weight: bold;
-      font-family: 'Roboto';
+    height: 10%;
+    color: white;
+    display: flex;
+    cursor: pointer;
+    background: rgb(0 79 255);
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-family: 'Roboto';
+    margin-top: 10px;
   }
-  .comprar:hover{
+  
+  .comprar:hover {
     transition: 0.5s all ease;
     background: rgb(0 78 253 / 68%);
   }
+  
   .container {
     display: flex;
     flex-direction: column;
+    min-width: 225px;
+    min-height: 358px;
     align-items: center;
     justify-content: center;
-    padding: 20px 40px;
+    flex: none;
+    padding: 10px;
     cursor: pointer;
     box-shadow: 0px 0px 5px black;
-    margin-left: 20px;
-    margin-top: 20px;
-    border-radius: 10px;
-    height: 30rem;
-    width: 18rem;
-    min-width: 18rem;
-    min-height: 30rem;
-    background: #f0f8ff8f;
+    margin: 1.1vw;
+    height: 40vw;
+    width: 22.8vw;
+    background: #ffffff;
   }
   
-  .imagefood{
-    border-radius: 10px;
+  .arrumador {
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+  }
+  
+  .imagefood {
     overflow: hidden;
   }
-  
+  .imagefood:hover {
+    transition: 0.2s all ease;
+    transform: scale(1.05);
+  }
+ 
   .title {
     font-size: 26px;
     font-weight: bold;
@@ -66,7 +63,7 @@
   }
   
   .price {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     color: #282828;
   }
@@ -75,50 +72,52 @@
     text-align: center;
     color: #777;
   }
-  
+
+
+
   @media screen and (max-width: 480px) {
+    
+
+
     .container {
-      width: 10rem;
+      width: 46vw;
+      min-width: auto;
       flex-direction: column;
       display: flex;
-      justify-content: center;
-      padding: 10px;
+      justify-content: space-between;
+      padding: 0px;
+      margin: 2vw;
       box-shadow: 0px 0px 7px black;
-      border-radius: 10px;
-      flex-wrap: wrap;
-      margin-left: 10px;
-      margin-right: 10px;
-      height: 419px;
-      min-width: auto;
-      min-height: auto;
-      align-items: center;
-  }
-
-
-
-    .imagefood{
-      height: 13rem;
-      
+      align-content: flex-start;
+    }
+  
+    .imagefood {
+      width: 46vw;
+      height: 31vh;
+  
     }
   
     .title {
-      font-size: 20px;
-      text-align: center;
-      font-family: 'Quicken';
+      font-size: 4vw;
+
+      text-align: start;
+      width: 40vw;
+      margin: 0;
     }
   
-    .price
-     {
-      font-size: 20px;
-      width: 100px;
-      text-align: center;
+    .price {
+      font-size: 12px;
+      width: 40vw;
+      text-align: start;
     }
   
-    .desc{
+    .desc {
       display: none;
     }
-    .comprar{
-        font-size: 25px;
+  
+    .comprar {
+      font-size: 1rem;
+      margin: 0px;
     }
   }
   

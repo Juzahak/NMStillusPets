@@ -7,13 +7,15 @@ import {reset} from "../redux/cartSlice";
 import {removeProduct} from "../redux/cartSlice";
 import OrderDetail from "../components/OrderDetail";
 import axios from "axios";
-import Dropdown from "../components/Dropdown";
+import Dropdown2 from "../components/Dropdown2";
 
 
 const Cart = () => {
 
   const cart = useSelector((state) => state.cart);
   const [cash, setCash] = useState(false);
+  const [select, setSelect] = useState("");
+  const [price, setPrice] = useState(0);
   const [metodo, setMetodo] = useState(0);
   const dispatch = useDispatch();
   const router = useRouter();
@@ -138,23 +140,23 @@ const Cart = () => {
           <div className={styles.totalText}>
             <span className={styles.totalTextTitle}>SUBTOTAL:</span>R${cart.total}.00
           </div>
-          
+          <div className={styles.totalText}>
+            <Dropdown2 select={select} setSelect={setSelect} setPrice={setPrice} price={price}/>
+          </div>
           
           <div className={styles.totalText}>
-            <span className={styles.totalTextTitle}>TOTAL:</span>R${cart.total}.00
+            
+            <span className={styles.totalTextTitle}>ENTREGA:</span>R${price}.00
+           
           </div>
+          <div className={styles.totalText}>
+            <span className={styles.totalTextTitle}>TOTAL:</span>R${cart.total + price}.00
+          </div>
+          
           
             <div className={styles.paymentMethods}>
               <button className={styles.payButton} onClick={() => estaSel2()}>CARTÃO OU DINHEIRO</button>
-            <button className={styles.payButton2} onClick={() => estaSel()}>MERCADO LIVRE
-            <Image
-                  src="/img/mercadolivre.png"
-                  width="60px"
-                  height="40px"
-                  alt=""
-                  
-                />
-            </button>
+            
             </div>
            
         </div>

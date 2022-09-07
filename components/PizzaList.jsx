@@ -51,12 +51,12 @@ console.log(name);
 
       <div className={styles.container}>
         
-      {lista.map((listt) => (
+      {lista.slice(0, 3).map((listt) => (
         <div key={listt.list}>
         
           <h1 className={styles.title} key={listt._id}>{listt.list}</h1>
           
-        <div className={styles.wrapper2} style={{transform:`translateX(${-100*index}vw)`}}>
+        <div className={styles.wrapper2} >
           {pizzaList.map((pizza) => (
 
             pizza.refri == true && pizza.listName === listt.list ?
@@ -67,16 +67,12 @@ console.log(name);
         </div>
         <div className={styles.arrows}>
 
-        <div className={styles.arrowContainer} style={{ left: 0 }} onClick={()=>handleArrow("l")}>
-        <Image src="/img/arrowl.png" alt="" width="120px" height="120px"/>
-      </div>
+       
             
             <Link href="/produtos/[id].jsx" passHref >
               <div className={styles.vertodos}>VER TODOS</div>
             </Link>
-        <div className={styles.arrowContainer} style={{ right: 0 }} onClick={()=>handleArrow("r")}>
-        <Image src="/img/arrowr.png" width="120px" height="120px" alt=""/>
-      </div>
+        
         </div>
         </div>
       ))}

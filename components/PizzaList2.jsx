@@ -12,7 +12,7 @@ const PizzaList2 = ({ pizzaList, lista, verdade }) => {
   
   
   const [index, setIndex] = useState(0);
-  const [name, setName] = useState("Tamanho P");
+  const [name, setName] = useState("Estilizadas");
   
 
   const handleArrow = (direction) =>{
