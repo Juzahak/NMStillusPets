@@ -32,7 +32,7 @@ const PizzaCard = ({pizza}) => {
       }
       <div className={styles.price}>Tamanhos: 
       {pizza.extraOptions.map((tam) => 
-        <a className={styles.price}><span className={styles.price}>
+        <a className={styles.price} key={tam}><span className={styles.price}>
            -{tam.text}
           </span></a>
       )}
