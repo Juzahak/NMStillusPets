@@ -85,24 +85,29 @@ const Navbar = () => {
         <div className={styles.item}>
 
           <ul className={styles.list}>
-            <Link href="/produtos/[id].jsx" passHref >
-              <div className={styles.menus2}>Produtos</div>
-            </Link>
-
             <Link href="/" passHref >
               <div className={styles.menus3}>Home</div>
             </Link>
-
-
-
+            <Link href="/produtos/[id].jsx" passHref >
+              <div className={styles.menus2}>Produtos</div>
+            </Link>
             <Link href={pedidinho} passHref >
-
               <div className={styles.menus} >Pedido</div>
             </Link>
+            <Link href="#" passHref >
+              <div className={styles.menus} >Blog</div>
+            </Link>
+            <Link href="#" passHref >
+              <div className={styles.menus} >Sobre nós</div>
+            </Link>
+
+
+
+
 
           </ul>
-        </div>
         {teste()}
+        </div>
       </div>
 
     </div>

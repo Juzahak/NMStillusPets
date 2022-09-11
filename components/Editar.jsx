@@ -8,7 +8,7 @@ import { useEffect } from "react";
 const Editar = ({ setClose2, pizzaId, products, extras, }) => {
   const [pizzaList, setPizzaList] = useState(products);
   const [nomePrato, setNomePrato] = useState();
-  const [prices, setPrices] = useState();
+  const [prices, setPrices] = useState([]);
   const [extra, setExtra] = useState([extras]);
   
   const [extraOptions, setExtraOptions] = useState([]);

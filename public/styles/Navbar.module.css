@@ -3,82 +3,86 @@
   src: url('../fonts/Quicken.ttf');
 }
 
-@media print{
-    
-  
- 
-  .container{
+@media print {
+
+
+
+  .container {
     height: 0px;
     display: none;
-      visibility: hidden;
-      
+    visibility: hidden;
+
   }
 }
 
 .container {
   height: 150px;
   padding: 0px 50px;
-  background: linear-gradient(#9e9dbb, #6e707e);
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: sticky;
   top: 0;
   z-index: 999;
+  background: #6e707e;
 }
 
-.logotipomob{
+.logotipomob {
   display: none;
 }
 
-.menumob{
+.menumob {
   display: flex;
   width: 100%;
   height: 10vw;
 }
 
-.titulomob{
+.titulomob {
   display: none;
 }
 
-.menus{
+.menus {
   font-family: auto;
-  font-size: 2rem;
-  cursor: pointer;
-  color: #fff4f5;
-  text-shadow: 5px 4px 5px black;
-}
-.menus2{
-  font-family: auto;
-  font-size: 2rem;
-  cursor: pointer;
-  color: #fff4f5;
-  text-shadow: 5px 4px 5px black;
-}
-.menus3{
-  font-family: auto;
-  font-size: 3rem;
+  font-size: 25px;
   cursor: pointer;
   color: #fff4f5;
   text-shadow: 5px 4px 5px black;
 }
 
-.menus:hover{
-  transition: 0.5s all ease;
-  color: rgb(224, 227, 255);
+.menus2 {
+  font-family: auto;
+  font-size: 25px;
+  cursor: pointer;
+  color: #fff4f5;
+  text-shadow: 5px 4px 5px black;
 }
-.menus2:hover{
-  transition: 0.5s all ease;
-  color: rgb(224, 227, 255);
+
+.menus3 {
+  font-family: auto;
+  font-size: 25px;
+  cursor: pointer;
+  color: #fff4f5;
+  text-shadow: 5px 4px 5px black;
 }
-.menus3:hover{
+
+.menus:hover {
   transition: 0.5s all ease;
   color: rgb(224, 227, 255);
 }
 
-.logotipo{
+.menus2:hover {
+  transition: 0.5s all ease;
+  color: rgb(224, 227, 255);
+}
+
+.menus3:hover {
+  transition: 0.5s all ease;
+  color: rgb(224, 227, 255);
+}
+
+.logotipo {
   margin-left: 10px;
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .item {
@@ -86,37 +90,40 @@
   display: flex;
   align-items: center;
 }
+
 .item2 {
-  flex: 1;
   display: flex;
   align-items: center;
 }
 
-.callButton2{
+.callButton2 {
   position: fixed;
   width: 50px;
   height: 50px;
-    bottom: 40px;
-    right: 40px;
-    cursor: pointer;
-    border-radius: 10px;
+  bottom: 40px;
+  right: 40px;
+  cursor: pointer;
+  border-radius: 10px;
 }
-.callButton2:hover{
+
+.callButton2:hover {
   transition: 0.5s all ease;
   background: rgb(0 0 0 / 25%);
 }
-.callButton3{
+
+.callButton3 {
   position: fixed;
-    justify-content: center;
-    display: flex;
-    width: 50px;
-    height: 40px;
-    bottom: 110px;
-    right: 40px;
-    cursor: pointer;
-    border-radius: 10px;
+  justify-content: center;
+  display: flex;
+  width: 50px;
+  height: 40px;
+  bottom: 110px;
+  right: 40px;
+  cursor: pointer;
+  border-radius: 10px;
 }
-.callButton3:hover{
+
+.callButton3:hover {
   transition: 0.5s all ease;
   background: rgb(0 0 0 / 25%);
 }
@@ -124,6 +131,7 @@
 .item:last-child {
   justify-content: flex-end;
 }
+
 .item2:last-child {
   justify-content: flex-end;
 }
@@ -147,12 +155,12 @@
 
 .list {
   padding: 0;
-    width: 55vw;
-    display: flex;
-    align-items: center;
-    list-style: none;
-    color: white;
-    justify-content: space-evenly;
+  width: 55vw;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  color: white;
+  justify-content: space-evenly;
 }
 
 .listItem {
@@ -162,12 +170,12 @@
   font-family: "Aminetta";
 }
 
-.cart{
-    position: relative;
-    cursor: pointer;
+.cart {
+  position: relative;
+  cursor: pointer;
 }
 
-.counter{
+.counter {
   position: absolute;
   top: 3px;
   right: 3px;
@@ -183,36 +191,41 @@
   color: #d1411e;
 }
 
-.dropdown{
+.dropdown {
   display: none;
 }
 
 @media screen and (max-width:480px) {
- 
+
   .item:nth-child(2) {
     flex: 2 1;
     width: 100%;
     justify-content: space-between;
   }
 
-  .container{
+  .container {
     height: 95px;
     padding: 0px 30px;
     margin-bottom: 15px;
   }
-  .dropdown{
+
+  .dropdown {
     display: block;
   }
-  
-  .logotipo{
+
+  .logotipo {
     display: none;
   }
-  .texts{display: none;}
-  
-  .callButton{
+
+  .texts {
     display: none;
   }
-  .callButton2{
+
+  .callButton {
+    display: none;
+  }
+
+  .callButton2 {
     position: fixed;
     width: 3rem;
     height: 5rem;
@@ -221,14 +234,16 @@
     cursor: pointer;
     border-radius: 10px;
   }
-  .callButton3{
+
+  .callButton3 {
     position: fixed;
     bottom: 10vh;
     right: 24px;
     cursor: pointer;
     border-radius: 10px;
   }
-  .logotipomob{
+
+  .logotipomob {
     position: relative;
     display: block;
     width: 8rem;
@@ -236,33 +251,37 @@
     left: -1rem;
   }
 
-  .menumob{
+  .menumob {
     display: flex;
     width: 5vw;
   }
 
-  .list{
+  .list {
     justify-content: space-evenly;
     width: 100%;
     position: relative;
     top: 3rem;
   }
-  .menus{
+
+  .menus {
     font-size: 2rem;
     width: 30vw;
     text-align: center;
   }
-  .menus2{
-    font-size: 2rem;
-        width: 30vw;
-    text-align: center;
-  }
-  .menus3{
+
+  .menus2 {
     font-size: 2rem;
     width: 30vw;
     text-align: center;
   }
-  .item{
+
+  .menus3 {
+    font-size: 2rem;
+    width: 30vw;
+    text-align: center;
+  }
+
+  .item {
     display: none;
     height: 0vw;
     flex: none;
@@ -270,15 +289,17 @@
     right: 0vw;
     top: 15vw;
   }
-  .item2{
-  
+
+  .item2 {
+
     flex: none;
     position: absolute;
     right: 0vw;
- 
+
   }
- .cart{
-  right: 1.5rem;
-  bottom: 1rem;
- }
+
+  .cart {
+    right: 1.5rem;
+    bottom: 1rem;
+  }
 }

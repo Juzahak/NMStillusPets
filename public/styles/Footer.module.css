@@ -1,10 +1,11 @@
-@media print{
-  .container{
+@media print {
+  .container {
     visibility: hidden;
     height: 0px;
     display: none;
   }
-  .mapContainer{
+
+  .mapContainer {
     visibility: hidden;
     height: 0px;
     display: none;
@@ -13,16 +14,16 @@
 
 .container {
   height: calc(95vh - 100px);
-  background: linear-gradient(#9e9dbb, #6e707e);
-    display: flex;
+  background: #6e707e;
+  display: flex;
 }
 
-.mapContainer{
+.mapContainer {
   width: 50%;
-    height: 55%;
-    position: absolute;
-    bottom: 30px;
-    left: 70px;
+  height: 55%;
+  position: absolute;
+  bottom: 30px;
+  left: 70px;
 }
 
 .item {
@@ -44,7 +45,8 @@
 
 .title {
   font-size: 18px;
-  color: #efb63a;;
+  color: #efb63a;
+  ;
 }
 
 .text {
@@ -64,7 +66,7 @@
     text-align: center;
   }
 
-  .mapContainer{
+  .mapContainer {
     width: 90%;
     height: 330px;
     bottom: -20px;
@@ -74,9 +76,9 @@
     position: relative;
   }
 
-  .motto{
+  .motto {
     display: none;
-    
+
   }
 
   .item:first-child {
@@ -97,8 +99,9 @@
   .title {
     font-size: 30px;
     margin-top: 40px;
-  text-shadow: 1px 15px 15px grey;
-    color: #812121;  }
+    text-shadow: 1px 15px 15px grey;
+    color: #812121;
+  }
 
   .text {
     font-size: 20px;

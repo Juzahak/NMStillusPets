@@ -36,8 +36,8 @@
   width: 100vw;
   display: flex;
   justify-content: space-around;
-  margin-top: 3rem;
-  align-items: center;
+  margin: 3rem 0;
+    align-items: center;
 }
 
 .arrowContainer{
@@ -55,7 +55,7 @@
 }
 .wrapper2 {
   width: 100vw;
-    height: 34vw;
+    height: 35rem;
     position: relative;
     display: flex;
     align-items: center;
