@@ -215,6 +215,7 @@ const Add = ({ setClose, lista }) => {
         <div className={styles.item}>
           <label className={styles.label}>Descrição</label>
           <textarea
+            className={styles.texttt}
             rows={4}
             type="text"
             onChange={(e) => setDesc(e.target.value)}

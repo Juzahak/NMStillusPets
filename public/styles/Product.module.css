@@ -12,6 +12,7 @@
 
 .desc {
   font-size: 1.03rem;
+  white-space: pre-wrap;
 }
 
 .textarea {

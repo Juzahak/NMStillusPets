@@ -180,3 +180,7 @@
   border-color: lightgreen;
   transition: all 0.5S ease;
 }
+
+.texttt{
+  white-space: pre-wrap;
+}

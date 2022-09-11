@@ -20,7 +20,7 @@
 
 .wrapper {
   width: 300vw;
-  height: 120%;
+  height: 100%;
   display: flex;
   transition: all 1.5s ease-in-out ;
 }
