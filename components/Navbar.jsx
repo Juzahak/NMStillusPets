@@ -62,7 +62,7 @@ const Navbar = () => {
       </div>
       <div className={styles.logotipomob}>
 
-        <Image src="/img/NMLogo.png" alt="" width="150px" height="120px" />
+        <Image src="/img/NMLogo.png" alt="" width="500px" height="500px" />
       </div>
 
       <div className={styles.menumob}>

@@ -24,7 +24,7 @@
   position: sticky;
   top: 0;
   z-index: 999;
-  background: #6e707e;
+  background: #f6e4ff;
 }
 
 .logotipomob {
@@ -43,41 +43,39 @@
 
 .menus {
   font-family: auto;
-  font-size: 25px;
-  cursor: pointer;
-  color: #fff4f5;
-  text-shadow: 5px 4px 5px black;
+    font-size: 25px;
+    cursor: pointer;
+    color: #444444;
 }
+
 
 .menus2 {
   font-family: auto;
-  font-size: 25px;
-  cursor: pointer;
-  color: #fff4f5;
-  text-shadow: 5px 4px 5px black;
+    font-size: 25px;
+    cursor: pointer;
+    color: #444444;
 }
 
 .menus3 {
   font-family: auto;
-  font-size: 25px;
-  cursor: pointer;
-  color: #fff4f5;
-  text-shadow: 5px 4px 5px black;
+    font-size: 25px;
+    cursor: pointer;
+    color: #444444;
 }
 
 .menus:hover {
   transition: 0.5s all ease;
-  color: rgb(224, 227, 255);
+  color: rgb(0, 0, 0);
 }
 
 .menus2:hover {
   transition: 0.5s all ease;
-  color: rgb(224, 227, 255);
+  color: rgb(0, 0, 0);
 }
 
 .menus3:hover {
   transition: 0.5s all ease;
-  color: rgb(224, 227, 255);
+  color: rgb(0, 0, 0);
 }
 
 .logotipo {
@@ -121,6 +119,10 @@
   right: 40px;
   cursor: pointer;
   border-radius: 10px;
+}
+
+.callButton{
+  width: 90%;
 }
 
 .callButton3:hover {
