@@ -2,3 +2,16 @@
     background-image: url("../img/vetorialdog.png");
 
 }
+.btnsaiba{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    background: pink;
+    height: 3rem;
+    color: #303030;
+    border-radius: 5px;
+    font-weight: 900;
+    width: 100%;
+    cursor: pointer;
+}

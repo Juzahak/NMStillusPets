@@ -6,6 +6,7 @@ import axios from 'axios'
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const PizzaList = ({ pizzaList, lista, verdade }) => {
 
@@ -51,7 +52,7 @@ console.log(name);
 
       <div className={styles.container}>
         
-      {lista.slice(0, 3).map((listt) => (
+      {lista.slice(0, 2).map((listt) => (
         <div key={listt.list}>
         
           <h1 className={styles.title} key={listt._id}>{listt.list}</h1>

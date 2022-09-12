@@ -163,6 +163,7 @@
   list-style: none;
   color: white;
   justify-content: space-evenly;
+  margin: 0;
 }
 
 .listItem {
