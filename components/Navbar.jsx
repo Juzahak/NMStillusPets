@@ -95,6 +95,9 @@ const Navbar = () => {
               <div className={styles.menus} >Pedido</div>
             </Link>
             <Link href="#" passHref >
+              <div className={styles.menus} >Como Medir</div>
+            </Link>
+            <Link href="#" passHref >
               <div className={styles.menus} >Blog</div>
             </Link>
             <Link href="#" passHref >

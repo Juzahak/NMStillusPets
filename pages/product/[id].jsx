@@ -224,10 +224,10 @@ const Product = ({ productId }) => {
         </div>
         <div className={styles.left2}>
           <div className={styles.arrowContainer} style={{ left: 0 }} onClick={() => setTrocaimg("l")}>
-            <Image src="/img/arrowl.png" alt="" width="120px" height="120px" />
+            <Image src="/img/arrowl.png" alt="" width="50px" height="50px" />
           </div>
           <div className={styles.arrowContainer} style={{ right: 0 }} onClick={() => setTrocaimg("r")}>
-            <Image src="/img/arrowr.png" width="120px" height="120px" alt="" />
+            <Image src="/img/arrowr.png" width="50px" height="50px" alt="" />
           </div>
         </div>
       </div>

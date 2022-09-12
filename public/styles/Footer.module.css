@@ -14,7 +14,7 @@
 
 .container {
   height: calc(95vh - 100px);
-  background: #6e707e;
+  background: #f6e4ff;
   display: flex;
 }
 
@@ -45,8 +45,7 @@
 
 .title {
   font-size: 18px;
-  color: #efb63a;
-  ;
+  color: #e43aef;  
 }
 
 .text {
@@ -56,7 +55,6 @@
 }
 
 .motto {
-  color: #FFFFFF;
   font-size: 1.2rem;
 }
 

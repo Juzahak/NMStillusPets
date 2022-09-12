@@ -70,14 +70,14 @@ console.log(name);
 
        
             
-            <Link href="/produtos/[id].jsx" passHref >
-              <div className={styles.vertodos}>VER TODOS</div>
-            </Link>
         
         </div>
         </div>
       ))}
       
+            <Link href="/produtos/[id].jsx" passHref >
+              <div className={styles.vertodos}>VER TODOS</div>
+            </Link>
       </div>
     </div>
   );

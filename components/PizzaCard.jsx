@@ -19,21 +19,21 @@ const PizzaCard = ({pizza}) => {
       <div className={styles.arrumador}>
         {pizza.title.length > 17 ?
       <Link href={`/product/${pizza._id}`} passHref>
-      <a>
+      <a className="text-decoration-none">
       <h1 className={styles.title}>{pizza.title.slice(0, 17)}...</h1>
       </a>
       </Link>
       :
       <Link href={`/product/${pizza._id}`} passHref>
-      <a>
+      <a className="text-decoration-none">
       <h1 className={styles.title}>{pizza.title}</h1>
       </a>
       </Link>
       }
-      <div className={styles.price}>Tamanhos: 
+      <div className={styles.price}>Tamanhos 
       {pizza.extraOptions.map((tam) => 
         <a className={styles.price} key={tam}><span className={styles.price}>
-           -{tam.text}
+           / {tam.text} 
           </span></a>
       )}
       </div>

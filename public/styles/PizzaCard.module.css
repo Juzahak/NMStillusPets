@@ -11,7 +11,7 @@
   display: flex;
   cursor: pointer;
   margin-top: 15px;
-  background: rgb(0 79 255);
+  background: rgb(232 103 255);
   justify-content: center;
   align-items: center;
   font-size: 22px;
@@ -20,7 +20,7 @@
 
 .comprar:hover {
   transition: 0.5s all ease;
-  background: rgb(0 78 253 / 68%);
+  background: rgb(227 116 255 / 68%);
 }
 
 .container {
@@ -62,6 +62,7 @@
   font-size: 18px;
   font-weight: bold;
   color: #282828;
+  text-decoration: none;
 }
 
 .desc {

@@ -23,7 +23,10 @@
     margin-bottom: 25px;
     border-radius: 10px;
   }
-
+  .titleadd{
+    text-decoration: none;
+    height: 3rem;
+  }
   .titext{
     display: flex;
     margin-top: 15px;
