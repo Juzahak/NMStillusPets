@@ -71,7 +71,6 @@ export default function Home({ admin }) {
           </div>
         </div>
       </div>
-      </div>
     );
   } else {
     return (
