@@ -18,13 +18,13 @@ const PizzaCard = ({pizza}) => {
       <div className={styles.arrumador}>
         {pizza.title.length > 17 ?
       <Link href={`/product/${pizza._id}`} passHref>
-      <a>
+      <a className="text-decoration-none">
       <h1 className={styles.title}>{pizza.title.slice(0, 17)}...</h1>
       </a>
       </Link>
       :
       <Link href={`/product/${pizza._id}`} passHref>
-      <a>
+      <a className="text-decoration-none">
       <h1 className={styles.title}>{pizza.title}</h1>
       </a>
       </Link>
@@ -49,6 +49,7 @@ const PizzaCard = ({pizza}) => {
       <div className={styles.comprar}>Adicionar</div>
       </Link>
     </div>
+    
   );
 };
 

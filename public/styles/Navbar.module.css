@@ -43,24 +43,24 @@
 
 .menus {
   font-family: auto;
-    font-size: 25px;
+    font-size: 1.2rem;
     cursor: pointer;
-    color: #444444;
+    color:  #39005c;;
 }
 
 
 .menus2 {
   font-family: auto;
-    font-size: 25px;
+    font-size: 1.2rem;
     cursor: pointer;
-    color: #444444;
+    color:  #39005c;;
 }
 
 .menus3 {
   font-family: auto;
-    font-size: 25px;
+    font-size: 1.2rem;
     cursor: pointer;
-    color: #444444;
+    color:  #39005c;;
 }
 
 .menus:hover {
@@ -249,7 +249,7 @@
   .logotipomob {
     position: relative;
     display: block;
-    width: 8rem;
+    width: 6rem;
     margin: 0 auto;
     left: -1rem;
   }
@@ -264,6 +264,7 @@
     width: 100%;
     position: relative;
     top: 3rem;
+    display: none;
   }
 
   .menus {
@@ -285,7 +286,6 @@
   }
 
   .item {
-    display: none;
     height: 0vw;
     flex: none;
     position: absolute;
@@ -303,6 +303,6 @@
 
   .cart {
     right: 1.5rem;
-    bottom: 1rem;
+    bottom: 2.6rem;
   }
 }

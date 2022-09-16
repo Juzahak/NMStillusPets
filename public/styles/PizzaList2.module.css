@@ -22,11 +22,11 @@
   
 }
 .menu{
-  background: black;
-  color: white;
+  background: pink;
+  color: black;
   font-size: 18px;
   font-weight: bold;
-  width: 150px;
+  width: 240px;
   height: 50px;
   display: flex;
   justify-content: center;
@@ -40,6 +40,8 @@
   font-family: system-ui;
   font-size: 45px;
   text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .desc {
@@ -69,7 +71,7 @@
   transition: all 1.5s ease-in-out ;
 }
 .wrapper2 {
-  width: 100vw;
+  width: 98vw;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -84,6 +86,7 @@
 @media screen and (max-width: 480px) {
   .title {
     text-align: center;
+    font-size: 30px;
   }
 
   .desc {
@@ -95,12 +98,17 @@
   }
   .menu{
     font-size: 0.9rem;
+    width: 290px;
   }
-
+  .menus{
+    align-items: center;
+    flex-direction: column;
+  }
 
   .title {
     text-align: center;
     margin-bottom: 2rem;
+    margin-top: 2rem;
   }
   .container{
     padding: 0;

@@ -4,7 +4,7 @@
 }
 
 .container {
-  height: calc(100vh - -50px);
+  height: calc(100vh + 150px);
   display: flex;
   background-image: url("../img/vetorialdog.png");
 

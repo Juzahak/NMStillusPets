@@ -65,12 +65,12 @@ const Cart = () => {
           <tbody>
             
           <tr className={styles.trTitle}>
-            <th>FOTO</th>
-            <th>PRODUTO</th>
-            <th>TAMANHO</th>
-            <th>DESCRIÇÃO</th>
-            <th>PRECO</th>
-            <th>TOTAL</th>
+            <th className="text-center">FOTO</th>
+            <th className="text-center">PRODUTO</th>
+            <th className="text-center">TAMANHO</th>
+            <th className="text-center">DESCRIÇÃO</th>
+            <th className="text-center">PRECO</th>
+            <th className="text-center">TOTAL</th>
            
             
           </tr>

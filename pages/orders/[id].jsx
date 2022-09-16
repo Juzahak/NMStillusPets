@@ -168,7 +168,7 @@ const checked = () => {
           </div>
           <div className={statusClass(2)}>
             <Image src="/img/transporte.png" width={30} height={30} alt="" />
-            <span>A caminho</span>
+            <span className={styles.center}>A caminho</span>
             <div className={styles.checkedIcon}>
               <Image
                 className={styles.checkedIcon}
@@ -216,9 +216,7 @@ const checked = () => {
           <div className={styles.totalText}>
             <b className={styles.totalTextTitle}>MSG:</b> Seu pedido foi recebido, em breve entraremos em contato!
           </div>
-          <div className={styles.totalText}>
-            Caso tenha escolhido o metodo mercado livre, entraremos em contato para realização do pedido!
-          </div>
+          
           <button disabled className={styles.button}>
             PEDIDO RECEBIDO!
           </button>

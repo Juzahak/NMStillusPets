@@ -109,7 +109,10 @@ const Navbar = () => {
 
 
           </ul>
+          <div>
         {teste()}
+
+          </div>
         </div>
       </div>
 

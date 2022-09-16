@@ -1,123 +1,113 @@
+@font-face {
+  font-family: 'Quicken';
+  src: url('../fonts/Quicken.ttf');
+}
 
-  @font-face {
-    font-family: 'Quicken';
-    src: url('../fonts/Quicken.ttf');
-  }
-  
-  
-  .comprar {
-    width: 100%;
-    height: 10%;
-    color: white;
-    display: flex;
-    cursor: pointer;
-    background: rgb(0 79 255);
-    justify-content: center;
-    align-items: center;
-    font-size: 22px;
-    font-family: 'Roboto';
-    margin-top: 10px;
-  }
-  
-  .comprar:hover {
-    transition: 0.5s all ease;
-    background: rgb(0 78 253 / 68%);
-  }
-  
+
+.comprar {
+  width: 100%;
+  height: 10%;
+  color: white;
+  display: flex;
+  cursor: pointer;
+  margin-top: 15px;
+  background: rgb(232 103 255);
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-family: 'Roboto';
+}
+
+.comprar:hover {
+  transition: 0.5s all ease;
+  background: rgb(227 116 255 / 68%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-width: 225px;
+  min-height: 358px;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px black;
+  margin-left: 15px;
+  height: 40vw;
+  width: 22.8vw;
+  background: #ffffff;
+  flex: 0 0 auto;
+    width: 16.66666667%; 
+    justify-content: space-between;
+}
+
+.arrumador {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.imagefood {
+  overflow: hidden;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #000000;
+  font-family: fangsong;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #282828;
+  text-decoration: none;
+}
+
+.desc {
+  text-align: center;
+  color: #777;
+}
+
+@media screen and (max-width: 480px) {
   .container {
-    display: flex;
+    width: 46vw;
+    min-width: auto;
     flex-direction: column;
-    min-width: 225px;
-    min-height: 358px;
-    align-items: center;
-    justify-content: center;
-    flex: none;
-    padding: 10px;
-    cursor: pointer;
-    box-shadow: 0px 0px 5px black;
-    margin: 1.1vw;
-    height: 40vw;
-    width: 22.8vw;
-    background: #ffffff;
-  }
-  
-  .arrumador {
     display: flex;
-    flex-direction: column;
-    width: 98%;
+    justify-content: space-between;
+    padding: 0px;
+    margin: 0.5rem;
+    box-shadow: 0px 0px 7px black;
+    align-content: flex-start;
   }
-  
+
   .imagefood {
-    overflow: hidden;
+    width: 46vw;
+    height: 31vh;
+
   }
-  .imagefood:hover {
-    transition: 0.2s all ease;
-    transform: scale(1.05);
-  }
- 
+
   .title {
-    font-size: 26px;
-    font-weight: bold;
-    color: #000000;
-    font-family: fangsong;
+    font-size: 1.1rem;
+    text-align: start;
+    width: 40vw;
+    margin: 0;
   }
-  
+
   .price {
-    font-size: 18px;
-    font-weight: bold;
-    color: #282828;
+    font-size: 12px;
+    width: 40vw;
+    text-align: start;
   }
-  
+
   .desc {
-    text-align: center;
-    color: #777;
+    display: none;
   }
 
-
-
-  @media screen and (max-width: 480px) {
-    
-
-
-    .container {
-      width: 46vw;
-      min-width: auto;
-      flex-direction: column;
-      display: flex;
-      justify-content: space-between;
-      padding: 0px;
-      margin: 2vw;
-      box-shadow: 0px 0px 7px black;
-      align-content: flex-start;
-    }
-  
-    .imagefood {
-      width: 46vw;
-      height: 31vh;
-  
-    }
-  
-    .title {
-      font-size: 4vw;
-
-      text-align: start;
-      width: 40vw;
-      margin: 0;
-    }
-  
-    .price {
-      font-size: 12px;
-      width: 40vw;
-      text-align: start;
-    }
-  
-    .desc {
-      display: none;
-    }
-  
-    .comprar {
-      font-size: 1rem;
-      margin: 0px;
-    }
+  .comprar {
+    font-size: 1rem;
   }
-  
+}

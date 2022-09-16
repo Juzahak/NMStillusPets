@@ -9,9 +9,7 @@ const Pratododia = ({ pizza, verdade }) => {
 
   return (
     <div className={styles.container}>
-      {!verdade &&
-      <h1 className={styles.titulomob}>Sejam Bem Vindos ao nosso Atelie!</h1>
-      }
+     
       <div className={styles.imgg}>
         <Link href={`/product/${pizza._id}`} passHref>
           <a>

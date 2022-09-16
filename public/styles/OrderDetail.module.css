@@ -14,9 +14,9 @@
 }
 
 .spancents{
-  font-size: 20px;
-    padding: 5px 50px 6px 5px;
-    border: 1px solid black;
+  font-size: 12px;
+  padding: 2px 50px 2px 5px;
+  border: 1px solid black;
 }
 
 .close {
@@ -30,7 +30,7 @@
     cursor: pointer;
     position: relative;
     bottom: 40px;
-    right: 40px;
+    right: 90px;
     font-size: 30px;
     justify-content: center;
 }
@@ -62,14 +62,12 @@
 }
 
 .input {
-  height: 40px;
-
-  font-size: 20px;
+  height: 25px;
+  font-size: 12px;
 }
 .input2 {
-  height: 40px;
-
-  font-size: 20px;
+  height: 25px;
+  font-size: 12px;
 }
 .troquinho{
   display: flex;
@@ -113,8 +111,7 @@
     width: 20%;
   }
   .close{
-    
-    top: 0.1rem;
+    right: 45px;
 
   }
   .input2 {
