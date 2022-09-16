@@ -101,7 +101,7 @@ export default function Home({ admin }) {
           </div>
         </div>
         <div className="container bg-white mb-5">
-          <div className="col-12 d-flex flex-row-reverse">
+          <div className="col-12 d-flex flex-column">
             <div className="col-12 col-lg-6 text-center">
               <Image src="/img/vantagens.jpg" alt="" width="500" height="400" />
             </div>
