@@ -97,7 +97,7 @@ export default function Home({ admin }) {
         <Featured />
 
         <PizzaList pizzaList={pizzaList || []} lista={lista || []} />
-        <div className="container bg-white pt-5">
+        <div className="container bg-white pt-5 mb-5">
           <div className="col-12 d-flex flex-column">
             <div className="col-12 col-lg-12 text-center">
               <Image src="/img/comomedir.jpg" alt="" width="500" height="500" />
@@ -113,7 +113,7 @@ export default function Home({ admin }) {
             </div>
           </div>
         </div>
-        <div className="container bg-white mb-5">
+        <div className="container bg-white mb-5 mt-3">
           <div className="col-12 d-flex flex-column">
             <div className="col-12 col-lg-12 text-center">
               <Image src="/img/vantagens.jpg" alt="" width="500" height="400" />
