@@ -199,7 +199,9 @@ const Product = ({ productId }) => {
         <div className="container clearfix dark">
           <h1 className="text-white">Produto</h1>
           <ol className="breadcrumb">
-            <li className="breadcrumb-item"><a className="text-white text-decoration-none" href="/">Home</a></li>
+            <Link href="/" passHref >
+              <li className="breadcrumb-item text-white text-decoration-none">Home</li>
+            </Link>
             <li className="breadcrumb-item active" aria-current="page">Produto</li>
           </ol>
         </div>
