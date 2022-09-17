@@ -55,7 +55,11 @@ export default function Home({ admin }) {
               <h2>Como medir seu pet?</h2>
               <p className="p-3">Escolher a roupa no tamanho correto é um fator importante para o conforto do animal. Tire as medidas antes de comprar para achar o look perfeito para seu pet! Depois encontre o tamanho ideal, através das medidas, nas tabelas dos tamanhos, de acordo com cada modelo.</p>
               <div className="col-6 d-flex ">
-              <div className={styles.btnsaiba}><a className={styles.corcerta} href="/comoMedir/[id].jsx">Saiba Mais</a></div>
+                <Link href="/comoMedir/[id].jsx" passHref >
+                  <div className={styles.btnsaiba}>
+                    <spam className={styles.corcerta}>Saiba Mais</spam>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -69,7 +73,11 @@ export default function Home({ admin }) {
               <h2>Vista seu pet</h2>
               <p className="p-3">Se você é o tipo de tutor que gosta de colocar roupas no seu pet, possivelmente já deve ter ouvido de alguém que se trata de frescura. Do mesmo modo, se você é um tutor que nunca recorre a esses acessórios, é bem possível que também já tenha ouvido que o pet pode estar com frio e que o melhor seria colocar nele um agasalho, não é mesmo?</p>
               <div className="col-6 d-flex ">
-              <div className={styles.btnsaiba}><a className={styles.corcerta} href="/blog/[id].jsx">Visite nosso Blog</a></div>
+                <Link href="/blog/[id].jsx" passHref >
+                  <div className={styles.btnsaiba}>
+                    <spam className={styles.corcerta}>Visite nosso Blog</spam>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -96,7 +104,11 @@ export default function Home({ admin }) {
             <div className="col-12 col-lg-12 align-items-center d-flex text-center flex-column justify-content-center">
               <h2>Como medir seu pet?</h2>
               <p className="p-3">Escolher a roupa no tamanho correto é um fator importante para o conforto do animal. Tire as medidas antes de comprar para achar o look perfeito para seu pet! Depois encontre o tamanho ideal, através das medidas, nas tabelas dos tamanhos, de acordo com cada modelo.</p>
-              <div className={styles.btnsaiba}><a>Saiba Mais</a></div>
+              <Link href="/comoMedir/[id].jsx" passHref >
+                <div className={styles.btnsaiba}>
+                  <spam className={styles.corcerta}>Saiba Mais</spam>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -108,7 +120,11 @@ export default function Home({ admin }) {
             <div className="col-12 col-lg-12 align-items-center d-flex text-center flex-column justify-content-center">
               <h2>Vista seu pet</h2>
               <p className="p-3">Se você é o tipo de tutor que gosta de colocar roupas no seu pet, possivelmente já deve ter ouvido de alguém que se trata de frescura. Do mesmo modo, se você é um tutor que nunca recorre a esses acessórios, é bem possível que também já tenha ouvido que o pet pode estar com frio e que o melhor seria colocar nele um agasalho, não é mesmo?</p>
-              <div className={styles.btnsaiba}><a>Visite nosso Blog</a></div>
+              <Link href="/blog/[id].jsx" passHref >
+                <div className={styles.btnsaiba}>
+                  <spam className={styles.corcerta}>Visite nosso Blog</spam>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
