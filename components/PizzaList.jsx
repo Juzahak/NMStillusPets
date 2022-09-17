@@ -53,7 +53,7 @@ console.log(name);
       <div className={styles.container}>
         
       {lista.slice(0, 2).map((listt) => (
-        <div key={listt.list}>
+        <div key={listt._id}>
         
           <h1 className={styles.title} key={listt._id}>{listt.list}</h1>
           
