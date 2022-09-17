@@ -234,7 +234,7 @@
   width: 45vw;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 650px) {
   .container {
     height: auto;
     text-align: center;
@@ -244,6 +244,13 @@
 
   .popupimg {
     width: 95vw;
+  }
+
+  .left2{
+    display: flex;
+    width: 100%;
+    position: absolute;
+    justify-content: space-between;
   }
 
   .imgContainer {
