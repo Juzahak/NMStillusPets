@@ -60,7 +60,7 @@ console.log(lista[0]);
         
       {lista.map((listt) => (
         name === listt.list ?
-        <div key={listt._id}>
+        <div key={listt._id} className="col-12">
           <h1 className={styles.title}>{listt.list}</h1>
           
         <div className={styles.wrapper2}>

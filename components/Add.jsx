@@ -221,35 +221,24 @@ const Add = ({ setClose, lista }) => {
             onChange={(e) => setDesc(e.target.value)}
           />
         </div>
-            <div>
-        <div className={styles.item}>
-          <label className={styles.label}>Valor</label>
-          <div className={styles.priceContainer}>
-            <input
-              className={`${styles.input} ${styles.inputSm}`}
-              type="number"
-              placeholder="Valor do ITEM"
-              onChange={(e) => changePrice(e, 0)}
-            />
-            
-            
-
+        <div>
+          <div className={styles.item}>
+            <label className={styles.label}>Valor</label>
+            <div className={styles.priceContainer}>
+              <input
+                className={`${styles.input} ${styles.inputSm}`}
+                type="number"
+                placeholder="Valor do ITEM"
+                onChange={(e) => changePrice(e, 0)}
+              />
+              <input
+                className={`${styles.input} ${styles.inputSm}`}
+                type="number"
+                placeholder="Quantidade"
+                onChange={(e) => setEstoque(e.target.value)}
+              />
+            </div>
           </div>
-          
-        </div>
-        <div className={styles.item}>
-          <label className={styles.label}>Estoque</label>
-          <div className={styles.priceContainer}>
-            <input
-              className={`${styles.input} ${styles.inputSm}`}
-              type="number"
-              placeholder="Quantidade"
-              onChange={(e) => setEstoque(e.target.value)}
-            />
-
-
-          </div>
-        </div>
         </div>
 
 

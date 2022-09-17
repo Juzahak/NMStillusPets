@@ -13,10 +13,24 @@ function Dropdown({ select, setSelect, price, setPrice, pedidinho }) {
         {
             bairro: 'Produtos',
             destino: '/produtos/[id].jsx',
-        }, {
+        }, 
+        {
             bairro: 'Pedido',
             destino: `${pedidinho}`,
-        }];
+        },
+        {
+            bairro: 'Como Medir',
+            destino: `/comoMedir/[id].jsx`,
+        },
+        {
+            bairro: 'Blog',
+            destino: `/blog/[id].jsx`,
+        },
+        {
+            bairro: 'Sobre Nós',
+            destino: `/sobreNos/[id].jsx`,
+        }
+    ];
     const frete = [8, 5, 7];
     
     return (
@@ -32,7 +46,7 @@ function Dropdown({ select, setSelect, price, setPrice, pedidinho }) {
                     {opcoes.map((opt) => 
                         <span key={opt.bairro}>
                         <div  className={styles.dropsItem}>
-                           <a href={opt.destino}> {opt.bairro}</a>
+                           <a href={opt.destino} className={styles.text}> {opt.bairro}</a>
                             
                         </div>
                         </span>

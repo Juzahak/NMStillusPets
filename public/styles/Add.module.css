@@ -64,6 +64,13 @@
     height: 25px;
   }
 
+  .buttonn{
+    padding: 0;
+    height: 20px;
+    width: 20px;
+    margin: 0;
+    font-size: 13px;
+  }
 .container {
   width: 100vw;
   height: 100vh;
@@ -123,7 +130,7 @@
 
 .priceContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .inputSm {

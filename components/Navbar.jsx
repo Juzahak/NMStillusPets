@@ -34,7 +34,7 @@ const Navbar = () => {
       return (<Link href="/cart" passHref>
         <div className={styles.item2}>
           <div className={styles.cart}>
-            <Image src="/img/carticon1.png" alt="" width="70px" height="70px" />
+            <Image src="/img/carticon1.png" alt="" width="60px" height="60px" />
             <div className={styles.counter}>{quantity}</div>
           </div>
         </div>
@@ -45,7 +45,7 @@ const Navbar = () => {
       return (<Link href="/cart" passHref>
         <div className={styles.item2}>
           <div className={styles.cart}>
-            <Image src="/img/carticon2.png" alt="" width="70px" height="70px" />
+            <Image src="/img/carticon2.png" alt="" width="60px" height="60px" />
             <div className={styles.counter}>{quantity}</div>
           </div>
         </div>
@@ -94,13 +94,13 @@ const Navbar = () => {
             <Link href={pedidinho} passHref >
               <div className={styles.menus} >Pedido</div>
             </Link>
-            <Link href="#" passHref >
+            <Link href="/comoMedir/[id].jsx" passHref >
               <div className={styles.menus} >Como Medir</div>
             </Link>
-            <Link href="#" passHref >
+            <Link href="/blog/[id].jsx" passHref >
               <div className={styles.menus} >Blog</div>
             </Link>
-            <Link href="#" passHref >
+            <Link href="/sobreNos/[id].jsx" passHref >
               <div className={styles.menus} >Sobre nós</div>
             </Link>
 

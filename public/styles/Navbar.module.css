@@ -198,7 +198,7 @@
   display: none;
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:650px) {
 
   .item:nth-child(2) {
     flex: 2 1;
@@ -302,7 +302,7 @@
   }
 
   .cart {
-    right: 1.5rem;
-    bottom: 2.6rem;
+    right: 20px;
+    bottom: 10vw;
   }
 }

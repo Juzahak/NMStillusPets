@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 import { addProduct } from '../../redux/cartSlice';
 import Link from "next/link";
 import useSwr from 'swr'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
@@ -162,7 +163,7 @@ const Product = ({ productId }) => {
 
       return (
         <>
-          <div className={styles.imgContainer2 } onClick={() => setClose(false)}>
+          <div className={styles.imgContainer2} onClick={() => setClose(false)}>
             <Image src={pizza.img} alt="" layout="fill" objectFit="contain" className={styles.imgContainer3} />
           </div>
           <div className={styles.popup}>
@@ -192,138 +193,151 @@ const Product = ({ productId }) => {
   }
 
   return (
-    <div className={styles.container}>
-      <div className={styles.left}>
-        <div className={styles.imgContainer}>
+    <>
+      <section id="page-title" className={styles.estilo}>
 
-          {pizza &&
-
-
-            <div className={styles.wrapperr}>
-              {trocaimgg === "l" ?
-                <>
-                  {teste2()}
-
-                </>
-                :
-                <></>
-              }
-              {trocaimgg === "r" ?
-                <>
-                  {teste()}
-
-                </>
-                :
-                <></>
-              }
-            </div>
-
-
-          }
-
+        <div className="container clearfix dark">
+          <h1 className="text-white">Produto</h1>
+          <ol className="breadcrumb">
+            <li className="breadcrumb-item"><a className="text-white text-decoration-none" href="/">Home</a></li>
+            <li className="breadcrumb-item active" aria-current="page">Produto</li>
+          </ol>
         </div>
-        <div className={styles.left2}>
-          <div className={styles.arrowContainer} style={{ left: 0 }} onClick={() => setTrocaimg("l")}>
-            <Image src="/img/arrowl.png" alt="" width="50px" height="50px" />
+
+      </section>
+      <div className={styles.container}>
+        <div className={styles.left}>
+          <div className={styles.imgContainer}>
+
+            {pizza &&
+
+
+              <div className={styles.wrapperr}>
+                {trocaimgg === "l" ?
+                  <>
+                    {teste2()}
+
+                  </>
+                  :
+                  <></>
+                }
+                {trocaimgg === "r" ?
+                  <>
+                    {teste()}
+
+                  </>
+                  :
+                  <></>
+                }
+              </div>
+
+
+            }
+
           </div>
-          <div className={styles.arrowContainer} style={{ right: 0 }} onClick={() => setTrocaimg("r")}>
-            <Image src="/img/arrowr.png" width="50px" height="50px" alt="" />
+          <div className={styles.left2}>
+            <div className={styles.arrowContainer} style={{ left: 0 }} onClick={() => setTrocaimg("l")}>
+              <Image src="/img/arrowl.png" alt="" width="50px" height="50px" />
+            </div>
+            <div className={styles.arrowContainer} style={{ right: 0 }} onClick={() => setTrocaimg("r")}>
+              <Image src="/img/arrowr.png" width="50px" height="50px" alt="" />
+            </div>
+          </div>
+        </div>
+        <div className={styles.right}>
+          <h1 className={styles.title}>{pizza?.title}</h1>
+          <span className={styles.price}>R$ {price}.00</span>
+          {pizza?.refri && (
+            <>
+              <span className={styles.price}> ---- </span>
+              <span className={styles.price}>Estoque: {pizza?.estoque}</span>
+            </>
+          )}
+          <p className={styles.desc}>{pizza?.desc}</p>
+          {pizza?.refri && (
+            <>
+              <div className={styles.position}>
+                <div className={styles.margem}>
+                  <h3 className={styles.choose}>Adicione</h3>
+                  <div className={styles.ingredients} name='form1'>
+
+                    {pizza?.extraOptions.map((option) => (
+
+                      <div className={styles.option} key={option._id}>
+                        <input
+                          type="checkbox"
+                          id={option.text}
+                          name={option.text}
+                          className={styles.checkbox}
+                          onChange={(e) => handleChange(e, option)}
+                        />
+                        <label htmlFor="double">{option.text}</label>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
+
+          {!pizza?.refri && (
+
+            <>
+
+
+
+              <h3 className={styles.choose}>Nos conte abaixo como desejaria!</h3>
+
+              <div className={styles.item}>
+
+                <textarea
+                  rows={5}
+                  type="text"
+                  className={styles.textarea}
+                  onChange={(e) => setDescri(e.target.value)}
+                />
+              </div>
+
+              <div className={styles.position}>
+                <div className={styles.margem}>
+                  <h3 className={styles.choose2}>Selecione o Tamanho</h3>
+                  <div className={styles.ingredients} name='form1'>
+
+                    {pizza?.extraOptions.map((option) => (
+                      <div className={styles.option} key={option._id}>
+                        <input
+                          type="checkbox"
+                          id={option.text}
+                          name={option.text}
+                          className={styles.checkbox}
+                          onChange={(e) => handleChange(e, option)}
+                        />
+                        <label htmlFor="double">{option.text}</label>
+                      </div>
+
+                    ))}
+                  </div>
+                </div>
+
+              </div>
+            </>
+          )}
+          <div className={styles.add}>
+            <input onChange={(e) => setQuantity(e.target.value)} type="number" defaultValue={1} className={styles.quantity} />
+            {pizza?.estoque === 0 ?
+              <Link href="https://web.whatsapp.com/send?phone=5513991553318" passHref >
+                <button className={styles.button} onClick={handleClick}>ENCOMENDAR</button>
+              </Link>
+              :
+              <Link href="/" passHref >
+                <button className={styles.button} onClick={handleClick}>ADICIONAR</button>
+              </Link>
+            }
+
           </div>
         </div>
       </div>
-      <div className={styles.right}>
-        <h1 className={styles.title}>{pizza?.title}</h1>
-        <span className={styles.price}>R$ {price}.00</span>
-        {pizza?.refri && (
-          <>
-            <span className={styles.price}> ---- </span>
-            <span className={styles.price}>Estoque: {pizza?.estoque}</span>
-          </>
-        )}
-        <p className={styles.desc}>{pizza?.desc}</p>
-        {pizza?.refri && (
-          <>
-            <div className={styles.position}>
-              <div className={styles.margem}>
-                <h3 className={styles.choose}>Adicione</h3>
-                <div className={styles.ingredients} name='form1'>
-
-                  {pizza?.extraOptions.map((option) => (
-
-                    <div className={styles.option} key={option._id}>
-                      <input
-                        type="checkbox"
-                        id={option.text}
-                        name={option.text}
-                        className={styles.checkbox}
-                        onChange={(e) => handleChange(e, option)}
-                      />
-                      <label htmlFor="double">{option.text}</label>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </>
-        )}
-
-        {!pizza?.refri && (
-
-          <>
-
-
-
-            <h3 className={styles.choose}>Nos conte abaixo como desejaria!</h3>
-
-            <div className={styles.item}>
-
-              <textarea
-                rows={5}
-                type="text"
-                className={styles.textarea}
-                onChange={(e) => setDescri(e.target.value)}
-              />
-            </div>
-
-            <div className={styles.position}>
-              <div className={styles.margem}>
-                <h3 className={styles.choose2}>Selecione o Tamanho</h3>
-                <div className={styles.ingredients} name='form1'>
-
-                  {pizza?.extraOptions.map((option) => (
-                    <div className={styles.option} key={option._id}>
-                      <input
-                        type="checkbox"
-                        id={option.text}
-                        name={option.text}
-                        className={styles.checkbox}
-                        onChange={(e) => handleChange(e, option)}
-                      />
-                      <label htmlFor="double">{option.text}</label>
-                    </div>
-
-                  ))}
-                </div>
-              </div>
-
-            </div>
-          </>
-        )}
-        <div className={styles.add}>
-          <input onChange={(e) => setQuantity(e.target.value)} type="number" defaultValue={1} className={styles.quantity} />
-          {pizza?.estoque === 0 ?
-            <Link href="https://web.whatsapp.com/send?phone=5513991553318" passHref >
-              <button className={styles.button} onClick={handleClick}>ENCOMENDAR</button>
-            </Link>
-            :
-            <Link href="/" passHref >
-              <button className={styles.button} onClick={handleClick}>ADICIONAR</button>
-            </Link>
-          }
-
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 
