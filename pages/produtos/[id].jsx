@@ -7,6 +7,7 @@ import PizzaList2 from "../../components/PizzaList2";
 import styles from "../../public/styles/Home.module.css";
 import useSwr from 'swr'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Link from "next/link";
 
 
 const fetcher = (url) => fetch(url).then((res) => res.json())

@@ -1,4 +1,5 @@
 import styles from "../../public/styles/Order.module.css";
+import Link from "next/link";
 
 const orderCheck = () => {
     

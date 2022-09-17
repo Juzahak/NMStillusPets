@@ -7,6 +7,8 @@ import PizzaList2 from "../../components/PizzaList2";
 import styles from "../../public/styles/Home.module.css";
 import useSwr from 'swr'
 import { sliderUnstyledClasses } from "@mui/base";
+import Link from "next/link";
+
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
@@ -59,8 +61,10 @@ export default function Home({ admin }) {
                     <div className="container clearfix dark">
                         <h1 className="text-white">Como medir</h1>
                         <ol className="breadcrumb">
-                            <li className="breadcrumb-item"><a className="text-white text-decoration-none" href="/">Home</a></li>
-                            <li className="breadcrumb-item active" aria-current="page">Como medir</li>
+                        <Link href="/" passHref >
+                            <li className="breadcrumb-item text-white text-decoration-none">Home</li>
+                        </Link>
+                        <li className="breadcrumb-item active" aria-current="page">Como medir</li>
                         </ol>
                     </div>
 

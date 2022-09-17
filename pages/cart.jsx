@@ -9,6 +9,7 @@ import OrderDetail from "../components/OrderDetail";
 import axios from "axios";
 import Dropdown2 from "../components/Dropdown2";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Link from "next/link";
 
 const Cart = () => {
 
@@ -65,7 +66,9 @@ const Cart = () => {
         <div className="container clearfix dark">
           <h1 className="text-white">Cesta de Compras</h1>
           <ol className="breadcrumb">
-            <li className="breadcrumb-item"><a className="text-white text-decoration-none" href="/">Home</a></li>
+            <Link href="/" passHref >
+              <li className="breadcrumb-item text-white text-decoration-none">Home</li>
+            </Link>            
             <li className="breadcrumb-item active" aria-current="page">Cesta de Compras</li>
           </ol>
         </div>
