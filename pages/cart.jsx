@@ -67,9 +67,9 @@ const Cart = () => {
           <h1 className="text-white">Cesta de Compras</h1>
           <ol className="breadcrumb">
             <Link href="/" passHref >
-              <li className="breadcrumb-item text-white text-decoration-none">Home</li>
+              <li className="breadcrumb-item text-white text-decoration-none"><spam className={styles.pointer}>Home</spam></li>
             </Link>            
-            <li className="breadcrumb-item active" aria-current="page">Cesta de Compras</li>
+            <li className="breadcrumb-item active" aria-current="page"><spam className={styles.pointer}>Cesta de Compras</spam></li>
           </ol>
         </div>
 

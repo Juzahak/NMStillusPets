@@ -58,6 +58,10 @@
     font-family: fantasy;
   }
   
+  .pointer{
+    cursor: pointer;
+  }
+  
   @media screen and (max-width: 650px) {
     .container {
       width: 100%;

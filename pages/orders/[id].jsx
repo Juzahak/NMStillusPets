@@ -62,9 +62,9 @@ const Order = ({ orderId }) => {
           <h1 className="text-white">Pedido</h1>
           <ol className="breadcrumb">
             <Link href="/" passHref >
-              <li className="breadcrumb-item text-white text-decoration-none">Home</li>
+              <li className="breadcrumb-item text-white text-decoration-none"><spam className={styles.pointer}>Home</spam></li>
             </Link>
-            <li className="breadcrumb-item active" aria-current="page">Pedido</li>
+            <li className="breadcrumb-item active" aria-current="page"><spam className={styles.pointer}>Pedido</spam></li>
           </ol>
         </div>
 

@@ -133,6 +133,10 @@
   justify-content: space-evenly;
 }
 
+.pointer{
+  cursor: pointer;
+}
+
 .inputSm {
   width: 40%;
 }

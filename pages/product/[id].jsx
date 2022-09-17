@@ -200,7 +200,10 @@ const Product = ({ productId }) => {
           <h1 className="text-white">Produto</h1>
           <ol className="breadcrumb">
             <Link href="/" passHref >
-              <li className="breadcrumb-item text-white text-decoration-none">Home</li>
+              <li className="breadcrumb-item text-white text-decoration-none cursor-pointer"><spam className={styles.pointer}>Home</spam></li>
+            </Link>
+            <Link href="/produtos/[id].jsx" passHref >
+              <li className="breadcrumb-item text-white text-decoration-none cursor-pointer"><spam className={styles.pointer}>Todos os Produtos</spam></li>
             </Link>
             <li className="breadcrumb-item active" aria-current="page">Produto</li>
           </ol>

@@ -62,9 +62,9 @@ export default function Home({ admin }) {
                         <h1 className="text-white">Blog</h1>
                         <ol className="breadcrumb">
                         <Link href="/" passHref >
-                            <li className="breadcrumb-item text-white text-decoration-none">Home</li>
+                            <li className="breadcrumb-item text-white text-decoration-none"><spam className={styles.pointer}>Home</spam></li>
                         </Link>
-                            <li className="breadcrumb-item active" aria-current="page">Blog</li>
+                            <li className="breadcrumb-item active" aria-current="page"><spam className={styles.pointer}>Blog</spam></li>
                         </ol>
                     </div>
 

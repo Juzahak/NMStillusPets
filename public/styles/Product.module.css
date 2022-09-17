@@ -27,6 +27,10 @@
   background-position: center;
 }
 
+.pointer{
+  cursor: pointer;
+}
+
 .arrowContainer {
   cursor: pointer;
 }
