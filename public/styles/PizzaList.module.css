@@ -55,7 +55,6 @@
 }
 .wrapper2 {
   width: 100vw;
-    height: 35rem;
     position: relative;
     display: flex;
     align-items: center;
@@ -77,6 +76,7 @@
     border-radius: 5px;
     font-weight: 900;
     cursor: pointer;
+    margin-top: 30px;
 }
 
 
