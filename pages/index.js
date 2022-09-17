@@ -89,7 +89,7 @@ export default function Home({ admin }) {
 
       <div className={styles.container} >
         <Head>
-          <title>N&M Stillus Pets</title>
+          <title>NM Stillus Pets</title>
           <meta name="description" content="" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
