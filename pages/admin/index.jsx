@@ -10,7 +10,9 @@ import Editar from "../../components/Editar";
 import Print from "../../components/Print";
 import Printss from "../../components/Printss";
 import PizzaList from "../../components/PizzaList";
-import useSwr, {mutate} from 'swr'
+import useSwr, {mutate} from 'swr';
+import Add from "../../components/Add";
+import AddButton from "../../components/AddButton";
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
@@ -24,6 +26,8 @@ const Index = () => {
   const [close3, setClose3] = useState(true);
   const [Ide, setIde] = useState("");
   const [loading, setLoading] = useState(false);
+  const [close4, setClose4] = useState(true);
+  const { data: lista } = useSwr("/api/lists", fetcher);
 
  
    
@@ -68,14 +72,19 @@ const Index = () => {
 
   return (
     
-        
+ 
+
 
           
           <div className={styles.container}>
       
       <div className={styles.item}>
         <div className={styles.alinhado}>
-          <h1 className={styles.title}>PEDIDOS</h1>
+          <h1 className={styles.title2}>PEDIDOS</h1>
+          {<AddButton setClose={setClose4} />}
+
+          {!close4 && <Add setClose={setClose4} lista={lista || []} />}
+
           {<Finalizados setClose={setClose} />}
 
           {!close && <Finalizado setClose={setClose} orders={orders} />}
@@ -200,8 +209,8 @@ const Index = () => {
                 <td className={styles.tdTitle}>
                   <Image
                     src={product?.img}
-                    width={50}
-                    height={50}
+                    width={120}
+                    height={120}
                     objectFit="cover"
                     alt=""
                   />

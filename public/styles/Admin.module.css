@@ -88,9 +88,9 @@
   font-size: 15px;
   font-weight: 600;
   color: #009f00;
-  width: 75px;
+  width: 100px;
   padding: 5px;
-  height: 50px;
+  height: 65px;
   background-color: white;
   border-radius: 10px;
   cursor: pointer;
@@ -297,4 +297,12 @@ margin-top:10px;
   text-shadow: 2px 2px 15px black;
   text-align: center;
   font-weight: 900;
+  
+}
+.title2 {
+  text-shadow: 2px 2px 15px black;
+  text-align: center;
+  font-weight: 900;
+  display: flex;
+    align-items: center;
 }

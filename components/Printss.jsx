@@ -26,41 +26,41 @@ const Printss = ({ setClose3, order, orderId }) => {
             <section className={styles.notinha} id={styles.notinhaPr}>
             <div className={styles.position34}></div>
             <div className={styles.position25}>N&M Stillus Pets</div>
-            <div className={styles.position}>Dia: {pedidos.createdAt.slice(0, 10)} </div>
-            <div className={styles.position}>Hora: {pedidos.createdAt.slice(11, 16)}</div>
-            <div className={styles.position}>====================</div>
+            <div className={styles.position4}>Dia: {pedidos.createdAt.slice(0, 10)} </div>
+            <div className={styles.position4}>Hora: {pedidos.createdAt.slice(11, 16)}</div>
+            <div className={styles.position4}>====================</div>
             <div className={styles.position4}>-Cliente-</div>
             <div className={styles.position4}>{pedidos.customer}</div>
-            <div className={styles.position4}>{pedidos.telefone}</div>
-            <div className={styles.position}>====================</div>
+            <div className={styles.position4}>Telefone: {pedidos.telefone}</div>
+            <div className={styles.position4}>====================</div>
 
             <div className={styles.position4}>{pedidos.address}</div>
             <div className={styles.position4}>{pedidos.select}</div>
-            <div className={styles.position4}>OBS:  {pedidos.obs}</div>
-            <div className={styles.position}>====================</div>
+            <div className={styles.position4}>Observações:  {pedidos.obs}</div>
+            <div className={styles.position4}>====================</div>
             <div className={styles.position2}>-Pedido-</div>
             {pedidos.produto.map((produtos, Index) => (
                 <div key={Index}>
-                    <div className={styles.position}>{produtos.title}</div>
-                    <div className={styles.position}>Quantidade: {produtos.quantity}</div>
-                    <div className={styles.position}>Tamanho: {produtos.extras}</div>
+                    <div className={styles.position4}>{produtos.title}</div>
+                    <div className={styles.position4}>Quantidade: {produtos.quantity}</div>
+                    <div className={styles.position4}>Tamanho: {produtos.extras}</div>
                     
                     
                     
-            <div className={styles.position}>====================</div>
+            <div className={styles.position4}>====================</div>
             </div>
                 
                 
                 ))}
-                <div className={styles.position}>Sub-Total: R${pedidos.total}.00</div>
-                <div className={styles.position}>Tax-Entreg: R${pedidos.price}.00</div>
-                <div className={styles.position}>Total: R${pedidos.total}.00</div>
+                <div className={styles.position4}>Sub-Total: R${pedidos.total}.00</div>
+                <div className={styles.position4}>Tax-Entreg: R${pedidos.price}.00</div>
+                <div className={styles.position4}>Total: R${pedidos.total}.00</div>
                 {pedidos.metodo == 1 ?
-                <div className={styles.position}>Método: Dinheiro/Cartão</div>
+                <div className={styles.position4}>Método: Dinheiro/Cartão</div>
                 :
-                <div className={styles.position}>Método: Mercado Livre</div>
+                <div className={styles.position4}>Método: Mercado Livre</div>
                 }
-                <div className={styles.position}>Troco Para: R${pedidos.troco}.00</div>
+                <div className={styles.position4}>Troco Para: R${pedidos.troco}.00</div>
                 <div className={styles.position3}></div>
                 <div className={styles.image}>
                 <Image src="/img/NMLogo.png" alt="" width="150px" height="120px"/>

@@ -44,9 +44,7 @@ export default function Home({ admin }) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Featured />
-        {<AddButton setClose={setClose} />}
         <PizzaList pizzaList={pizzaList || []} lista={lista || []} />
-        {!close && <Add setClose={setClose} lista={lista || []} />}
         <div className="container bg-white pt-5 mb-5 mt-5">
           <div className="col-12 d-flex flex-column">
             <div className="col-12 col-lg-12 text-center">
