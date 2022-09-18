@@ -1,7 +1,8 @@
 import styles from "../public/styles/Featured.module.css";
 import Image from "next/image";
 import { useState } from "react";
-
+import Link from "next/link";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Featured = () => {
   const [index, setIndex] = useState(0);
@@ -21,15 +22,13 @@ const Featured = () => {
   }
 
   return (
-    <div className={styles.container}>
-      <div className={styles.wrapper} style={{transform:`translateX(${-100*index}vw)`}}>
-        {images.map((img, i) => (
-          <div className={styles.imgContainer} key={i}>
-            <Image src={img} alt="" layout="fill" objectFit="contain" />
-          </div>
-        ))}
-      </div>
+    <section id="page-title" className={styles.estilo}>
+
+    <div className="container clearfix dark">
+      
     </div>
+
+  </section>
   );
 };
 

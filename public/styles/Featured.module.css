@@ -18,6 +18,12 @@
     padding: 25px;
 }
 
+.estilo {
+  padding: 300px 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('../img/foto1.jpeg');
+  background-size: cover;
+  background-position: center;
+}
 .wrapper {
   width: 300vw;
   height: 100%;
