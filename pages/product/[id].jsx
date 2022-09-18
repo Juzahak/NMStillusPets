@@ -334,7 +334,7 @@ const Product = ({ productId }) => {
                 <button className={styles.button} onClick={handleClick}>ENCOMENDAR</button>
               </Link>
               :
-              <Link href="/" passHref >
+              <Link href="/produtos/[id].jsx" passHref >
                 <button className={styles.button} onClick={handleClick}>ADICIONAR</button>
               </Link>
             }
