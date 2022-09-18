@@ -197,7 +197,6 @@ const Index = () => {
             <tr className={styles.title}>
               <th>IMAGEM</th>
               <th>TITULO</th>
-              <th>QTD</th>
               <th>PREÇO</th>
               <th>EDITAR</th>
               <th>EXCLUIR</th>
@@ -216,7 +215,6 @@ const Index = () => {
                   />
                 </td>
                 <td className={styles.tdTitle}>{product?.title}</td>
-                <td className={styles.tdTitle}>QTD: {product?.estoque}</td>
                 <td className={styles.tdTitle}>R${product?.prices[0]}.00</td>
                 <td className={styles.tdTitle} >
                   <button onClick={() => setIde(product?._id)}>

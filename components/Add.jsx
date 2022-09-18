@@ -18,7 +18,7 @@ const Add = ({ setClose, lista }) => {
   const [extraOptions, setExtraOptions] = useState([]);
 
   const [qtd, setQtd] = useState(0);
-  const [estoque, setEstoque] = useState(0);
+  const [estoque, setEstoque] = useState(999999);
 
   const [extra, setExtra] = useState(null);
 
@@ -231,12 +231,7 @@ const Add = ({ setClose, lista }) => {
                 placeholder="Valor do ITEM"
                 onChange={(e) => changePrice(e, 0)}
               />
-              <input
-                className={`${styles.input} ${styles.inputSm}`}
-                type="number"
-                placeholder="Quantidade"
-                onChange={(e) => setEstoque(e.target.value)}
-              />
+              
             </div>
           </div>
         </div>

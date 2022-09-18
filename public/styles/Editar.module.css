@@ -63,6 +63,10 @@
 
       }
 
+      .input{
+        margin-left: 15px;
+      }
+
       .inputinho {  
         width: 20px;
         height: 20px;
@@ -156,7 +160,7 @@
     
     .priceContainer {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
     }
     
     .inputSm {

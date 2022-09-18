@@ -63,6 +63,11 @@ const Editar = ({ setClose2, pizzaId, products, extras, }) => {
     setExtraOptions((prev) => [...prev, extra]);
   };
   
+  const handleExtraRemove = (e) => {
+    setExtraOptions({
+      data: this.state.data.filter((e) => e !== index)
+    });
+  };
 
   return (
     <div className={styles.container}>
@@ -98,14 +103,7 @@ const Editar = ({ setClose2, pizzaId, products, extras, }) => {
                     onChange={(e) => changePrice(e, 0)}
                   />
                  
-                  <span>Estoque:</span>
-                  <input
-                    className={`${styles.input} ${styles.inputSm}`}
-                    type="number"
 
-                    placeholder={produto.estoque}
-                    onChange={(e) => setEsto(e.target.value)}
-                  />
 
                 </div>
               
@@ -140,8 +138,8 @@ const Editar = ({ setClose2, pizzaId, products, extras, }) => {
                   <div className={styles.separador}> ANTIGOS:  
                   {produto?.extraOptions.map((option, Index) => (
 
-                    <span key={Index} className={styles.extraItem}>
-                       {option?.text}
+                    <span onClick={handleExtraRemove(Index)} key={Index} className={styles.extraItem}>
+                       {option?.text} : R${option?.price}
                     
                     </span>
                   ))}
@@ -149,7 +147,7 @@ const Editar = ({ setClose2, pizzaId, products, extras, }) => {
                   <div> NOVOS:
                   {extraOptions?.map((option, Index) => (
                     <span key={Index} className={styles.extraItem}>
-                      {option?.text}
+                       {option?.text}:R${option?.price}
                     
                     </span>
                   ))}
