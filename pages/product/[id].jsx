@@ -252,12 +252,7 @@ const Product = ({ productId }) => {
         <div className={styles.right}>
           <h1 className={styles.title}>{pizza?.title}</h1>
           <span className={styles.price}>R$ {price}.00</span>
-          {pizza?.refri && (
-            <>
-              <span className={styles.price}> ---- </span>
-              <span className={styles.price}>Estoque: {pizza?.estoque}</span>
-            </>
-          )}
+          
           <p className={styles.desc}>{pizza?.desc}</p>
           {pizza?.refri && (
             <>
