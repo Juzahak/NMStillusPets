@@ -173,22 +173,22 @@
 }
 
 .button {
-  height: 40px;
-  font-size: 17px;
-  margin-left: 10px;
-  background-color: whitesmoke;
-  color: green;
-  border: 1;
-  border-color: green;
-  font-weight: 700;
-  cursor: pointer;
+  height: 50px;
+    width: 160px;
+    background: #ffa4e7b8;
+    border-color: #ffa4e7b8;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 .button:hover {
 
-  background-color: lightgreen;
-  color: white;
-  transition: all 0.5S ease;
+  background-color: #32cd32;
+  border-color: #32cd32;
+  color: #f5f5f5;
+  transition: all .5s ease;
 }
 
 .popup {
