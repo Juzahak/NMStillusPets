@@ -6,15 +6,16 @@
 }
 
 .removebtn{
-  height: 30px;
+  height: 50px;
+    width: 90px;
     background: white;
-    border-color: red;
+    border-color: #ffa4e7b8;
     border-radius: 10px;
     cursor: pointer;
 }
 
 .removebtn:hover{
-  background: red;
+  background: #ffa4e7b8;
   color: white;
   transition: 0.5s all ease;
 }
@@ -27,17 +28,22 @@
   text-align: center;
 }
 
+.price{
+  margin: 0;
+}
+
 .left {
   flex: 2;
 }
 
 .right {
-  flex: 1;
+
+  width: 320px;
 }
 
 .imgContainer {
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 180px;
   position: relative;
   margin: 0 auto;
 }
@@ -51,6 +57,12 @@
   font-weight: 500;
   color: #d1411e;
   font-size: 18px;
+  
+}
+
+.name2 {
+  flex: 0 0 auto;
+  width: 8.33333333%;
 }
 
 .total {
@@ -59,7 +71,6 @@
 }
 
 .wrapper {
-  width: 90%;
   max-height: 330px;
   background-color: #333;
   padding: 25px;
@@ -68,6 +79,7 @@
   flex-direction: column;
   justify-content: space-between;
   color: white;
+  margin-left: 20px;
 }
 
 .totalTextTitle {
@@ -101,7 +113,7 @@
   background-size: cover;
   background-position: center;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 650px) {
   .container {
     flex-direction: column;
     padding: 0;
@@ -113,6 +125,7 @@
 
   .removebtn{
     margin-bottom: 1rem;
+    width: 10rem;
   }
 
   .imgContainer{
@@ -125,6 +138,11 @@
   .table{
     border-spacing: 0px;
     margin-bottom: 20px;
+  }
+
+  .name2{
+    flex: 0 0 auto;
+    width: 100%;
   }
 
   .tr {
@@ -185,6 +203,10 @@
   .wrapper{
     width: 100%;
     max-height: 1000px;
+  }
+
+  .right{
+    width: 100%;
   }
 }
 

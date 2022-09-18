@@ -109,7 +109,7 @@ const Cart = () => {
 
                     </div>
                   </td>
-                  <td>
+                  <td className={styles.name2}>
                     <span className={styles.name}>{product.title}</span>
 
                   </td>
@@ -117,12 +117,12 @@ const Cart = () => {
                     <span className={styles.extras}>
 
                       {product.extras.map((extra) =>
-                        <span key={extra._id} >Tamanho: {extra} </span>
+                        <span key={extra._id} >{extra} </span>
                       )}
                       {product.refri && <></>}
                     </span>
                   </td>
-                  <td>
+                  <td className="m-0">
                     <p className={styles.price}>
                       {product.descri}
                     </p>
