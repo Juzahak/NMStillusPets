@@ -67,22 +67,22 @@ const Navbar = () => {
 
       <div className={styles.menumob}>
         <div className={styles.item2}>
-          <a href="https://nmstilluspets.mercadoshops.com.br/?preview.com.br/" target="_blank" passHref>
+          <a href="https://nmstilluspets.mercadoshops.com.br/?preview.com.br/" rel="noreferrer" target="_blank" passHref>
             <div className={styles.callButton3}>
               <Image src="/img/mercadolivre.png" alt="" width="400" height="300" />
             </div>
           </a>
-          <a href="https://www.instagram.com/noemymaximoatelie/" target="_blank" passHref>
+          <a href="https://www.instagram.com/noemymaximoatelie/" rel="noreferrer" target="_blank" passHref>
             <div className={styles.callButton4}>
               <Image src="/img/instagram.png" alt="" width="100" height="100" />
             </div>
           </a>
-          <a href="https://www.facebook.com/nmstilluspets" target="_blank" passHref>
+          <a href="https://www.facebook.com/nmstilluspets" rel="noreferrer" target="_blank" passHref>
             <div className={styles.callButton5}>
               <Image src="/img/facebook.png" alt="" width="100" height="100" />
             </div>
           </a>
-          <a href="https://web.whatsapp.com/send?phone=5513991553318" target="_blank" passHref>
+          <a href="https://web.whatsapp.com/send?phone=5513991553318" rel="noreferrer" target="_blank" passHref>
             <div className={styles.callButton2}>
               <Image src="/img/whatss.png" alt="" width="100" height="100" />
             </div>
