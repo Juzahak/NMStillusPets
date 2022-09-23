@@ -5,16 +5,16 @@ import useSwr, {mutate} from 'swr'
 import { useEffect } from "react";
 
 
-const Editar = ({ setClose2, pizzaId, products, extras, }) => {
+const Editar = ({ setClose2, pizzaId, products, extras, title, desc2, prices2, estoque }) => {
   const [pizzaList, setPizzaList] = useState(products);
-  const [nomePrato, setNomePrato] = useState();
-  const [prices, setPrices] = useState([]);
+  const [nomePrato, setNomePrato] = useState(title);
+  const [prices, setPrices] = useState(prices2);
   const [extra, setExtra] = useState([extras]);
   
   const [extraOptions, setExtraOptions] = useState([]);
   
-  const [desc, setDesc] = useState();
-  const [esto, setEsto] = useState();
+  const [desc, setDesc] = useState(desc2);
+  const [esto, setEsto] = useState(estoque);
 
 
   const [ide, setId] = useState(pizzaId);
@@ -26,11 +26,22 @@ const Editar = ({ setClose2, pizzaId, products, extras, }) => {
   const handleUpdate = async (id) => {
     const item = products.filter((pizza) => pizza._id === id);
 
- if(nomePrato == "" || prices == "" || desc == ""){
-  alert("preencha os campos corretamente")
+ if(prices == ""){
+  alert("preencha o campo de valor")
   return
- }else{
-
+}
+ if(nomePrato == ""){
+  alert("preencha o nome do prato")
+  return
+}
+ if(extraOptions == ""){
+  alert("preencha os tamanhos corretamente")
+  return
+}
+else{
+  if(extraOptions === []) {
+    setExtraOptions(produto?.extraOptions);
+  }
     try {
       const res = await axios.put(`/api/products/${id}`, {
         title: nomePrato,
@@ -59,10 +70,13 @@ const Editar = ({ setClose2, pizzaId, products, extras, }) => {
     setExtra({ ...extra, [e.target.name]: e.target.value });
   };
 
+  
   const handleExtra = (e) => {
     setExtraOptions((prev) => [...prev, extra]);
   };
-  
+  const handleExtra2 = (e) => {
+    setExtraOptions(e);
+  };
 
   return (
     <div className={styles.container}>
@@ -97,9 +111,7 @@ const Editar = ({ setClose2, pizzaId, products, extras, }) => {
                     placeholder={produto.prices[0]}
                     onChange={(e) => changePrice(e, 0)}
                   />
-                 
-
-
+              
                 </div>
               
                  
@@ -124,6 +136,9 @@ const Editar = ({ setClose2, pizzaId, products, extras, }) => {
                     name="price"
                     onChange={handleExtraInput}
                   />
+                  <div className={styles.extraButton} onClick={() => handleExtra2(produto?.extraOptions)}>
+                    Usar os mesmos!
+                  </div>
                   <div className={styles.extraButton} onClick={handleExtra}>
                     Adicionar!
                   </div>
@@ -135,7 +150,7 @@ const Editar = ({ setClose2, pizzaId, products, extras, }) => {
 
                     <span key={Index} className={styles.extraItem}>
                        {option?.text} : R${option?.price}
-                    
+                      
                     </span>
                   ))}
                     </div>

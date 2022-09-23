@@ -225,7 +225,12 @@ const Index = () => {
                   pizzaList={products} 
                   extras={product?.extraOptions} 
                   products={products} 
-                  pizzaId={Ide}/>}
+                  pizzaId={Ide}
+                  title={product?.title}
+                  desc2={product?.desc}
+                  prices2={product?.prices}
+                  estoque={product?.estoque}
+                  />}
                   </button>
                   </td>
                   <td>
