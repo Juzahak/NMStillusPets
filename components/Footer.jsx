@@ -27,9 +27,8 @@ const Footer = () => {
            
             Rua José Pedroso de Lima Filho 161, 
             <br /> Nova Serra Negra
-            <br /> Serra Negra - SP,
-            <br /> 13930-000 
-            <br /> (XX) XXXXX-XXXX
+            <br /> Serra Negra - SP, 13930-000 
+            <br />Contato: (19) 97115-6832
           </div>
          
         </div>

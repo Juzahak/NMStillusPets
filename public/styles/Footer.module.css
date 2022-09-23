@@ -112,11 +112,11 @@
     color: #812121;
   }
   .card{
-    padding: 0 20px;
+    padding: 0 0px;
     flex: 0 0 auto;
     width: auto;
   }
   .text {
-    font-size: 20px;
+    font-size: 18px;
   }
 }

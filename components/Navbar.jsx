@@ -58,7 +58,7 @@ const Navbar = () => {
   return (
     <div className={styles.container}>
       <div className={styles.dropdown}>
-        <Dropdown pedidinho={pedidinho}/>
+        <Dropdown pedidinho={pedidinho} />
       </div>
       <div className={styles.logotipomob}>
 
@@ -82,7 +82,8 @@ const Navbar = () => {
               <Image src="/img/facebook.png" alt="" width="100" height="100" />
             </div>
           </a>
-          <a href="https://web.whatsapp.com/send?phone=5513991553318" rel="noreferrer" target="_blank" passHref>
+          <a href="https://api.whatsapp.com/send?phone=5519971156832&text=Bem%20vindo%20ao%20NM%20Stillus%20Moda%20Pet"
+            rel="noreferrer" target="_blank" passHref>
             <div className={styles.callButton2}>
               <Image src="/img/whatss.png" alt="" width="100" height="100" />
             </div>
@@ -123,7 +124,7 @@ const Navbar = () => {
 
           </ul>
           <div>
-        {teste()}
+            {teste()}
 
           </div>
         </div>

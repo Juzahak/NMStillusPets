@@ -75,6 +75,7 @@
 @media screen and (max-width: 850px) {
   .container {
     width: 46vw;
+    height: 250px;
     min-width: auto;
     flex-direction: column;
     display: flex;
