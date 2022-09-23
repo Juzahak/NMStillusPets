@@ -19,43 +19,48 @@
 }
 
 .mapContainer {
-  width: 50%;
-  height: 55%;
+  width: 40%;
+  height: 90%;
   position: absolute;
-  bottom: 30px;
-  left: 70px;
+  bottom: 50px;
+  right: 40px;
 }
 
 .item {
   flex: 1;
   position: relative;
   display: flex;
+  flex-direction: column;
 }
 
 .item:last-child {
   flex: 2;
   padding: 50px;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .card {
-  flex: 1;
   padding: 0 20px;
+  flex: 0 0 auto;
+  width: 50%;
 }
 
 .title {
   font-size: 18px;
-  color: #e43aef;  
+  color: #e43aef; 
+  text-align: center; 
 }
 
 .text {
   color: black;
   font-size: 15px;
   margin-top: 15px;
+  text-align: center;
 }
 
 .motto {
   font-size: 1.2rem;
+  text-align: center;
 }
 
 @media screen and (max-width: 650px) {
@@ -100,7 +105,11 @@
     text-shadow: 1px 15px 15px grey;
     color: #812121;
   }
-
+  .card{
+    padding: 0 20px;
+    flex: 0 0 auto;
+    width: auto;
+  }
   .text {
     font-size: 20px;
   }

@@ -89,10 +89,10 @@
     padding: 0;
   }
   .wrapper2{
-    height: 95vh;
+    height: 830px;
     flex-wrap: wrap;
     overflow: hidden;
-    width: 101vw;
+    width: 100vw;
   }
 
   .desc {

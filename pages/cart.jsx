@@ -68,7 +68,7 @@ const Cart = () => {
           <ol className="breadcrumb">
             <Link href="/" passHref >
               <li className="breadcrumb-item text-white text-decoration-none"><spam className={styles.pointer}>Home</spam></li>
-            </Link>            
+            </Link>
             <li className="breadcrumb-item active" aria-current="page"><spam className={styles.pointer}>Cesta de Compras</spam></li>
           </ol>
         </div>
@@ -158,22 +158,38 @@ const Cart = () => {
             <div className={styles.totalText}>
               <Dropdown2 select={select} setSelect={setSelect} setPrice={setPrice} price={price} />
             </div>
+            {select === "Mercado Livre" ?
+              <>
+              <div className={styles.totalText}>
 
-            <div className={styles.totalText}>
+                <span className={styles.totalTextTitle}>ENTREGA:</span>para fora de serra negra pedimos para que realize o pedido pelo mercado livre, preparamos a página para que você possa economizar no frete!
+              </div>
+              <div className={styles.paymentMethods}>
+                <a className={styles.payButton2} target="_blank" href="https://nmstilluspets.mercadoshops.com.br/?preview.com.br/">Mercado Livre
+              <Image src="/img/mercadolivre.png" alt="" width="50" height="30" />
+                </a>
 
-              <span className={styles.totalTextTitle}>ENTREGA:</span>R${price}.00
+              </div>
+            </>
+              :
+              <>
+                <div className={styles.totalText}>
 
-            </div>
-            <div className={styles.totalText}>
-              <span className={styles.totalTextTitle}>TOTAL:</span>R${cart.total + price}.00
-            </div>
+                  <span className={styles.totalTextTitle}>ENTREGA:</span>R${price}.00
+
+                </div>
+                <div className={styles.totalText}>
+                  <span className={styles.totalTextTitle}>TOTAL:</span>R${cart.total + price}.00
+                </div>
 
 
-            <div className={styles.paymentMethods}>
-              <button className={styles.payButton} onClick={() => estaSel2()}>CARTÃO OU DINHEIRO</button>
+                <div className={styles.paymentMethods}>
+                  <button className={styles.payButton} onClick={() => estaSel2()}>CARTÃO OU DINHEIRO</button>
 
-            </div>
-
+                </div>
+              </>
+              
+            }
           </div>
         </div>
 

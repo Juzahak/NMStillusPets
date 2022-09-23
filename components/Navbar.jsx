@@ -67,16 +67,26 @@ const Navbar = () => {
 
       <div className={styles.menumob}>
         <div className={styles.item2}>
-          <Link href="https://nmstilluspets.mercadoshops.com.br/?preview.com.br/" passHref>
+          <a href="https://nmstilluspets.mercadoshops.com.br/?preview.com.br/" target="_blank" passHref>
             <div className={styles.callButton3}>
               <Image src="/img/mercadolivre.png" alt="" width="400" height="300" />
             </div>
-          </Link>
-          <Link href="https://web.whatsapp.com/send?phone=5513991553318" passHref>
+          </a>
+          <a href="https://www.instagram.com/noemymaximoatelie/" target="_blank" passHref>
+            <div className={styles.callButton4}>
+              <Image src="/img/instagram.png" alt="" width="100" height="100" />
+            </div>
+          </a>
+          <a href="https://www.facebook.com/nmstilluspets" target="_blank" passHref>
+            <div className={styles.callButton5}>
+              <Image src="/img/facebook.png" alt="" width="100" height="100" />
+            </div>
+          </a>
+          <a href="https://web.whatsapp.com/send?phone=5513991553318" target="_blank" passHref>
             <div className={styles.callButton2}>
               <Image src="/img/whatss.png" alt="" width="100" height="100" />
             </div>
-          </Link>
+          </a>
           <div className={styles.callButton}>
             <Image src="/img/NMLogo.png" alt="" width="180" height="150" />
           </div>
@@ -96,6 +106,9 @@ const Navbar = () => {
             </Link>
             <Link href="/comoMedir/[id].jsx" passHref >
               <div className={styles.menus} >Como Medir</div>
+            </Link>
+            <Link href="/tabeladeMedidas/[id].jsx" passHref >
+              <div className={styles.menus} >Tabela de Medidas</div>
             </Link>
             <Link href="/blog/[id].jsx" passHref >
               <div className={styles.menus} >Blog</div>

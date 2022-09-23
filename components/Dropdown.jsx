@@ -23,6 +23,10 @@ function Dropdown({ select, setSelect, price, setPrice, pedidinho }) {
             destino: `/comoMedir/[id].jsx`,
         },
         {
+            bairro: 'Tabela de Medidas',
+            destino: `/tabeladeMedidas/[id].jsx`,
+        },
+        {
             bairro: 'Blog',
             destino: `/blog/[id].jsx`,
         },

@@ -77,8 +77,26 @@ export default function Home({ admin }) {
                 <Image src="/img/foto3.jpg" alt="" width="450" height="450" />
               </div>
               <div className="col-12 col-md-6 col-lg-6 p-2">
-                <h3>Local de trabalho</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam error aut qui dignissimos, veritatis magnam ducimus repudiandae nemo animi necessitatibus hic quaerat saepe vero iusto cupiditate fugit. Officiis, tenetur itaque!</p>
+                <h3 className="text-center">Quem somos nós</h3>
+                
+                <p>A N&M Stillus moda Pet é a realização de um sonho, amamos os animais temos 4
+                  filhos de 4 patas e sempre estamos rodeados por eles, notamos que a lealdade
+                  o carinho de um pet entre uma família humana é algo que só quem tem entende.
+                  <br></br><br></br>
+                  Juntando o nosso amor pelos animais com o poder da internet, criamos a N&M
+                  Stillus Pet com a proposta de tornar disponível no mercado produtos com
+                  excelente qualidade a um preço competitivo.
+                  <br></br><br></br>
+                  Ao comprar na N&M Stillus moda Pet você adquire um produto de qualidade e tem
+                  um atendimento dedicado com o foco na satisfação do cliente e bem estar do seu
+                  pet.
+                  <br></br><br></br>
+                  Estamos sempre acompanhando as últimas tendências no mercado Pet no
+                  atualizando a nossa seleção de produtos para que você mamãe e papai de pet
+                  possam deixar o seu filho de quatro patas ainda mais feliz, garantindo mais
+                  conforto no dia a dia.
+                  <br></br><br></br>
+                  Qualquer dúvida, entre em contato, teremos o maior prazer em atendê-lo.</p>
               </div>
             </div>
           </div>
@@ -87,8 +105,21 @@ export default function Home({ admin }) {
           <div className="container col-12 col-lg-12 align-items-center d-flex mt-4 mb-5 teste">
             <div className={styles.correto}>
               <div className="col-12 col-md-6 col-lg-6 p-2">
-                <h3>Dedicação e amor para seu pet</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam error aut qui dignissimos, veritatis magnam ducimus repudiandae nemo animi necessitatibus hic quaerat saepe vero iusto cupiditate fugit. Officiis, tenetur itaque!</p>
+                <h3 className="text-center">Dedicação e amor para seu pet</h3>
+                <p>Nós sabemos o quanto o seu bichinho é especial para
+                  você, como parte integrante da família.
+                  <br></br><br></br>
+                  É com todo respeito e dedicação que desenvolvemos
+                  nossos produtos, para compartilhar o carinho devido
+                  àqueles que “invadiram” nossas casas, nossas vidas e
+                  nos inundaram de alegria, sempre a um preço justo.
+                  <br></br><br></br>
+                  Nossa missão: Oferecer produtos com qualidade, sem
+                  abrir mão do estilo casual e clássico<br></br><br></br>
+                  Somos apaixonados pelo o que fazemos!<br></br><br></br>
+                  Estamos sempre buscando o que há de mais novo e
+                  moderno, com o intuito de trazer o que há de melhor,
+                  em primeira mão aos nossos clientes.</p>
               </div>
               <div className="col-12 col-md-6 col-lg-6 justify-content-center d-flex">
                 <Image src="/img/foto2.jpg" alt="" width="450" height="450" />

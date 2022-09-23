@@ -98,13 +98,41 @@
   position: fixed;
   width: 50px;
   height: 50px;
-  bottom: 40px;
-  right: 40px;
+  bottom: 30px;
+  left: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.callButton4 {
+  position: fixed;
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  bottom: 80px;
+  left: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.callButton5 {
+  position: fixed;
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  bottom: 130px;
+  left: 20px;
   cursor: pointer;
   border-radius: 10px;
 }
 
 .callButton2:hover {
+  transition: 0.5s all ease;
+  background: rgb(0 0 0 / 25%);
+}
+.callButton4:hover {
+  transition: 0.5s all ease;
+  background: rgb(0 0 0 / 25%);
+}
+.callButton5:hover {
   transition: 0.5s all ease;
   background: rgb(0 0 0 / 25%);
 }
@@ -115,8 +143,8 @@
   display: flex;
   width: 50px;
   height: 40px;
-  bottom: 110px;
-  right: 40px;
+  bottom: 30px;
+  right: 20px;
   cursor: pointer;
   border-radius: 10px;
 }
@@ -231,20 +259,36 @@
   .callButton2 {
     position: fixed;
     width: 3rem;
-    height: 5rem;
-    bottom: -10px;
-    right: 25px;
+    bottom: 20px;
+    left: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .callButton4 {
+    position: fixed;
+    width: 3rem;
+    bottom: 70px;
+    left: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .callButton5 {
+    position: fixed;
+    width: 3rem;
+    bottom: 120px;
+    left: 15px;
     cursor: pointer;
     border-radius: 10px;
   }
 
   .callButton3 {
     position: fixed;
-    bottom: 10vh;
-    right: 24px;
+    bottom: 20px;
+    right: 15px;
     cursor: pointer;
     border-radius: 10px;
   }
+ 
 
   .logotipomob {
     position: relative;

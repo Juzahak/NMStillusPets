@@ -6,17 +6,14 @@ function Dropdown2({ select, setSelect, price, setPrice }) {
     const [ativo, setAtivo] = useState(false);
     const opcoes = [
         {
-            bairro: 'Alto das Palmeiras',
+            bairro: 'Serra Negra',
             preco: 8,
         },
         {
-            bairro: 'Centro',
-            preco: 5
-        }, {
-            bairro: 'São Luiz',
-            preco: 7
+            bairro: 'Mercado Livre',
+            preco: 0
         }];
-    const frete = [8, 5, 7];
+    const frete = [8, 0];
     
     return (
         <div className={styles.container}>
