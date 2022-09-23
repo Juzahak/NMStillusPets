@@ -70,7 +70,7 @@ export default function Home({ admin }) {
 
         <section>
 
-          <h1 className="text-center mt-5 mb-5">Saiba mais sobre nossa alfaiataria</h1>
+          <h1 className="text-center mt-5 mb-5">Saiba mais sobre nosso ateliê</h1>
           <div className="container col-12 col-lg-12 align-items-center d-flex mt-4 mb-4">
             <div className={styles.correto2}>
               <div className="col-12 col-md-6 col-lg-6 justify-content-center d-flex">

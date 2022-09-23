@@ -22,7 +22,8 @@ const Footer = () => {
           <h1 className={styles.title}>LOCAL DO ATELIÊ</h1>
           <div className={styles.text}>
            
-            Rua Sete de Setembro 228, 
+            Rua José Pedroso de Lima Filho 161, 
+            <br /> Nova Serra Negra
             <br /> Serra Negra - SP,
             <br /> 13930-000 
             <br /> (XX) XXXXX-XXXX
@@ -37,33 +38,11 @@ const Footer = () => {
         <div className={styles.card}>
           <h1 className={styles.title}>ABERTO ÁS:</h1>
           <div className={styles.text}>
-          Segunda: 12:00 às 15:00
+          Segunda á sexta: <br /> 08:00 às 20:00
             
           </div>
           <div className={styles.text}>
-          Terça: 12:00 às 15:00         
-          </div>
-          <div className={styles.text}>
-          Quarta: 12:00 às 15:00
-            
-          </div>
-          <div className={styles.text}>
-          Quinta: 11:00 às 15:00
-          </div>
-          <div className={styles.text}>
-          Sexta: 12:00 às 15:00
-          <br />17:00 às 23:00
-            
-          </div>
-          <div className={styles.text}>
-          Sábado: 12:00 às 15:00
-          <br />  17:00 às 23:00
-            
-          </div>
-          <div className={styles.text}>
-          Domingo: 12:00 às 15:00
-          <br />   17:00 às 23:00
-            
+          Sábado: <br /> 08:00 às 15:00         
           </div>
           
         </div>

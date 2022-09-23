@@ -67,7 +67,7 @@ const Navbar = () => {
 
       <div className={styles.menumob}>
         <div className={styles.item2}>
-          <Link href="https://www.mercadolivre.com.br/" passHref>
+          <Link href="https://nmstilluspets.mercadoshops.com.br/?preview.com.br/" passHref>
             <div className={styles.callButton3}>
               <Image src="/img/mercadolivre.png" alt="" width="400" height="300" />
             </div>
