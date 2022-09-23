@@ -86,6 +86,8 @@
 
 .wrapper {
   width: 630px;
+  height: 650px;
+    overflow: auto;
   background-color: white;
   padding: 10px 50px;
   border-radius: 20px;
@@ -106,8 +108,7 @@
   justify-content: center;
   cursor: pointer;
   position: absolute;
-  top: -10px;
-  right: -10px;
+  right: 0;
 }
 
 .item {
