@@ -62,6 +62,9 @@
   font-size: 1.2rem;
   text-align: center;
 }
+.item2{
+  display: none;
+}
 
 @media screen and (max-width: 650px) {
   .container {
@@ -91,6 +94,10 @@
   .item {
     flex-direction: column;
     padding: 20px;
+  }
+  .item2 {
+    display: block;
+    padding: 30px;
   }
 
   .item:last-child {

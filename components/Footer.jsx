@@ -18,6 +18,9 @@ const Footer = () => {
              Nossa alegria é transformar sonhos em realidade!
           </h2>
         </div>
+        <div className={styles.item2}>
+        <Image src="/img/NMLogo.png" width="250px" height="250px" alt="" />
+      </div>
         <div className={styles.card}>
           <h1 className={styles.title}>LOCAL DO ATELIÊ</h1>
           <div className={styles.text}>
