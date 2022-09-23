@@ -44,8 +44,16 @@ export default function Home({ admin }) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Featured />
+        <div className="container">
+          <div className="col-12 col-lg6">
+            <Image src="/img/comomedir.jpg" alt="" width="500" height="500" />
+          </div>
+          <div className="col-12 col-lg-6">
+            <Image src="/img/comomedir.jpg" alt="" width="500" height="500" />
+          </div>
+        </div>
         <PizzaList pizzaList={pizzaList || []} lista={lista || []} />
-        <div className="container bg-white pt-5 mb-5 mt-5">
+        <div className="container bg-white pt-5 pb-5 mt-5">
           <div className="col-12 d-flex flex-column">
             <div className="col-12 col-lg-12 text-center">
               <Image src="/img/comomedir.jpg" alt="" width="500" height="500" />
@@ -93,7 +101,14 @@ export default function Home({ admin }) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Featured />
-
+        <div className="container d-flex">
+          <div className="col-12 col-lg-6 text-center p-2">
+            <Image src="/img/promo1.jpg" alt="" width="812 " height="950" />
+          </div>
+          <div className="col-12 col-lg-6 text-center p-2">
+            <Image src="/img/promo2.jpg" alt="" width="812" height="950" />
+          </div>
+        </div>
         <PizzaList pizzaList={pizzaList || []} lista={lista || []} />
         <div className="container bg-white pt-5 mb-5">
           <div className="col-12 d-flex flex-column">
