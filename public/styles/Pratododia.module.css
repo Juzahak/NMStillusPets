@@ -62,7 +62,7 @@
     cursor: pointer;
   }
   
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 850px) {
     .container {
       width: 100%;
       flex-direction: column;

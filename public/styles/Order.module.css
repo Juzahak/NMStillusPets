@@ -195,7 +195,7 @@ text-align: center;
   cursor: pointer;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 850px) {
   .container {
     flex-direction: column;
     padding: 0;

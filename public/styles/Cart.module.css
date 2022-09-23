@@ -113,7 +113,7 @@
   background-size: cover;
   background-position: center;
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 850px) {
   .container {
     flex-direction: column;
     padding: 0;
