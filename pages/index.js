@@ -44,11 +44,11 @@ export default function Home({ admin }) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Featured />
-        <div className="container">
-          <div className="col-12 col-lg6">
+        <div className="container d-flex flex-column flex-lg-row">
+          <div className="col-12 col-lg-6 text-center p-2">
             <Image src="/img/comomedir.jpg" alt="" width="500" height="500" />
           </div>
-          <div className="col-12 col-lg-6">
+          <div className="col-12 col-lg-6 text-center p-2">
             <Image src="/img/comomedir.jpg" alt="" width="500" height="500" />
           </div>
         </div>
@@ -101,7 +101,7 @@ export default function Home({ admin }) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Featured />
-        <div className="container d-flex">
+        <div className="container d-flex flex-column flex-lg-row ">
           <div className="col-12 col-lg-6 text-center p-2">
             <Image src="/img/promo1.jpg" alt="" width="812 " height="950" />
           </div>
