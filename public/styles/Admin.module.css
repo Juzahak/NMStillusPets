@@ -306,3 +306,12 @@ margin-top:10px;
   display: flex;
     align-items: center;
 }
+
+.sidebar{
+  height: 1000px;
+}
+.sidebtn{
+  width: 100%;
+    border: 2px solid white;
+    padding: 1rem;
+}

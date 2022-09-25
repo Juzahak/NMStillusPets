@@ -109,7 +109,7 @@ const Navbar = () => {
               <div className={styles.menus} >Como Medir</div>
             </Link>
             <Link href="/tabeladeMedidas/[id].jsx" passHref >
-              <div className={styles.menus} >Tabela de Medidas</div>
+              <div className={styles.menus} >Tabelas</div>
             </Link>
             <Link href="/blog/[id].jsx" passHref >
               <div className={styles.menus} >Blog</div>
