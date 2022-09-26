@@ -86,12 +86,6 @@
     align-content: flex-start;
   }
 
-  .imagefood {
-    width: 185px;
-    height: 200px;
-
-  }
-
   .title {
     font-size: 1.1rem;
     text-align: start;
