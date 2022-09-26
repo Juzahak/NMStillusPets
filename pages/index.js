@@ -52,13 +52,13 @@ export default function Home({ admin }) {
               </spam>
           </div>
           </Link>
-          <spam className={styles.pointer}>
           <Link href="/produtos/[id].jsx" passHref >
           <div className="col-12 col-lg-6 text-center p-2">
-            <Image src="/img/promo2.jpg" alt="" width="812" height="950" />
+          <spam className={styles.pointer}>
+           <Image src="/img/promo2.jpg" alt="" width="812" height="950" />
+          </spam>
           </div>
           </Link>
-          </spam>
         </div>
         <PizzaList pizzaList={pizzaList || []} lista={lista || []} />
         <div className="container bg-white pt-5 pb-5 mt-5">
@@ -117,13 +117,15 @@ export default function Home({ admin }) {
            </spam>
            </div>
           </Link>
-          <spam className={styles.pointer}>
+          
           <Link href="/produtos/[id].jsx" passHref >
           <div className="col-12 col-lg-6 text-center p-2">
-            <Image src="/img/promo2.jpg" alt="" width="812" height="950" />
+           <spam className={styles.pointer}>
+         <Image src="/img/promo2.jpg" alt="" width="812" height="950" />
+          </spam>
           </div>
           </Link>
-          </spam>
+          
         </div>
         <PizzaList pizzaList={pizzaList || []} lista={lista || []} />
         <div className="container bg-white pt-5 mb-5">
