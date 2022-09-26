@@ -46,7 +46,8 @@
 
 .imagefood {
   overflow: hidden;
-
+  height: 340px;
+  width: 250px;
 }
 
 .title {
