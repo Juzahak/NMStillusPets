@@ -45,13 +45,14 @@ export default function Home({ admin }) {
         </Head>
         <Featured />
         <div className="container d-flex flex-column flex-lg-row">
-          <spam className={styles.pointer}>
           <Link href="/produtos/[id].jsx" passHref >
+           <spam className={styles.pointer}>
           <div className="col-12 col-lg-6 text-center p-2">
             <Image src="/img/promo1.jpg" alt="" width="812" height="950" />
           </div>
-          </Link>
           </spam>
+          </Link>
+          
           <spam className={styles.pointer}>
           <Link href="/produtos/[id].jsx" passHref >
           <div className="col-12 col-lg-6 text-center p-2">
@@ -110,13 +111,13 @@ export default function Home({ admin }) {
         </Head>
         <Featured />
         <div className="container d-flex flex-column flex-lg-row ">
-          <spam className={styles.pointer}>
           <Link href="/produtos/[id].jsx" passHref >
+           <spam className={styles.pointer}>
           <div className="col-12 col-lg-6 text-center p-2">
             <Image src="/img/promo1.jpg" alt="" width="812 " height="950" />
           </div>
-          </Link>
           </spam>
+          </Link>
           <spam className={styles.pointer}>
           <Link href="/produtos/[id].jsx" passHref >
           <div className="col-12 col-lg-6 text-center p-2">
