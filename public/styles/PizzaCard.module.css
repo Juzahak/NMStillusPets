@@ -83,7 +83,10 @@
         height: 400px;
   }
 
-  
+  .imagefood {
+  height: auto;
+  width: auto;
+  } 
 
   .title {
     font-size: 1.1rem;
