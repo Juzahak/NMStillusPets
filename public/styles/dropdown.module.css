@@ -30,6 +30,7 @@
     font-weight: bold;
     color: #333;
     width: 100%;
+    z-index: 999;
 }
 
 .container .dropCont .dropsItem {
