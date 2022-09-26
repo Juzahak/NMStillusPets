@@ -1,4 +1,4 @@
-import styles from "../public/styles/admin.module.css";
+import styles from "../public/styles/Admin.module.css";
 import Image from "next/image";
 
 const Sidebar = ({ setClose3 }) => {
