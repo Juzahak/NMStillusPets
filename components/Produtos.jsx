@@ -49,8 +49,7 @@ const Produtos = () => {
 
   return (
     <>
-      <div className="col-lg-12 d-flex">
-        <Sidebar />
+     
         <div className="col-lg-10">
           <h1>Produtos</h1>
           <div className={styles.item}>
@@ -114,7 +113,7 @@ const Produtos = () => {
             </table>
           </div>
         </div>
-      </div>
+     
     </>
   );
 };
