@@ -30,17 +30,9 @@ const Index = () => {
   const [close4, setClose4] = useState(true);
   const { data: lista } = useSwr("/api/lists", fetcher);
 
-
-
   console.log(products)
 
-
   const status = ["Preparando", "A Caminho!", "Entregue!"];
-
-
-
-
-
 
   const handleDelete = async (id) => {
     console.log(id);
@@ -63,8 +55,6 @@ const Index = () => {
         status: currentStatus + 1,
       });
       mutate(`/api/orders`);
-
-
     } catch (err) {
       console.log(err);
     }
@@ -72,9 +62,6 @@ const Index = () => {
 
 
   return (
-
-
-
     <>
       <div className="col-lg-12 d-flex">
         <Sidebar />
@@ -83,7 +70,6 @@ const Index = () => {
         </div>
       </div>
     </>
-
   );
 };
 
