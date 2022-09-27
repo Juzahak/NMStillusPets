@@ -20,9 +20,6 @@ const Sidebar = ({ setClose3 }) => {
         <div className={styles.sidebtn}>
         <a className="text-white"> Finalizados </a> 
         </div>
-        <div className={styles.sidebtn}>
-        <a className="text-white"> Blog </a>
-        </div>
         <div className="mb-5 mt-5">
         <Image src="/img/checked.png" alt="" width="100" height="100" />
       </div>
