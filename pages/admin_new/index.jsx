@@ -62,7 +62,7 @@ const Index = () => {
     <>
       <div className="col-lg-12 d-flex">
         <Sidebar />
-        <div className="col-lg-9">
+        <div className="col-lg-10">
           <h1>Produtos</h1>
           <div className={styles.item}>
             <h1 className={styles.title}>PRODUTOS</h1>
