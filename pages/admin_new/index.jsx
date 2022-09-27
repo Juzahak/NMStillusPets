@@ -2,7 +2,7 @@ import axios from "axios";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import styles from "../../public/styles/Admin.module.css";
-import * as React from 'react';
+import * as React from "react";
 import Finalizado from "../../components/Finalizado";
 import Finalizados from "../../components/Finalizados";
 import Edit from "../../components/Edit";
@@ -10,17 +10,17 @@ import Editar from "../../components/Editar";
 import Print from "../../components/Print";
 import Printss from "../../components/Printss";
 import PizzaList from "../../components/PizzaList";
-import useSwr, { mutate } from 'swr';
+import useSwr, { mutate } from "swr";
 import Add from "../../components/Add";
 import AddButton from "../../components/AddButton";
 import Sidebar from "../../components/Sidebar";
 
-const fetcher = (url) => fetch(url).then((res) => res.json())
-
-
+const fetcher = (url) => fetch(url).then((res) => res.json());
 
 const Index = () => {
-  const { data: orders } = useSwr(`/api/orders`, fetcher, { refreshInterval: 5000 });
+  const { data: orders } = useSwr(`/api/orders`, fetcher, {
+    refreshInterval: 5000,
+  });
   const { data: products } = useSwr(`/api/products`, fetcher);
   const [close, setClose] = useState(true);
   const [close2, setClose2] = useState(true);
@@ -30,16 +30,14 @@ const Index = () => {
   const [close4, setClose4] = useState(true);
   const { data: lista } = useSwr("/api/lists", fetcher);
 
-  console.log(products)
+  console.log(products);
 
   const status = ["Preparando", "A Caminho!", "Entregue!"];
 
   const handleDelete = async (id) => {
     console.log(id);
     try {
-      const res = await axios.delete(
-        `/api/products/${id}`
-      );
+      const res = await axios.delete(`/api/products/${id}`);
       mutate(`/api/products`);
     } catch (err) {
       console.log(err);
@@ -60,13 +58,72 @@ const Index = () => {
     }
   };
 
-
   return (
     <>
       <div className="col-lg-12 d-flex">
         <Sidebar />
         <div className="col-lg-9">
-        <h1>Painel Administrativo</h1>
+          <h1>Produtos</h1>
+          <div className={styles.item}>
+            <h1 className={styles.title}>PRODUTOS</h1>
+            <table className={styles.table}>
+              <tbody>
+                <tr className={styles.title}>
+                  <th>IMAGEM</th>
+                  <th>TITULO</th>
+                  <th>PREÇO</th>
+                  <th>EDITAR</th>
+                  <th>EXCLUIR</th>
+                </tr>
+              </tbody>
+              {products?.map((product, Index) => (
+                <tbody key={Index}>
+                  <tr className={styles.trTitle}>
+                    <td className={styles.tdTitle}>
+                      <Image
+                        src={product?.img}
+                        width={120}
+                        height={120}
+                        objectFit="cover"
+                        alt=""
+                      />
+                    </td>
+                    <td className={styles.tdTitle}>{product?.title}</td>
+                    <td className={styles.tdTitle}>
+                      R${product?.prices[0]}.00
+                    </td>
+                    <td className={styles.tdTitle}>
+                      <button onClick={() => setIde(product?._id)}>
+                        {<Edit setClose2={setClose2} />}
+
+                        {!close2 && (
+                          <Editar
+                            setClose2={setClose2}
+                            pizzaList={products}
+                            extras={product?.extraOptions}
+                            products={products}
+                            pizzaId={Ide}
+                            title={product?.title}
+                            desc2={product?.desc}
+                            prices2={product?.prices}
+                            estoque={product?.estoque}
+                          />
+                        )}
+                      </button>
+                    </td>
+                    <td>
+                      <button
+                        className={styles.button}
+                        onClick={() => handleDelete(product?._id)}
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              ))}
+            </table>
+          </div>
         </div>
       </div>
     </>
@@ -85,11 +142,8 @@ export const getServerSideProps = async (ctx) => {
     };
   }
 
-
   return {
-    props: {
-
-    },
+    props: {},
   };
 };
 
