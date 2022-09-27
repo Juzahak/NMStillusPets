@@ -67,7 +67,7 @@ export default function Home({ admin }) {
               <Image src="/img/comomedir.jpg" alt="" width="500" height="500" />
             </div>
             <div className="col-12 col-lg-12 align-items-center d-flex text-center flex-column justify-content-center">
-              <h2>Como medir seu pet?</h2>
+              <h2>Como medir seu Lucas?</h2>
               <p className="p-3">Escolher a roupa no tamanho correto é um fator importante para o conforto do animal. Tire as medidas antes de comprar para achar o look perfeito para seu pet! Depois encontre o tamanho ideal, através das medidas, nas tabelas dos tamanhos, de acordo com cada modelo.</p>
               <div className="col-6 d-flex ">
                 <Link href="/comoMedir/[id].jsx" passHref >
