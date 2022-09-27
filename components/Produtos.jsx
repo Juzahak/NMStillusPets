@@ -1,12 +1,12 @@
 import axios from "axios";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import styles from "../../public/styles/Admin.module.css";
+import styles from "../public/styles/Admin.module.css";
 import * as React from "react";
-import Edit from "../../components/Edit";
-import Editar from "../../components/Editar";
+import Edit from "./Edit";
+import Editar from "./Editar";
 import useSwr, { mutate } from "swr";
-import Sidebar from "../../components/Sidebar";
+import Sidebar from "./Sidebar";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
