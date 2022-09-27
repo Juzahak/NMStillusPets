@@ -14,6 +14,7 @@ import useSwr, { mutate } from "swr";
 import Add from "../../components/Add";
 import AddButton from "../../components/AddButton";
 import Sidebar from "../../components/Sidebar";
+import Produtos from "../../components/Produtos";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -62,69 +63,9 @@ const Index = () => {
     <>
       <div className="col-lg-12 d-flex">
         <Sidebar />
-        <div className="col-lg-10">
-          <h1>Produtos</h1>
-          <div className={styles.item}>
-            <h1 className={styles.title}>PRODUTOS</h1>
-            <table className={styles.table}>
-              <tbody>
-                <tr className={styles.title}>
-                  <th>IMAGEM</th>
-                  <th>TITULO</th>
-                  <th>PREÇO</th>
-                  <th>EDITAR</th>
-                  <th>EXCLUIR</th>
-                </tr>
-              </tbody>
-              {products?.map((product, Index) => (
-                <tbody key={Index}>
-                  <tr className={styles.trTitle}>
-                    <td className={styles.tdTitle}>
-                      <Image
-                        src={product?.img}
-                        width={120}
-                        height={120}
-                        objectFit="cover"
-                        alt=""
-                      />
-                    </td>
-                    <td className={styles.tdTitle}>{product?.title}</td>
-                    <td className={styles.tdTitle}>
-                      R${product?.prices[0]}.00
-                    </td>
-                    <td className={styles.tdTitle}>
-                      <button onClick={() => setIde(product?._id)}>
-                        {<Edit setClose2={setClose2} />}
+       
+        <Produtos />
 
-                        {!close2 && (
-                          <Editar
-                            setClose2={setClose2}
-                            pizzaList={products}
-                            extras={product?.extraOptions}
-                            products={products}
-                            pizzaId={Ide}
-                            title={product?.title}
-                            desc2={product?.desc}
-                            prices2={product?.prices}
-                            estoque={product?.estoque}
-                          />
-                        )}
-                      </button>
-                    </td>
-                    <td>
-                      <button
-                        className={styles.button}
-                        onClick={() => handleDelete(product?._id)}
-                      >
-                        Delete
-                      </button>
-                    </td>
-                  </tr>
-                </tbody>
-              ))}
-            </table>
-          </div>
-        </div>
       </div>
     </>
   );
