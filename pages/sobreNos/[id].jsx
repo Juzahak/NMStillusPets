@@ -7,6 +7,8 @@ import PizzaList2 from "../../components/PizzaList2";
 import styles from "../../public/styles/Home.module.css";
 import useSwr from 'swr'
 import Link from "next/link";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
@@ -33,20 +35,10 @@ export default function Home({ admin }) {
   const { data: pizzaList } = useSwr("/api/products", fetcher);
   const { data: lista } = useSwr("/api/lists", fetcher);
   console.log(lista);
-  if (lista === true) {
+ 
     return (
-      <div className={styles.container}>
-        <Head>
-          <title>NM Stillus Pets</title>
-          <meta name="description" content="" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-
-
-      </div>
-    );
-  } else {
-    return (
+      <>
+      <Navbar />
       <div className={styles.container}>
         <Head>
           <title>NM moda em roupas pet</title>
@@ -161,7 +153,9 @@ export default function Home({ admin }) {
         </section>
 
       </div>
+      <Footer />
+      </>
     );
   }
 
-}
+

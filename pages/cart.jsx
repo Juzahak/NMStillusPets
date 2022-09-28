@@ -10,6 +10,8 @@ import axios from "axios";
 import Dropdown2 from "../components/Dropdown2";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Link from "next/link";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const Cart = () => {
 
@@ -61,6 +63,7 @@ const Cart = () => {
 
   return (
     <>
+    <Navbar />
       <section id="page-title" className={styles.estilo}>
 
         <div className="container clearfix dark">
@@ -195,6 +198,7 @@ const Cart = () => {
 
         {cash && <OrderDetail total={cart.total} produto={cart.products} metodo={metodo} size={cart.products.size} createOrder={createOrder} setCash={setCash} />}
       </div>
+      <Footer />
     </>
   );
 };

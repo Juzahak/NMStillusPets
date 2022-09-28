@@ -304,7 +304,8 @@ margin-top:10px;
   text-align: center;
   font-weight: 900;
   display: flex;
-    align-items: center;
+  align-items: center;
+  padding: 40px;
 }
 
 .sidebar{

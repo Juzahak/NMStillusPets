@@ -14,6 +14,8 @@ import useSwr, { mutate } from 'swr';
 import Add from "../../components/Add";
 import AddButton from "../../components/AddButton";
 import Sidebar from "../../components/Sidebar";
+import Home from "../../components/Home";
+import Pedidos from "../../components/Pedidos";
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
@@ -76,11 +78,11 @@ const Index = () => {
 
 
     <>
-      <div className="col-lg-12 d-flex">
+      <div className="col-lg-12 d-flex bg-white">
         <Sidebar />
-        <div className="col-lg-9">
-        <h1>Painel Administrativo</h1>
-        </div>
+        
+        <Pedidos />
+
       </div>
     </>
 

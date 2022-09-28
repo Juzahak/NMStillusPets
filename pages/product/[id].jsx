@@ -7,6 +7,8 @@ import { addProduct } from '../../redux/cartSlice';
 import Link from "next/link";
 import useSwr from 'swr'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
 
 
@@ -194,6 +196,7 @@ const Product = ({ productId }) => {
 
   return (
     <>
+      <Navbar />
       <section id="page-title" className={styles.estilo}>
 
         <div className="container clearfix dark">
@@ -252,7 +255,7 @@ const Product = ({ productId }) => {
         <div className={styles.right}>
           <h1 className={styles.title}>{pizza?.title}</h1>
           <span className={styles.price}>R$ {price}.00</span>
-          
+
           <p className={styles.desc}>{pizza?.desc}</p>
           {pizza?.refri && (
             <>
@@ -337,6 +340,7 @@ const Product = ({ productId }) => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

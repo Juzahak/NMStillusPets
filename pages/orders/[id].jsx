@@ -6,6 +6,8 @@ import { useRouter } from "next/router";
 import useSwr from 'swr'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Link from "next/link";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
@@ -56,6 +58,7 @@ const Order = ({ orderId }) => {
   };
   return (
     <>
+    <Navbar />
       <section id="page-title" className={styles.estilo}>
 
         <div className="container clearfix dark">
@@ -246,6 +249,7 @@ const Order = ({ orderId }) => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

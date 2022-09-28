@@ -7,6 +7,8 @@ import PizzaList2 from "../../components/PizzaList2";
 import styles from "../../public/styles/Home.module.css";
 import useSwr from 'swr'
 import Link from "next/link";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
@@ -47,6 +49,8 @@ export default function Home({ admin }) {
     );
   } else {
     return (
+      <>
+      <Navbar />
       <div className={styles.container}>
         <Head>
           <title>NM moda em roupas pet</title>
@@ -95,6 +99,8 @@ export default function Home({ admin }) {
         </section>
 
       </div>
+      <Footer />
+      </>
     );
   }
 
