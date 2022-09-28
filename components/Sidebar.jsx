@@ -5,6 +5,16 @@ import { useEffect, useState } from "react";
 const Sidebar = ({ setClose2 }) => {
   const [close3, setClose3] = useState(true);
 
+
+  const abrefecha = () => {
+    if(close3 === true) {
+      setClose2(false);
+    }
+    if(close3 === false) {
+      setClose2(true);
+    }
+  };
+
   console.log(close3);
   return (
     <div className={styles.sidebar}>
@@ -18,7 +28,7 @@ const Sidebar = ({ setClose2 }) => {
         <div onClick={() => setClose3(false)} className={styles.sidebtn}>
         Pedidos
         </div>
-        <div onClick={() => setClose2(false)} className={styles.sidebtn}>
+        <div onClick={() => abrefecha()} className={styles.sidebtn}>
         <a className="text-white"> Produtos </a> 
         </div>
         <div className={styles.sidebtn}>
