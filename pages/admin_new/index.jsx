@@ -71,7 +71,7 @@ const Index = () => {
         
         {<Produtos setClose2={setClose2} />}
 
-        {!close && <Produtos setClose2={setClose2}/>}
+        {!close2 && <Produtos setClose2={setClose2}/>}
       </div>
     </>
   );
