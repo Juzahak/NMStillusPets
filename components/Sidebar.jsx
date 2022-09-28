@@ -7,10 +7,10 @@ const Sidebar = ({ setClose2, close2 }) => {
 
 
   const abrefecha = () => {
-    if({close2} === true) {
+    if(close2 === true) {
       setClose2(false);
     }
-    if({close2} === false) {
+    if(close2 === false) {
       setClose2(true);
     }
   };

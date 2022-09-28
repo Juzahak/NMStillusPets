@@ -67,7 +67,7 @@ const Index = () => {
 
     <>
       <div className="col-lg-12 d-flex bg-white">
-        <Sidebar setClose2={setClose2}/>
+        <Sidebar setClose2={setClose2} close2={close2}/>
 
         {!close2 && <Produtos setClose2={setClose2} close2={close2}/>}
       </div>
