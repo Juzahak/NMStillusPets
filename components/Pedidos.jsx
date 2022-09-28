@@ -1,4 +1,4 @@
-import styles from "../public/styles/admin.module.css";
+import styles from "../public/styles/Admin.module.css";
 import Image from "next/image";
 import useSwr, { mutate } from 'swr';
 import { useEffect, useState } from "react";
