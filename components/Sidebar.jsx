@@ -2,8 +2,9 @@ import styles from "../public/styles/Admin.module.css";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const Sidebar = () => {
+const Sidebar = ({ setClose2 }) => {
   const [close3, setClose3] = useState(true);
+
   console.log(close3);
   return (
     <div className={styles.sidebar}>
@@ -15,9 +16,9 @@ const Sidebar = () => {
         <a className="text-white"> Home </a> 
         </div>
         <div onClick={() => setClose3(false)} className={styles.sidebtn}>
-        Editar
+        Pedidos
         </div>
-        <div className={styles.sidebtn}>
+        <div onClick={() => setClose2(false)} className={styles.sidebtn}>
         <a className="text-white"> Produtos </a> 
         </div>
         <div className={styles.sidebtn}>

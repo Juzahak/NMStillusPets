@@ -67,10 +67,11 @@ const Index = () => {
 
     <>
       <div className="col-lg-12 d-flex bg-white">
-        <Sidebar />
+        <Sidebar setClose2={setClose2}/>
         
-        <Produtos />
+        {<Produtos setClose2={setClose2} />}
 
+        {!close && <Produtos setClose2={setClose2}/>}
       </div>
     </>
   );
