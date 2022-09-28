@@ -19,7 +19,7 @@ const Sidebar = ({ setClose2, close2 }) => {
   return (
     <div className={styles.sidebar}>
     <div className="col-lg-2 bg-black h-100 w-100 d-flex align-items-center flex-column" >
-      <div className="m-5 p-4">
+      <div>
         <Image src="/img/checked.png" alt="" width="100" height="100" />
       </div>
       <div className={styles.sidebtn}>
@@ -34,7 +34,7 @@ const Sidebar = ({ setClose2, close2 }) => {
         <div className={styles.sidebtn}>
         <a className="text-white"> Finalizados </a> 
         </div>
-        <div className="mb-5 mt-5">
+        <div>
         <Image src="/img/checked.png" alt="" width="100" height="100" />
       </div>
     </div>
