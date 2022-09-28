@@ -46,6 +46,8 @@
 
 .imagefood {
   overflow: hidden;
+  height: auto;
+  width: auto;
 }
 
 .title {
@@ -82,10 +84,9 @@
   }
 
   .imagefood {
-    width: 46vw;
-    height: 31vh;
-
-  }
+  height: auto;
+  width: auto;
+  } 
 
   .title {
     font-size: 1.1rem;

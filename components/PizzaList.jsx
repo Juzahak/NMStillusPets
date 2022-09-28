@@ -61,7 +61,7 @@ console.log(name);
           {pizzaList.map((pizza) => (
             
             pizza.refri == true && pizza.listName === listt.list && contador < 2?
-            <div className="col-6 col-md-4 col-sm-5 col-lg-3">
+            <div className="col-6 col-lg-3">
               <PizzaCard key={pizza._id} pizza={pizza} />
               
             </div>
