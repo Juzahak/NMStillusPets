@@ -51,7 +51,7 @@ const Produtos = () => {
     <>
      
         <div className="col-lg-10">
-          <h1>Produtos</h1>
+          <h1 className={styles.title2}>Produtos</h1>
           <div className={styles.item}>
             <table className={styles.table}>
               <tbody>
