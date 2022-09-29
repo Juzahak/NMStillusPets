@@ -65,7 +65,7 @@ const Sidebar = ({ setClose, close, setClose2, close2, setClose3, close3, setClo
   console.log(close3);
   return (
     <div className={styles.sidebar}>
-    <div className="col-lg-2 bg-black h-100 w-100 d-flex align-items-center flex-column" >
+    <div className="col-lg-2 bg-black h-100 w-100 d-flex align-items-center flex-column min-vh-100" >
       <div>
         <Image src="/img/checked.png" alt="" width="100" height="100" />
       </div>
