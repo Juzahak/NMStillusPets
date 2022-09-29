@@ -22,6 +22,9 @@ const Finalizado = ({ orders }) => {
   };
 
   return (
+    
+    <div className="col-lg-10">
+    
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <table className={styles.table}>
@@ -47,19 +50,9 @@ const Finalizado = ({ orders }) => {
                   <td className={styles.tdTitle}>{order.customer}, {order.telefone}</td>
                   <td className={styles.tdTitle}>
                     {order.produto.map((sla, Index) =>
-                      
                         <span className={styles.spanTitle} key={Index}>{sla.title}, </span>
-                        
-                      
                     )}
-
-
-
                   </td>
-
-
-
-
                   <td className={styles.tdTitle}>R${order.total}.00</td>
                   <td className={styles.tdTitle}>
                     {order?.metodo === 1 ? <span>Dinheiro/Cartão ({order?.troco}R$)</span> : <span>Mercado Livre</span>}
@@ -83,6 +76,7 @@ const Finalizado = ({ orders }) => {
           
         </table>
         </div>
+    </div>
     </div>
   )
 
