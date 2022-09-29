@@ -2,27 +2,43 @@ import styles from "../public/styles/Admin.module.css";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const Sidebar = ({ setClose2, close2, setClose3, close3 }) => {
+const Sidebar = ({ setClose2, close2, setClose3, close3, setClose4, close4 }) => {
 
 
   const abrefecha = () => {
     if(close2 === true) {
       setClose2(false);
       setClose3(true);
+      setClose4(true);
     }
     if(close2 === false) {
       setClose2(true);
       setClose3(true);
+      setClose4(true);
     }
   };
   const abrefecha2 = () => {
     if(close3 === true) {
-      setClose2(true);
       setClose3(false);
+      setClose2(true);
+      setClose4(true);
     }
     if(close3 === false) {
       setClose2(true);
       setClose3(true);
+      setClose4(true);
+    }
+  };
+  const abrefecha3 = () => {
+    if(close4 === true) {
+      setClose4(false);
+      setClose2(true);
+      setClose3(true);
+    }
+    if(close4 === false) {
+      setClose2(true);
+      setClose3(true);
+      setClose4(true);
     }
   };
 
@@ -37,12 +53,12 @@ const Sidebar = ({ setClose2, close2, setClose3, close3 }) => {
         <a className="text-white"> Home </a> 
         </div>
         <div onClick={() => abrefecha2()} className={styles.sidebtn}>
-        Pedidos
+        <a className="text-white">Pedidos</a>
         </div>
         <div onClick={() => abrefecha()} className={styles.sidebtn}>
         <a className="text-white"> Produtos </a> 
         </div>
-        <div className={styles.sidebtn}>
+        <div onClick={() => abrefecha3()} className={styles.sidebtn}>
         <a className="text-white"> Finalizados </a> 
         </div>
         <div>
