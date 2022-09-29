@@ -14,6 +14,8 @@ const Sidebar = ({ setClose2, close2, setClose3, close3 }) => {
       setClose2(true);
       setClose3(true);
     }
+  };
+  const abrefecha2 = () => {
     if(close3 === true) {
       setClose2(true);
       setClose3(false);
@@ -34,7 +36,7 @@ const Sidebar = ({ setClose2, close2, setClose3, close3 }) => {
       <div className={styles.sidebtn}>
         <a className="text-white"> Home </a> 
         </div>
-        <div onClick={() => abrefecha()} className={styles.sidebtn}>
+        <div onClick={() => abrefecha2()} className={styles.sidebtn}>
         Pedidos
         </div>
         <div onClick={() => abrefecha()} className={styles.sidebtn}>
