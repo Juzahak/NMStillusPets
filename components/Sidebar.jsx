@@ -2,16 +2,25 @@ import styles from "../public/styles/Admin.module.css";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const Sidebar = ({ setClose2, close2 }) => {
-  const [close3, setClose3] = useState(true);
+const Sidebar = ({ setClose2, close2, setClose3, close3 }) => {
 
 
   const abrefecha = () => {
     if(close2 === true) {
       setClose2(false);
+      setClose3(true);
     }
     if(close2 === false) {
       setClose2(true);
+      setClose3(true);
+    }
+    if(close3 === true) {
+      setClose2(true);
+      setClose3(false);
+    }
+    if(close3 === false) {
+      setClose2(true);
+      setClose3(true);
     }
   };
 

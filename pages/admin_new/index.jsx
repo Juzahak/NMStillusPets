@@ -67,8 +67,9 @@ const Index = () => {
 
     <>
       <div className="col-lg-12 d-flex bg-white h-100">
-        <Sidebar setClose2={setClose2} close2={close2}/>
+        <Sidebar setClose2={setClose2} close2={close2} setClose3={setClose3} close3={close3}/>
 
+        {!close3 && <Pedidos setClose3={setClose3} close3={close3}/>}
         {!close2 && <Produtos setClose2={setClose2} close2={close2}/>}
       </div>
     </>
