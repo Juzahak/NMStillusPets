@@ -34,7 +34,7 @@ const Sidebar = ({ setClose2, close2, setClose3, close3 }) => {
       <div className={styles.sidebtn}>
         <a className="text-white"> Home </a> 
         </div>
-        <div onClick={() => setClose3(false)} className={styles.sidebtn}>
+        <div onClick={() => abrefecha()} className={styles.sidebtn}>
         Pedidos
         </div>
         <div onClick={() => abrefecha()} className={styles.sidebtn}>
