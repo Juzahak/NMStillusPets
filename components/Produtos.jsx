@@ -50,7 +50,7 @@ const Produtos = () => {
   return (
     <>
      
-        <div className="col-lg-10">
+        <div className="col-lg-10 d-flex justify-content-center">
           <h1>Produtos</h1>
           <div className={styles.item}>
             <h1 className={styles.title}>PRODUTOS</h1>
