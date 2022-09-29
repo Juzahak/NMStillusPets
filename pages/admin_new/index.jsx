@@ -25,12 +25,12 @@ const Index = () => {
     refreshInterval: 5000,
   });
   const { data: products } = useSwr(`/api/products`, fetcher);
-  const [close, setClose] = useState(true);
+  const [close, setClose] = useState(false);
   const [close2, setClose2] = useState(true);
   const [close3, setClose3] = useState(true);
+  const [close4, setClose4] = useState(true);
   const [Ide, setIde] = useState("");
   const [loading, setLoading] = useState(false);
-  const [close4, setClose4] = useState(true);
   const { data: lista } = useSwr("/api/lists", fetcher);
 
   console.log(products);
@@ -66,11 +66,13 @@ const Index = () => {
 
 
     <>
-      <div className="col-lg-12 d-flex bg-white">
-        <Sidebar />
-        
-        <Produtos />
+      <div className="col-lg-12 d-flex bg-white h-100">
+        <Sidebar setClose={setClose} close={close} setClose2={setClose2} close2={close2} setClose3={setClose3} close3={close3} setClose4={setClose4} close4={close4}/>
 
+        {!close4 && <Finalizado setClose4={setClose4} close4={close4} orders={orders}/>}
+        {!close3 && <Pedidos setClose3={setClose3} close3={close3}/>}
+        {!close2 && <Produtos setClose2={setClose2} close2={close2}/>}
+        {!close && <Home setClose={setClose} close={close}/>}
       </div>
     </>
   );

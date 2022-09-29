@@ -33,10 +33,7 @@
     }
   
   .container {
-    width: 100vw;
-    height: 55vh;
     background-color: rgba(245, 240, 240, 0.52);
-    position: fixed;
     left: 0;
     margin: 0 auto;
     z-index: 999;
@@ -59,6 +56,15 @@
     overflow-y: scroll;
   }
   
+  .title2 {
+    text-shadow: 2px 2px 15px black;
+    text-align: center;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+  }
+
   .delete {
     border-radius: 5px;
     background: white;

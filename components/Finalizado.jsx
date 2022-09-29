@@ -4,7 +4,7 @@ import axios from "axios";
 import { useRouter } from "next/router";
 
 
-const Finalizado = ({ setClose, orders }) => {
+const Finalizado = ({ orders }) => {
   const [orderList, setOrderList] = useState(orders);
 
   
@@ -20,18 +20,12 @@ const Finalizado = ({ setClose, orders }) => {
       console.log(err);
     }
   };
-  
-
-  
-
-  
- 
 
   return (
+    
+    <div className="col-lg-10">
+    <h1 className={styles.title2}>Produtos</h1>
     <div className={styles.container}>
-        <span onClick={() => setClose(true)} className={styles.close}>
-          X
-        </span>
       <div className={styles.wrapper}>
         <table className={styles.table}>
         <tbody>
@@ -56,19 +50,9 @@ const Finalizado = ({ setClose, orders }) => {
                   <td className={styles.tdTitle}>{order.customer}, {order.telefone}</td>
                   <td className={styles.tdTitle}>
                     {order.produto.map((sla, Index) =>
-                      
                         <span className={styles.spanTitle} key={Index}>{sla.title}, </span>
-                        
-                      
                     )}
-
-
-
                   </td>
-
-
-
-
                   <td className={styles.tdTitle}>R${order.total}.00</td>
                   <td className={styles.tdTitle}>
                     {order?.metodo === 1 ? <span>Dinheiro/Cartão ({order?.troco}R$)</span> : <span>Mercado Livre</span>}
@@ -92,6 +76,7 @@ const Finalizado = ({ setClose, orders }) => {
           
         </table>
         </div>
+    </div>
     </div>
   )
 

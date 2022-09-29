@@ -34,7 +34,7 @@ const Sidebar = () => {
     <div className="col-lg-10 d-flex justify-content-center">
     <div className={styles.item}>
         <div className={styles.alinhado}>
-          <h1 className={styles.title2}>PEDIDOS</h1>
+          <h1 className={styles.title2}>Pedidos</h1>
           
         </div>
         <table className={styles.table}>

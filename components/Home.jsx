@@ -1,7 +1,7 @@
 import styles from "../public/styles/Admin.module.css";
 import Image from "next/image";
 
-const Home = ({ setClose3 }) => {
+const Home = ({ setClose }) => {
   return (
     <div className="col-lg-9 mt-5 text-center">
         <h1>Painel Administrativo</h1>
