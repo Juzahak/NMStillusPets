@@ -12,7 +12,7 @@ const Sidebar = ({ setClose, close, setClose2, close2, setClose3, close3, setClo
       setClose3(true);
       setClose4(true);
     }
-    if(close2 === false) {
+    if(close === false) {
       setClose(true);
       setClose2(true);
       setClose3(true);

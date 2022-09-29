@@ -25,7 +25,7 @@ const Index = () => {
     refreshInterval: 5000,
   });
   const { data: products } = useSwr(`/api/products`, fetcher);
-  const [close, setClose] = useState(true);
+  const [close, setClose] = useState(false);
   const [close2, setClose2] = useState(true);
   const [close3, setClose3] = useState(true);
   const [close4, setClose4] = useState(true);
