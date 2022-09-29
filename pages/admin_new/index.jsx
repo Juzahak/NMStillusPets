@@ -72,7 +72,7 @@ const Index = () => {
         {!close4 && <Finalizado setClose4={setClose4} close4={close4} orders={orders}/>}
         {!close3 && <Pedidos setClose3={setClose3} close3={close3}/>}
         {!close2 && <Produtos setClose2={setClose2} close2={close2}/>}
-        {!close2 && <Home setClose={setClose} close={close}/>}
+        {!close && <Home setClose={setClose} close={close}/>}
       </div>
     </>
   );
