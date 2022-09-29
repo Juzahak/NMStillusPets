@@ -13,7 +13,7 @@ const Sidebar = ({ setClose, close, setClose2, close2, setClose3, close3, setClo
       setClose4(true);
     }
     if(close === false) {
-      setClose(true);
+      setClose(false);
       setClose2(true);
       setClose3(true);
       setClose4(true);
@@ -30,7 +30,7 @@ const Sidebar = ({ setClose, close, setClose2, close2, setClose3, close3, setClo
       setClose2(true);
       setClose3(true);
       setClose4(true);
-      setClose(true);
+      setClose(false);
     }
   };
   const abrefecha2 = () => {
@@ -43,7 +43,7 @@ const Sidebar = ({ setClose, close, setClose2, close2, setClose3, close3, setClo
     if(close3 === false) {
       setClose2(true);
       setClose3(true);
-      setClose(true);
+      setClose(false);
       setClose4(true);
     }
   };
@@ -58,7 +58,7 @@ const Sidebar = ({ setClose, close, setClose2, close2, setClose3, close3, setClo
       setClose2(true);
       setClose3(true);
       setClose4(true);
-      setClose(true);
+      setClose(false);
     }
   };
 
