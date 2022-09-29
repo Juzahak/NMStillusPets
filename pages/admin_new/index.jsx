@@ -67,11 +67,12 @@ const Index = () => {
 
     <>
       <div className="col-lg-12 d-flex bg-white h-100">
-        <Sidebar setClose2={setClose2} close2={close2} setClose3={setClose3} close3={close3} setClose4={setClose4} close4={close4}/>
+        <Sidebar setClose={setClose} close={close} setClose2={setClose2} close2={close2} setClose3={setClose3} close3={close3} setClose4={setClose4} close4={close4}/>
 
         {!close4 && <Finalizado setClose4={setClose4} close4={close4} orders={orders}/>}
         {!close3 && <Pedidos setClose3={setClose3} close3={close3}/>}
         {!close2 && <Produtos setClose2={setClose2} close2={close2}/>}
+        {!close2 && <Home setClose={setClose} close={close}/>}
       </div>
     </>
   );
