@@ -4,7 +4,7 @@ import axios from "axios";
 import { useRouter } from "next/router";
 
 
-const Finalizado = ({ setClose, orders }) => {
+const Finalizado = ({ orders }) => {
   const [orderList, setOrderList] = useState(orders);
 
   
@@ -20,18 +20,9 @@ const Finalizado = ({ setClose, orders }) => {
       console.log(err);
     }
   };
-  
-
-  
-
-  
- 
 
   return (
     <div className={styles.container}>
-        <span onClick={() => setClose(true)} className={styles.close}>
-          X
-        </span>
       <div className={styles.wrapper}>
         <table className={styles.table}>
         <tbody>
