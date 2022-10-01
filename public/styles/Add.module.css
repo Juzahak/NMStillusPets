@@ -1,15 +1,20 @@
 .mainAddButton {
-  padding: 10px;
-  margin: 20px;
-  background-color: #d1411e00;
-  border: 2px solid;
-  width: 150px;
-  border-radius: 10px;
-  color: blue;
-  font-weight: 500;
-  text-align: center;
-  cursor: pointer;
-  border-color: blue;
+    padding: 10px;
+    margin: 20px;
+    background-color: #d1411e00;
+    border: 2px solid;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    color: blue;
+    font-weight: 500;
+    display: flex;
+    text-align: center;
+    cursor: pointer;
+    border-color: blue;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .mainAddButton:hover {
@@ -24,6 +29,7 @@
     font-size: 20px;
     font-family: sans-serif;
     font-weight: 700;
+    align-items: center;
     margin-bottom: 10px;
     flex-wrap: wrap;
 }
@@ -33,6 +39,7 @@
     font-size: 25px;
     margin-bottom: 15px;
     margin-top: 15px;
+    margin-left: 20px;
   }
 
   .extraButton5 {
@@ -50,13 +57,14 @@
     border-radius: 10px;
   }
   .extraButton4 {
-    margin-bottom: 40px;
-    margin-top: 20px;
+    display: flex;
+    align-items: center;
   }
 
   .inputinho {
     width: 20px;
     height: 20px;
+    margin: 0 5px;
   }
 
   .button{
@@ -82,45 +90,55 @@
   align-items: center;
   justify-content: center;
   
+  flex: 0 0 auto;
+  width: 83.33333333%;
+
 }
 
 .wrapper {
-  width: 630px;
-  height: 650px;
+  width: 100vw;
+    height: 100vh;
     overflow: auto;
-  background-color: white;
-  padding: 10px 50px;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
+    background-color: white;
+    padding: 50px;    
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    
 }
 
 .close {
-  width: 30px;
-  height: 30px;
-  background-color: black;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  position: absolute;
-  right: 0;
+  width: 50px;
+    height: 50px;
+    font-size: 27px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999;
 }
+
 
 .item {
   display: flex;
     flex-direction: column;
     margin-bottom: 5px;
 }
-
+.item5 {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+  justify-content: space-evenly;
+}
 .label {
   margin-bottom: 10px;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .input {

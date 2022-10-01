@@ -23,10 +23,10 @@ const Finalizado = ({ orders }) => {
 
   return (
     
-    <div className="col-lg-10">
-    <h1 className={styles.title2}>Produtos</h1>
+    <div className="col-lg-12">
     <div className={styles.container}>
       <div className={styles.wrapper}>
+    <h1 className={styles.title2}>Finalizados</h1>
         <table className={styles.table}>
         <tbody>
             <tr>

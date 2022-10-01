@@ -2,7 +2,7 @@ import axios from "axios";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import styles from "../../public/styles/Admin.module.css";
-import * as React from 'react';
+import * as React from "react";
 import Finalizado from "../../components/Finalizado";
 import Finalizados from "../../components/Finalizados";
 import Edit from "../../components/Edit";
@@ -10,43 +10,37 @@ import Editar from "../../components/Editar";
 import Print from "../../components/Print";
 import Printss from "../../components/Printss";
 import PizzaList from "../../components/PizzaList";
-import useSwr, {mutate} from 'swr';
+import useSwr, { mutate } from "swr";
 import Add from "../../components/Add";
 import AddButton from "../../components/AddButton";
+import Sidebar from "../../components/Sidebar";
+import Home from "../../components/Home";
+import Pedidos from "../../components/Pedidos";
+import Produtos from "../../components/Produtos";
 
-const fetcher = (url) => fetch(url).then((res) => res.json())
-
-
+const fetcher = (url) => fetch(url).then((res) => res.json());
 
 const Index = () => {
-  const {data: orders} =  useSwr(`/api/orders`, fetcher, {refreshInterval:5000});
-  const {data: products} =  useSwr(`/api/products`, fetcher);
-  const [close, setClose] = useState(true);
-  const [close2, setClose2] = useState(true); 
+  const { data: orders } = useSwr(`/api/orders`, fetcher, {
+    refreshInterval: 5000,
+  });
+  const { data: products } = useSwr(`/api/products`, fetcher);
+  const [close, setClose] = useState(false);
+  const [close2, setClose2] = useState(true);
   const [close3, setClose3] = useState(true);
+  const [close4, setClose4] = useState(true);
   const [Ide, setIde] = useState("");
   const [loading, setLoading] = useState(false);
-  const [close4, setClose4] = useState(true);
   const { data: lista } = useSwr("/api/lists", fetcher);
 
- 
-   
-    console.log(products)
- 
+  console.log(products);
 
   const status = ["Preparando", "A Caminho!", "Entregue!"];
- 
 
-
-
-    
-    
   const handleDelete = async (id) => {
     console.log(id);
     try {
-      const res = await axios.delete(
-        `/api/products/${id}`
-      );
+      const res = await axios.delete(`/api/products/${id}`);
       mutate(`/api/products`);
     } catch (err) {
       console.log(err);
@@ -62,199 +56,31 @@ const Index = () => {
         status: currentStatus + 1,
       });
       mutate(`/api/orders`);
-
-      
     } catch (err) {
       console.log(err);
     }
   };
-  
 
   return (
-    
- 
-
-
-          
-          <div className={styles.container}>
-      
-      <div className={styles.item}>
-        <div className={styles.alinhado}>
-          <h1 className={styles.title2}>PEDIDOS</h1>
-          {<AddButton setClose={setClose4} />}
-
-          {!close4 && <Add setClose={setClose4} lista={lista || []} />}
-
-          {<Finalizados setClose={setClose} />}
-
-          {!close && <Finalizado setClose={setClose} orders={orders} />}
-        </div>
-        <table className={styles.table}>
-          <tbody>
-            <tr className={styles.title}>
-              <th>CLIENTE</th>
-              <th>PRODUTOS</th>
-              <th>TAMANHO</th>
-              <th>OBS.</th>
-              <th>TOTAL</th>
-              <th>MÉTODO/TROCO</th>
-              <th>STATUS</th>
-              <th>AÇÃO</th>
-            </tr>
-          </tbody>
-
-          {orders?.map((order, Index) => (
-            order.status == 3 ?
-              <tfoot key={Index}></tfoot>
-
-
-              :
-
-
-              <tbody key={Index} className={styles.tbTitle}>
-
-                <tr className={styles.trTitle}>
-                  <td className={styles.tdtTitle}>{order?.customer},
-                    <div className={styles.tdt2Title}>{order?.select}</div>
-                    <div className={styles.tdt2Title}>{order?.telefone}</div>
-                  </td>
-                  <td className={styles.tdTitle}>
-                    {order?.produto.map((sla, Index) =>
-                      <div key={Index}>
-                        <div className={styles.spanTitle}>
-                        <Image
-                    src={sla?.img}
-                    width={100}
-                    height={160}
-                    objectFit="cover"
-                    alt=""
-                  />
-                          {sla?.title}
-                        
-                        </div>
-                      </div>
-                    )}
 
 
 
-                  </td>
+    <>
+      <div className="col-lg-12 d-flex bg-white h-100 overflow-hidden">
+        <Sidebar setClose={setClose} close={close} setClose2={setClose2} close2={close2} setClose3={setClose3} close3={close3} setClose4={setClose4} close4={close4}/>
 
-                  <td className={styles.td2Title}>
-                    {order?.produto.map((sla, Index) =>
-                      <div className={styles.span3Title} key={Index}>
-                        {sla?.extras.map((sla2, Index) =>
-                          <span key={Index}>{sla2} </span>
-                        )}
-                        
-
-                      </div>
-                    )}
-
-
-                  </td>
-
-                  <td className={styles.td2Title}>
-                    {order?.produto.map((sla, Index) =>
-                      <div className={styles.span2Title} key={Index}>
-                       
-                        {sla?.descri}
-
-                      </div>
-                    )}
-
-                  </td>
-
-
-
-                  <td className={styles.totalTitle}>R${order?.total}.00</td>
-                  <td className={styles.metodoTitle}>
-                    {order?.metodo === 1 ? <span>Dinheiro/Cartão ({order?.troco}R$)</span> : <span>Mercado Livre</span>}
-                  </td>
-                  <td className={styles.tdTitle}>
-                    <div className={styles.statinho}>{status[order?.status]}</div>
-                    <button className={styles.proximo} onClick={() => handleStatus(order?._id)}>
-                      Próximo Passo
-                    </button>
-                  </td>
-                  <td className={styles.tdTitle}>
-                  <button onClick={() => setIde(order?._id)} className={styles.impressao2}>
-                {<Print setClose3={setClose3} />}
-                      <input type='checkbox' className={styles.checkkk}></input>
-                  {!close3 && <Printss className={styles.impressao} setClose3={setClose3} order={orders} orderId={Ide}/>}
-                  </button>
-
-                  </td>
-                </tr>
-              </tbody>
-
-          ))}
-        </table>
+        {!close4 && <Finalizado setClose4={setClose4} close4={close4} orders={orders}/>}
+        {!close3 && <Pedidos setClose3={setClose3} close3={close3}/>}
+        {!close2 && <Produtos setClose2={setClose2} close2={close2}/>}
+        {!close && <Home setClose={setClose} close={close}/>}
       </div>
-      <div className={styles.item}>
-        <h1 className={styles.title}>PRODUTOS</h1>
-        <table className={styles.table}>
-          <tbody>
-            <tr className={styles.title}>
-              <th>IMAGEM</th>
-              <th>TITULO</th>
-              <th>PREÇO</th>
-              <th>EDITAR</th>
-              <th>EXCLUIR</th>
-            </tr>
-          </tbody>
-          {products?.map((product, Index) => (
-            <tbody key={Index}>
-              <tr className={styles.trTitle}>
-                <td className={styles.tdTitle}>
-                  <Image
-                    src={product?.img}
-                    width={120}
-                    height={120}
-                    objectFit="cover"
-                    alt=""
-                  />
-                </td>
-                <td className={styles.tdTitle}>{product?.title}</td>
-                <td className={styles.tdTitle}>R${product?.prices[0]}.00</td>
-                <td className={styles.tdTitle} >
-                  <button onClick={() => setIde(product?._id)}>
-                {<Edit setClose2={setClose2} />}
-
-                  {!close2 && <Editar setClose2={setClose2} 
-                 
-                  pizzaList={products} 
-                  extras={product?.extraOptions} 
-                  products={products} 
-                  pizzaId={Ide}
-                  title={product?.title}
-                  desc2={product?.desc}
-                  prices2={product?.prices}
-                  estoque={product?.estoque}
-                  />}
-                  </button>
-                  </td>
-                  <td>
-                  <button
-                    className={styles.button}
-                    onClick={() => handleDelete(product?._id)}
-                  >
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          ))}
-        </table>
-      </div>
-      
-    </div>
-        
+    </>
   );
 };
 
 export const getServerSideProps = async (ctx) => {
   const myCookie = ctx.req?.cookies || "";
- 
+
   if (myCookie.token !== process.env.TOKEN) {
     return {
       redirect: {
@@ -264,11 +90,8 @@ export const getServerSideProps = async (ctx) => {
     };
   }
 
-
   return {
-    props: {
-      
-    },
+    props: {},
   };
 };
 

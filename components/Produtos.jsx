@@ -7,6 +7,8 @@ import Edit from "./Edit";
 import Editar from "./Editar";
 import useSwr, { mutate } from "swr";
 import Sidebar from "./Sidebar";
+import Add from "./Add";
+import AddButton from "./AddButton";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -16,6 +18,7 @@ const Produtos = () => {
   });
   const { data: products } = useSwr(`/api/products`, fetcher);
   const [close2, setClose2] = useState(true);
+  const [close4, setClose4] = useState(true);
   const [Ide, setIde] = useState("");
   const { data: lista } = useSwr("/api/lists", fetcher);
 
@@ -50,9 +53,14 @@ const Produtos = () => {
   return (
     <>
      
-        <div className="col-lg-10">
-          <h1 className={styles.title2}>Produtos</h1>
+        <div className="col-lg-12">
           <div className={styles.item}>
+          <div className="d-flex justify-content-between align-items-center">
+          <h1 className={styles.title2}>Produtos</h1>
+          {<AddButton setClose={setClose4} />}
+
+          {!close4 && <Add setClose={setClose4} lista={lista || []} />}
+          </div>
             <table className={styles.table}>
               <tbody>
                 <tr className={styles.title}>
@@ -67,13 +75,15 @@ const Produtos = () => {
                 <tbody key={Index}>
                   <tr className={styles.trTitle}>
                     <td className={styles.tdTitle}>
+                      <div className={styles.tdimgTitle}>
                       <Image
                         src={product?.img}
                         width={120}
-                        height={120}
+                        height={200}
                         objectFit="cover"
                         alt=""
                       />
+                      </div>
                     </td>
                     <td className={styles.tdTitle}>{product?.title}</td>
                     <td className={styles.tdTitle}>
@@ -108,7 +118,7 @@ const Produtos = () => {
                     </td>
                   </tr>
                 </tbody>
-              ))}
+              )).reverse()}
             </table>
           </div>
         </div>

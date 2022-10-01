@@ -1,42 +1,46 @@
+@media print {
 
-@media print{
- 
-  .container{
-      visibility: hidden;
-      height: 0px;
-      box-shadow: 0px 0px;
-      margin: 0;
-      color: #000;
-      background-color: #fff;
-      display: none;
+  .container {
+    visibility: hidden;
+    height: 0px;
+    box-shadow: 0px 0px;
+    margin: 0;
+    color: #000;
+    background-color: #fff;
+    display: none;
   }
-  .item{
+
+  .item {
     visibility: hidden;
     box-shadow: 0px 0px;
     height: 0px;
     display: block;
   }
-  .trTitle{
+
+  .trTitle {
     visibility: hidden;
     box-shadow: 0px 0px;
     height: 0px;
-    
+
     display: block;
   }
-  .tbTitle{
+
+  .tbTitle {
     visibility: hidden;
     box-shadow: 0px 0px;
     height: 0px;
     display: block;
   }
-  .table{
+
+  .table {
     visibility: hidden;
     box-shadow: 0px 0px;
     height: 0px;
-    
+
     display: block;
   }
-  .impressao{
+
+  .impressao {
     display: block;
   }
 }
@@ -47,18 +51,25 @@
   flex-direction: column;
   background-color: whitesmoke;
   background-image: url("../img/vetorialdog.png");
-  
+
 }
 
-.impressao2{
-  background: white;
-    border: none;
+.impressao2 {
+  background: #ffffff00;
+  border: none;
 }
 
 .item {
   flex: 0 0 auto;
-  width: 95%;
+  width: 80%;
   margin: 0 auto;
+  margin-left: 240px;
+}
+.item6 {
+  flex: 0 0 auto;
+  width: 80%;
+  margin: 0 auto;
+  margin-left: 240px;
 }
 
 .table {
@@ -68,21 +79,22 @@
 }
 
 .button {
-  
+
   color: white;
 
   cursor: pointer;
 }
 
-.statinho{
+.statinho {
   margin-top: 25px;
-    font-size: 15px;
+  font-size: 15px;
 }
 
-.checkkk{
+.checkkk {
   width: 22px;
-    height: 22px;
+  height: 22px;
 }
+
 .proximo {
   margin-bottom: 25px;
   border: 1;
@@ -98,18 +110,19 @@
   cursor: pointer;
   margin-top: 20px;
 }
+
 .proximo3 {
   border: 1;
-    border-color: GRAY;
-    font-size: 15px;
-    font-weight: 600;
-    color: GRAY;
-    width: 78px;
-    padding: 5px;
-    height: 97px;
-    background-color: white;
-    border-radius: 10px;
-    cursor: pointer;
+  border-color: GRAY;
+  font-size: 15px;
+  font-weight: 600;
+  color: GRAY;
+  width: 78px;
+  padding: 5px;
+  height: 97px;
+  background-color: white;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .proximo2 {
@@ -123,6 +136,7 @@
   color: white;
   transition: all 0.5S ease;
 }
+
 .proximo3:hover {
   background-color: lightgray;
   color: white;
@@ -134,19 +148,19 @@
   margin-right: 10px;
 }
 
-.button2{
-border: 1;
-    border-color: darkblue;
-    font-size: 15px;
-    font-weight: 600;
-    color: darkblue;
-    width: 100px;
-    padding: 5px;
-    height: 35px;
-    background-color: white;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-right: 20px;
+.button2 {
+  border: 1;
+  border-color: darkblue;
+  font-size: 15px;
+  font-weight: 600;
+  color: darkblue;
+  width: 100px;
+  padding: 5px;
+  height: 35px;
+  background-color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 20px;
 }
 
 .button2:hover {
@@ -157,21 +171,21 @@ border: 1;
 
 .button:last-child {
   border: 1;
-    border-color: red;
-    font-size: 15px;
-    font-weight: 600;
-    color: red;
-    width: 100px;
-    padding: 5px;
-    height: 35px;
-    background-color: white;
-    border-radius: 10px;
-    cursor: pointer;
+  border-color: red;
+  font-size: 15px;
+  font-weight: 600;
+  color: red;
+  width: 100px;
+  padding: 5px;
+  height: 35px;
+  background-color: white;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .button:last-child:hover {
   transition: all 0.5S ease;
-  
+
   color: white;
   padding: 5px;
   width: 100px;
@@ -192,12 +206,13 @@ border: 1;
 }
 
 .tdtTitle {
-  
+
   width: 10%;
 }
+
 .tdt2Title {
-  
-margin-top:10px;
+  text-align: initial;
+  margin-top: 10px;
 }
 
 .trTitle {
@@ -205,7 +220,17 @@ margin-top:10px;
   font-weight: bold;
   background: linear-gradient(45deg, white, transparent);
   text-align: center;
-  box-shadow: 0px 0px 6px 2px black;
+  box-shadow: 0px 0px 2px 0px black;
+}
+
+.tdimgTitle{
+  display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.spanTitle{
+  margin-left: 5px;
 }
 
 .alinhado {
@@ -218,7 +243,7 @@ margin-top:10px;
 }
 
 .metodoTitle {
-  width: 5%;
+  width: 15%;
 }
 
 
@@ -240,40 +265,32 @@ margin-top:10px;
 
 .spanTitle {
   display: flex;
-    height: 180px;
-    box-shadow: 0px 0px 5px;
-    margin-bottom: 15px;
-    flex-direction: column;
-    justify-content: center;    
-    margin-top: 15px;
+  height: 200px;
+  width: 130px;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .span3Title {
-  padding-top: 27px;
-    align-items: center;
-    height: 180px;
-    font-size: 15px;
-    box-shadow: 0px 0px 5px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    margin-left: 10px;
-    margin-bottom: 15px;
-    margin-top: 15px;
+  align-items: flex-start;
+  height: 200px;
+  font-size: 15px;
+  width: 230px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+
+  flex-direction: column;
 }
 
 .span2Title {
   font-size: 15px;
-  padding-top: 21px;
-  align-items: center;
-  height: 180px;
-  box-shadow: 0px 0px 5px;
+  align-items: flex-start;
+  height: 200px;
   display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 10px;
-    margin-bottom: 15px;
-    margin-top: 15px;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .produto {
@@ -295,23 +312,46 @@ margin-top:10px;
   width: 100%;
   height: 2px;
 }
+
 .title {
-  text-shadow: 2px 2px 15px black;
+  
   text-align: center;
   font-weight: 900;
-  
+
 }
+
+.homee{
+  margin-left: 220px;
+  width: 100vw;
+}
+
 .title2 {
-  text-shadow: 2px 2px 15px black;
+  
   text-align: center;
   font-weight: 900;
   display: flex;
   align-items: center;
-  padding: 40px;
+  padding: 40px 40px 40px 0px;
 }
-
-.sidebtn{
+.title4 {
+  
+  text-align: center;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  padding: 40px 40px 40px 0px;
+}
+.sidesite{
+  height: 50px;
+  cursor: pointer;
+}
+.sidebar{
+  background: #584b5e;
+  position: fixed;
+    width: 220px;
+}
+.sidebtn {
   width: 220px;
-    border: 2px solid white;
-    padding: 1rem;
+  border: 2px solid white;
+  padding: 1rem;
 }

@@ -140,25 +140,17 @@ const Add = ({ setClose, lista }) => {
 
     <div className={styles.container}>
       <div className={styles.wrapper}>
+        <div className="d-flex justify-content-between align-items-center">
+        <h3>Adicionar novo item!</h3>
         <span onClick={() => setClose(true)} className={styles.close}>
           X
         </span>
-        <h1>Adicionar novo item!</h1>
-        <div className={styles.bebida}>Listas
-          <input type="checkbox"
-            className={styles.inputinho}
-            checked={refri}
-            name="text"
-            onClick={(e) => setRefri(e.target.checked)} >
-
-
-          </input>
         </div>
         <div className={styles.item}>
           <label className={styles.label}>Escolha uma imagem</label>
-          <input type="file" onChange={(e) => setFile(e.target.files[0])} />
         </div>
-        <div className={styles.item}>
+        <div className={styles.item5}>
+          <input type="file" onChange={(e) => setFile(e.target.files[0])} />
           <input type="file" onChange={(e) => setFile2(e.target.files[0])} />
         </div>
 
@@ -174,10 +166,30 @@ const Add = ({ setClose, lista }) => {
               type="text"
               onChange={(e) => setList(e.target.value)}
             />
-            <button className={styles.extraButton5} onClick={handleCreateList}>ADD LIST</button>
+            <button className={styles.extraButton5} onClick={handleCreateList}>Aicionar lista</button>
+            <div className={styles.bebida}>Listas-
+              <input type="checkbox"
+                className={styles.inputinho}
+                checked={refri}
+                name="text"
+                onClick={(e) => setRefri(e.target.checked)} >
+
+
+              </input>
+            </div>
           </div>
           :
-          <></>
+
+          <><div className={styles.bebida}>Você está criando um item principal-
+          <input type="checkbox"
+            className={styles.inputinho}
+            checked={refri}
+            name="text"
+            onClick={(e) => setRefri(e.target.checked)} >
+
+
+          </input>
+        </div></>
         }
         <div className={styles.listcontainer}>
 
@@ -231,7 +243,7 @@ const Add = ({ setClose, lista }) => {
                 placeholder="Valor do ITEM"
                 onChange={(e) => changePrice(e, 0)}
               />
-              
+
             </div>
           </div>
         </div>
@@ -263,7 +275,7 @@ const Add = ({ setClose, lista }) => {
           <div className={styles.extraItems}>
             {extraOptions.map((option) => (
               <span key={option.text} className={styles.extraItem}>
-                {option.text}
+                {option.text}: R${option.price}
               </span>
             ))}
           </div>

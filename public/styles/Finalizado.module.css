@@ -40,30 +40,27 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 220px;
   }
   
   .wrapper {
     height: 100%;
     width: 95%;
-    background-color: white;
-    padding: 10px 10px;
+    background-color: #ffffff00;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    overflow: hidden;
-    overflow-y: scroll;
   }
   
   .title2 {
-    text-shadow: 2px 2px 15px black;
     text-align: center;
     font-weight: 900;
     display: flex;
     align-items: center;
-    padding: 40px;
-  }
+    padding: 40px 40px 40px 0px;
+    }
 
   .delete {
     border-radius: 5px;
