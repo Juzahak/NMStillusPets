@@ -6,6 +6,7 @@ import Print from "./Print";
 import Printss from "./Printss";
 import * as React from 'react';
 import axios from "axios";
+import Footeradmin from "./Footeradmin";
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
@@ -34,7 +35,8 @@ const Sidebar = () => {
     }
   };
   return (
-    <div className="col-lg-12 d-flex justify-content-center">
+    <>
+    <div className="col-lg-12 d-flex justify-content-center flex-column">
       <div className={styles.item6}>
         <div className={styles.alinhado}>
           <h1 className={styles.title4}>Pedidos</h1>
@@ -69,8 +71,8 @@ const Sidebar = () => {
                         <div className={styles.spanTitle}>
                           <Image
                             src={sla?.img}
-                            width={100}
-                            height={160}
+                            width={120}
+                            height={200}
                             objectFit="cover"
                             alt=""
                           />
@@ -82,7 +84,7 @@ const Sidebar = () => {
                   <td className={styles.tdTitle}>
                     {order?.produto.map((sla, Index) =>
                       <div key={Index}>
-                        <div className={styles.spanTitle}>
+                        <div className={styles.spanTitle5}>
                          
                           
                           {sla?.title}
@@ -133,8 +135,10 @@ const Sidebar = () => {
 
           ))}
         </table>
+      <Footeradmin />
       </div>
     </div>
+      </>
   );
 };
 

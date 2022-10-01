@@ -9,6 +9,7 @@ import useSwr, { mutate } from "swr";
 import Sidebar from "./Sidebar";
 import Add from "./Add";
 import AddButton from "./AddButton";
+import Footeradmin from "./Footeradmin";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -55,6 +56,7 @@ const Produtos = () => {
      
         <div className="col-lg-12">
           <div className={styles.item}>
+            <div>
           <div className="d-flex justify-content-between align-items-center">
           <h1 className={styles.title2}>Produtos</h1>
           {<AddButton setClose={setClose4} />}
@@ -120,9 +122,10 @@ const Produtos = () => {
                 </tbody>
               )).reverse()}
             </table>
+        <Footeradmin />
+        </div>
           </div>
         </div>
-     
     </>
   );
 };

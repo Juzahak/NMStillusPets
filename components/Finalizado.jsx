@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "../public/styles/Finalizado.module.css";
 import axios from "axios";
 import { useRouter } from "next/router";
-
+import Footeradmin from "./Footeradmin";
 
 const Finalizado = ({ orders }) => {
   const [orderList, setOrderList] = useState(orders);
@@ -22,7 +22,7 @@ const Finalizado = ({ orders }) => {
   };
 
   return (
-    
+    <div className={styles.central}>
     <div className="col-lg-12">
     <div className={styles.container}>
       <div className={styles.wrapper}>
@@ -76,6 +76,8 @@ const Finalizado = ({ orders }) => {
           
         </table>
         </div>
+    </div>
+    <Footeradmin />
     </div>
     </div>
   )

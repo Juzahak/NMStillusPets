@@ -32,6 +32,10 @@
       height: 20px;
     }
   
+      .central{
+        margin-left: 220px;
+      }
+
   .container {
     background-color: rgba(245, 240, 240, 0.52);
     left: 0;
@@ -40,7 +44,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 220px;
+    margin-bottom: 50px;
   }
   
   .wrapper {
@@ -59,7 +63,7 @@
     font-weight: 900;
     display: flex;
     align-items: center;
-    padding: 40px 40px 40px 0px;
+    padding: 40px 40px 40px 10px;
     }
 
   .delete {

@@ -68,26 +68,26 @@ const Sidebar = ({ setClose, close, setClose2, close2, setClose3, close3, setClo
     <div className={styles.sidebar}>
       <div className="col-lg-2 h-100 w-100 d-flex align-items-center flex-column vh-100" >
         <div>
-          <Image src="/img/juzawebwhite.png" alt="" width="300" height="300" />
+          <Image src="/img/juzawebwhite.png" alt="" width="220" height="200" />
         </div>
         <div className="d-flex justify-content-between flex-column h-100">
           <div>
         <div onClick={() => abrefecha()} className={styles.sidebtn}>
-          <a className="text-white"> Home </a>
+          <a className="text-white text-decoration-none"> Home </a>
         </div>
         <div onClick={() => abrefecha2()} className={styles.sidebtn}>
-          <a className="text-white">Pedidos</a>
+          <a className="text-white text-decoration-none">Pedidos</a>
         </div>
         <div onClick={() => abrefecha4()} className={styles.sidebtn}>
-          <a className="text-white"> Produtos </a>
+          <a className="text-white text-decoration-none"> Produtos </a>
         </div>
         <div onClick={() => abrefecha3()} className={styles.sidebtn}>
-          <a className="text-white"> Finalizados </a>
+          <a className="text-white text-decoration-none"> Finalizados </a>
         </div>
         </div>
         <Link href="/" passHref >
         <div className={styles.sidesite}>
-          <p className="text-center text-white d-flex justify-content-center align-items-center"> Voltar para o site</p>
+          <a className="text-center text-white d-flex justify-content-center align-items-center"> Voltar para o site</a>
         </div>
         </Link>
         </div>
