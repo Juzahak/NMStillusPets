@@ -80,7 +80,7 @@ export default function Home({ admin }) {
                     <div className="container col-12 col-lg-12 align-items-center d-flex mt-4 mb-4">
                         <div className={styles.correto2}>
                             <div className="col-12 col-md-6 col-lg-6 justify-content-center d-flex">
-                                <Image src="/img/blog-1.jpg" alt="" width="450" height="450" />
+                                <Image src="/img/blog-1.jpg" alt="" width="600" height="450" />
                             </div>
                             <div className="col-12 col-md-6 col-lg-6 p-2">
                                 <h2>Elas são necessárias?</h2>
@@ -122,14 +122,14 @@ export default function Home({ admin }) {
                             </div>
 
                             <div className="col-12 col-md-6 col-lg-6 justify-content-center d-flex">
-                                <Image src="/img/blog-2.jpg" alt="" width="450" height="450" />
+                                <Image src="/img/blog-2.jpg" alt="" width="600" height="450" />
                             </div>
                         </div>
                     </div>
                     <div className="container col-12 col-lg-12 align-items-center d-flex mt-4 mb-4">
                         <div className={styles.correto2}>
                             <div className="col-12 col-md-6 col-lg-6 justify-content-center d-flex">
-                                <Image src="/img/blog-3.jpg" alt="" width="450" height="450" />
+                                <Image src="/img/blog-3.jpg" alt="" width="600" height="450" />
                             </div>
                             <div className="col-12 col-md-6 col-lg-6 p-2">
                                 <h3>Mesmo com frio, meu pet não se acostuma com as roupas</h3>
@@ -149,7 +149,7 @@ export default function Home({ admin }) {
                             </div>
 
                             <div className="col-12 col-md-6 col-lg-6 justify-content-center d-flex">
-                                <Image src="/img/blog-4.jpg" alt="" width="450" height="450" />
+                                <Image src="/img/blog-4.jpg" alt="" width="600" height="450"  />
                             </div>
                         </div>
                     </div>

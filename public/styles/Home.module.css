@@ -24,6 +24,8 @@
 
 .pointer{
     cursor: pointer;
+    flex: 0 0 auto;
+    width: 50%;
   }
 
 .estilo {
@@ -47,6 +49,14 @@
     font-weight: 600;
 }
 
+.ladolado{
+    display: flex;
+}
+.textt{
+    height: 150px;
+    padding: 1rem !important;
+}
+
 @media screen and (max-width: 480px) {
     .correto2 {
         display: flex;
@@ -58,6 +68,10 @@
         display: flex;
         flex-direction: column;
         text-align: justify;
+    }
+    .ladolado{
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -72,5 +86,9 @@
         display: flex;
         flex-direction: column;
         text-align: justify;
+    }
+    .ladolado{
+        display: flex;
+        flex-direction: column;
     }
 }

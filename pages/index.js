@@ -37,7 +37,7 @@ export default function Home({ admin }) {
   const { data: pizzaList } = useSwr("/api/products", fetcher);
   const { data: lista } = useSwr("/api/lists", fetcher);
   console.log(lista);
-  if (admin === false) {
+
     return (
       <>
         <Navbar />
@@ -49,46 +49,52 @@ export default function Home({ admin }) {
           </Head>
           <Featured />
           <div className="container d-flex flex-column flex-lg-row">
-            <div className="col-12 col-lg-6 text-center p-2">
-              <Image src="/img/comomedir.jpg" alt="" width="500" height="500" />
+            <div className={styles.pointer}>
+              <div className="col-12 text-center p-2">
+                <Image src="/img/promo1.jpg" alt="" width="812" height="950" />
+              </div>
             </div>
-            <div className="col-12 col-lg-6 text-center p-2">
-              <Image src="/img/comomedir.jpg" alt="" width="500" height="500" />
+            <div className={styles.pointer}>
+              <div className="col-12 text-center p-2">
+                <Image src="/img/promo2.jpg" alt="" width="812" height="950" />
+              </div>
             </div>
           </div>
           <PizzaList pizzaList={pizzaList || []} lista={lista || []} />
-          <div className="container bg-white pt-5 pb-5 mt-5">
-            <div className="col-12 d-flex flex-column">
-              <div className="col-12 col-lg-12 text-center">
-                <Image src="/img/comomedir.jpg" alt="" width="500" height="500" />
-              </div>
-              <div className="col-12 col-lg-12 align-items-center d-flex text-center flex-column justify-content-center">
-                <h2>Como medir seu pet?</h2>
-                <p className="p-3">Escolher a roupa no tamanho correto é um fator importante para o conforto do animal. Tire as medidas antes de comprar para achar o look perfeito para seu pet! Depois encontre o tamanho ideal, através das medidas, nas tabelas dos tamanhos, de acordo com cada modelo.</p>
-                <div className="col-6 d-flex ">
-                  <Link href="/comoMedir/[id].jsx" passHref >
-                    <div className={styles.btnsaiba}>
-                      <spam className={styles.corcerta}>Saiba Mais</spam>
-                    </div>
-                  </Link>
+          <div className={styles.ladolado}>
+            <div className="container bg-white pt-5 pb-5 mt-5">
+              <div className="col-12  d-flex flex-column">
+                <div className="col-12 col-lg-12 text-center">
+                  <Image src="/img/comomedir.jpg" alt="" width="500" height="500" />
+                </div>
+                <div className="col-12 col-lg-12 align-items-center d-flex text-center flex-column justify-content-center">
+                  <h2>Como medir seu pet?</h2>
+                  <p className={styles.textt}>Escolher a roupa no tamanho correto é um fator importante para o conforto do animal. Tire as medidas antes de comprar para achar o look perfeito para seu pet! Depois encontre o tamanho ideal, através das medidas, nas tabelas dos tamanhos, de acordo com cada modelo.</p>
+                  <div className="col-6 d-flex ">
+                    <Link href="/comoMedir/[id].jsx" passHref >
+                      <div className={styles.btnsaiba}>
+                        <spam className={styles.corcerta}>Saiba Mais</spam>
+                      </div>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="container bg-white mb-5">
-            <div className="col-12 d-flex flex-column">
-              <div className="col-12 col-lg-12 text-center">
-                <Image src="/img/vantagens.jpg" alt="" width="500" height="400" />
-              </div>
-              <div className="col-12 col-lg-12 align-items-center d-flex text-center flex-column justify-content-center">
-                <h2>Vista seu pet</h2>
-                <p className="p-3">Se você é o tipo de tutor que gosta de colocar roupas no seu pet, possivelmente já deve ter ouvido de alguém que se trata de frescura. Do mesmo modo, se você é um tutor que nunca recorre a esses acessórios, é bem possível que também já tenha ouvido que o pet pode estar com frio e que o melhor seria colocar nele um agasalho, não é mesmo?</p>
-                <div className="col-6 d-flex ">
-                  <Link href="/blog/[id].jsx" passHref >
-                    <div className={styles.btnsaiba}>
-                      <spam className={styles.corcerta}>Visite nosso Blog</spam>
-                    </div>
-                  </Link>
+            <div className="container bg-white pt-5 pb-5 mt-5">
+              <div className="col-12 d-flex flex-column">
+                <div className="col-12 col-lg-12 text-center">
+                  <Image src="/img/vantagens.jpg" alt="" width="500" height="500" />
+                </div>
+                <div className="col-12 col-lg-12 align-items-center d-flex text-center flex-column justify-content-center">
+                  <h2>Vista seu pet</h2>
+                  <p className={styles.textt}>Se você é o tipo de tutor que gosta de colocar roupas no seu pet, possivelmente já deve ter ouvido de alguém que se trata de frescura. Do mesmo modo, se você é um tutor que nunca recorre a esses acessórios, é bem possível que também já tenha ouvido que o pet pode estar com frio e que o melhor seria colocar nele um agasalho, não é mesmo?</p>
+                  <div className="col-6 d-flex ">
+                    <Link href="/blog/[id].jsx" passHref >
+                      <div className={styles.btnsaiba}>
+                        <spam className={styles.corcerta}>Visite nosso Blog</spam>
+                      </div>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -97,64 +103,6 @@ export default function Home({ admin }) {
         <Footer />
       </>
     );
-  } else {
-    return (
-      <>
-        <Navbar />
-
-        <div className={styles.container} >
-          <Head>
-            <title>NM Stillus Pets</title>
-            <meta name="description" content="" />
-            <link rel="icon" href="/favicon.ico" />
-          </Head>
-          <Featured />
-          <div className="container d-flex flex-column flex-lg-row ">
-            <div className="col-12 col-lg-6 text-center p-2">
-              <Image src="/img/promo1.jpg" alt="" width="812 " height="950" />
-            </div>
-            <div className="col-12 col-lg-6 text-center p-2">
-              <Image src="/img/promo2.jpg" alt="" width="812" height="950" />
-            </div>
-          </div>
-          <PizzaList pizzaList={pizzaList || []} lista={lista || []} />
-          <div className="container bg-white pt-5 mb-5">
-            <div className="col-12 d-flex flex-column">
-              <div className="col-12 col-lg-12 text-center">
-                <Image src="/img/comomedir.jpg" alt="" width="500" height="500" />
-              </div>
-              <div className="col-12 col-lg-12 align-items-center d-flex text-center flex-column justify-content-center">
-                <h2>Como medir seu pet?</h2>
-                <p className="p-3">Escolher a roupa no tamanho correto é um fator importante para o conforto do animal. Tire as medidas antes de comprar para achar o look perfeito para seu pet! Depois encontre o tamanho ideal, através das medidas, nas tabelas dos tamanhos, de acordo com cada modelo.</p>
-                <Link href="/comoMedir/[id].jsx" passHref >
-                  <div className={styles.btnsaiba}>
-                    <spam className={styles.corcerta}>Saiba Mais</spam>
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="container bg-white mb-5 mt-3">
-            <div className="col-12 d-flex flex-column">
-              <div className="col-12 col-lg-12 text-center">
-                <Image src="/img/vantagens.jpg" alt="" width="500" height="400" />
-              </div>
-              <div className="col-12 col-lg-12 align-items-center d-flex text-center flex-column justify-content-center">
-                <h2>Vista seu pet</h2>
-                <p className="p-3">Se você é o tipo de tutor que gosta de colocar roupas no seu pet, possivelmente já deve ter ouvido de alguém que se trata de frescura. Do mesmo modo, se você é um tutor que nunca recorre a esses acessórios, é bem possível que também já tenha ouvido que o pet pode estar com frio e que o melhor seria colocar nele um agasalho, não é mesmo?</p>
-                <Link href="/blog/[id].jsx" passHref >
-                  <div className={styles.btnsaiba}>
-                    <spam className={styles.corcerta}>Visite nosso Blog</spam>
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-        <Footer />
-      </>
-    );
-  }
 
 }
 

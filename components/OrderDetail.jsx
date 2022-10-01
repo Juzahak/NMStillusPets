@@ -6,7 +6,7 @@ import axios from "axios";
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
-const OrderDetail = ({ total, createOrder, produto, setCash, metodo }) => {
+const OrderDetail = ({ total, createOrder, produto, setCash, metodo, entrega }) => {
   const [customer, setCustomer] = useState("");
   const [address, setAddress] = useState("");
   const [troco, setTroco] = useState("");
@@ -37,7 +37,7 @@ const OrderDetail = ({ total, createOrder, produto, setCash, metodo }) => {
       }
     })
 
-    createOrder({ customer, troco, address, total, produto, obs, metodo, telefone, bairro });
+    createOrder({ customer, troco, entrega, address, total, produto, obs, metodo, telefone, bairro });
 
     return
   };

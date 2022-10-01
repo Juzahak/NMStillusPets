@@ -66,7 +66,7 @@ const Produtos = () => {
             <table className={styles.table}>
               <tbody>
                 <tr className={styles.title}>
-                  <th>IMAGEM</th>
+                  <th>FOTO</th>
                   <th>TITULO</th>
                   <th>PREÇO</th>
                   <th>EDITAR</th>

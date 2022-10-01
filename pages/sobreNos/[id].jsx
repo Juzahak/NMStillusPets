@@ -66,7 +66,7 @@ export default function Home({ admin }) {
           <div className="container col-12 col-lg-12 align-items-center d-flex mt-4 mb-4">
             <div className={styles.correto2}>
               <div className="col-12 col-md-6 col-lg-6 justify-content-center d-flex">
-                <Image src="/img/foto3.jpg" alt="" width="450" height="450" />
+                <Image src="/img/foto3.jpg" alt="" width="550" height="450" />
               </div>
               <div className="col-12 col-md-6 col-lg-6 p-2">
                 <h3 className="text-center">Quem somos nós</h3>
@@ -114,7 +114,7 @@ export default function Home({ admin }) {
                   em primeira mão aos nossos clientes.</p>
               </div>
               <div className="col-12 col-md-6 col-lg-6 justify-content-center d-flex">
-                <Image src="/img/foto2.jpg" alt="" width="450" height="450" />
+                <Image src="/img/foto2.jpg" alt="" width="550" height="450" />
               </div>
             </div>
           </div>

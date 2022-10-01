@@ -34,7 +34,7 @@ const Order = ({ orderId }) => {
   }, []);
 
 
-
+console.log(order)
 
 
 
@@ -231,13 +231,13 @@ const Order = ({ orderId }) => {
               <b className={styles.totalTextTitle}>SUBTOTAL:</b>R${order?.total}.00
             </div>
             <div className={styles.totalText}>
-              <b className={styles.totalTextTitle}>ENTREGA:</b>R${order?.price}.00
+              <b className={styles.totalTextTitle}>ENTREGA:</b>R${order?.entrega}.00
             </div>
             <div className={styles.totalText}>
               <b className={styles.totalTextTitle}>TROCO PARA:</b>R${order?.troco}.00
             </div>
             <div className={styles.totalText}>
-              <b className={styles.totalTextTitle}>TOTAL:</b>R${order?.total}.00
+              <b className={styles.totalTextTitle}>TOTAL:</b>R${order?.total + order?.entrega}.00
             </div>
             <div className={styles.totalText}>
               <b className={styles.totalTextTitle}>MSG:</b> Seu pedido foi recebido, em breve entraremos em contato!

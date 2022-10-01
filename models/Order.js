@@ -12,6 +12,11 @@ const OrderSchema = new mongoose.Schema(
       required: true,
       maxlength: 60,
     },
+    entrega: {
+      type: Number,
+      required: true,
+      maxlength: 60,
+    },
     address: {
       type: String,
       required: true,

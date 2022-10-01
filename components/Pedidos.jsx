@@ -98,9 +98,15 @@ const Sidebar = () => {
                     {order?.produto.map((sla, Index) =>
                       <div className={styles.span2Title} key={Index}>
                         {sla?.extras.map((sla2, Index) =>
-                          <span key={Index}>Tamanho:{sla2} </span>
+                        <div key={Index}>
+                          <div>
+                          <span>Tamanho:{sla2} </span>
+                          </div>
+                          <div>
+                          <span>Valor: R${sla?.price}.00</span>
+                          </div>
+                        </div>
                         )}
-                        <span>Valor: R${order?.total}.00</span>
                         Descrição: {sla?.descri}
 
                       </div>
@@ -117,7 +123,8 @@ const Sidebar = () => {
 
                   </td>
                   <td className={styles.metodoTitle}>
-                    {order?.metodo === 1 ? <span>Dinheiro/Cartão ({order?.troco}R$)</span> : <span>Mercado Livre</span>}
+                    <div>Total: R$ {order?.total}.00</div>
+                    {order?.metodo === 1 ? <span>Dinheiro/Cartão (troco para: {order?.troco}R$)</span> : <span>Mercado Livre</span>}
                   </td>
                   <td className={styles.tdTitle}>
                     <div className={styles.statinho}>{status[order?.status]}</div>
