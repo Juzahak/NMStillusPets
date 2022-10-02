@@ -73,6 +73,11 @@
         display: flex;
         flex-direction: column;
     }
+    .pointer{
+        cursor: pointer;
+        flex: 0 0 auto;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 750px) {
@@ -90,5 +95,10 @@
     .ladolado{
         display: flex;
         flex-direction: column;
+    }
+    .pointer{
+        cursor: pointer;
+        flex: 0 0 auto;
+        width: 100%;
     }
 }
