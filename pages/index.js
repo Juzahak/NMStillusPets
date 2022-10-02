@@ -62,7 +62,7 @@ export default function Home({ admin }) {
           </div>
           <PizzaList pizzaList={pizzaList || []} lista={lista || []} />
           <div className={styles.ladolado}>
-            <div className="container bg-white pt-5 pb-5 mt-5">
+            <div className="container bg-transparent pt-5 pb-5 mt-5">
               <div className="col-12  d-flex flex-column">
                 <div className="col-12 col-lg-12 text-center">
                   <Image src="/img/comomedir.jpg" alt="" width="500" height="500" />
@@ -80,7 +80,7 @@ export default function Home({ admin }) {
                 </div>
               </div>
             </div>
-            <div className="container bg-white pt-5 pb-5 mt-5">
+            <div className="container bg-transparent pt-5 pb-5 mt-5">
               <div className="col-12 d-flex flex-column">
                 <div className="col-12 col-lg-12 text-center">
                   <Image src="/img/vantagens.jpg" alt="" width="500" height="500" />
