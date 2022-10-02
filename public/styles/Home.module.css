@@ -78,6 +78,10 @@
         flex: 0 0 auto;
         width: 100%;
     }
+    .textt{
+        height: 250px;
+        padding: 1rem !important;
+    }
 }
 
 @media screen and (max-width: 750px) {
@@ -100,5 +104,9 @@
         cursor: pointer;
         flex: 0 0 auto;
         width: 100%;
+    }
+    .textt{
+        height: 250px;
+        padding: 1rem !important;
     }
 }
