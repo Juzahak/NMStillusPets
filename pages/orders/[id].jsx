@@ -105,14 +105,14 @@ console.log(order)
                       </div>
                     </td>
                     <td className={styles.name}>
-                      <span className={styles.name}>{produto?.title}<span className={styles.onlymob}>-</span> </span>
-                      <span className={styles.extrasmob}>
+                      <span className={styles.name}>{produto?.title}</span>
+                      <div className={styles.extrasmob}>
                         <span></span>
                         {produto?.extras.map((extra) =>
                           <span key={extra}> Tamanho: {extra} </span>
                         )}
                         {produto?.refri && <></>}
-                      </span>
+                      </div>
                     </td>
                     <td>
                       <span className={styles.extras}>
