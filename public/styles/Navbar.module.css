@@ -230,7 +230,135 @@
   display: block;
 }
 
+
 @media screen and (max-width: 850px) {
+  .item:nth-child(2) {
+    flex: 2 1;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .container {
+    height: 95px;
+    padding: 0px 30px;
+    margin-bottom: 15px;
+  }
+
+  .dropdown {
+    display: block;
+  }
+
+  .logotipo {
+    display: none;
+  }
+
+  .texts {
+    display: none;
+  }
+
+  .callButton {
+    display: none;
+  }
+
+  .callButton2 {
+    position: fixed;
+    width: 3rem;
+    bottom: 20px;
+    left: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .callButton4 {
+    position: fixed;
+    width: 3rem;
+    bottom: 70px;
+    left: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .callButton5 {
+    position: fixed;
+    width: 3rem;
+    bottom: 120px;
+    left: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+
+  .callButton3 {
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+ 
+
+  .logotipomob {
+    position: relative;
+    display: block;
+    width: 6rem;
+    margin: 0 auto;
+    left: -1rem;
+  }
+
+  .menumob {
+    display: flex;
+    width: 5vw;
+  }
+
+  .list {
+    justify-content: space-evenly;
+    width: 100%;
+    position: relative;
+    top: 3rem;
+    display: none;
+  }
+
+  .menus {
+    font-size: 2rem;
+    width: 30vw;
+    text-align: center;
+  }
+
+  .menus2 {
+    font-size: 2rem;
+    width: 30vw;
+    text-align: center;
+  }
+
+  .menus3 {
+    font-size: 2rem;
+    width: 30vw;
+    text-align: center;
+  }
+
+  .item {
+    height: 0vw;
+    flex: none;
+    position: absolute;
+    right: 0vw;
+    top: 15vw;
+  }
+
+  .item2 {
+
+    flex: none;
+    position: absolute;
+    right: 0vw;
+
+  }
+
+  .cart {
+    right: 20px;
+    bottom: 85px;
+  }
+  .cartdesk{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
 
   .item:nth-child(2) {
     flex: 2 1;

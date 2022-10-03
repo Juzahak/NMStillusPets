@@ -64,9 +64,7 @@ const Navbar = () => {
         <div>
         <Image src="/img/NMLogo.png" alt="" width="500px" height="500px" />
         </div>
-        <div>
-        {teste()}
-        </div>
+        
       </div>
 
       <div className={styles.menumob}>
@@ -127,7 +125,7 @@ const Navbar = () => {
 
 
           </ul>
-          <div className={styles.cartdesk}>
+          <div>
             {teste()}
 
           </div>
