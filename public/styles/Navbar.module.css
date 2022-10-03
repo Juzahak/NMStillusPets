@@ -226,6 +226,10 @@
   display: none;
 }
 
+.cartdesk{
+  display: block;
+}
+
 @media screen and (max-width: 850px) {
 
   .item:nth-child(2) {
@@ -347,6 +351,9 @@
 
   .cart {
     right: 20px;
-    bottom: 10vw;
+    bottom: 40px;
+  }
+  .cartdesk{
+    display: none;
   }
 }

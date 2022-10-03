@@ -61,8 +61,12 @@ const Navbar = () => {
         <Dropdown pedidinho={pedidinho} />
       </div>
       <div className={styles.logotipomob}>
-
+        <div>
         <Image src="/img/NMLogo.png" alt="" width="500px" height="500px" />
+        </div>
+        <div>
+        {teste()}
+        </div>
       </div>
 
       <div className={styles.menumob}>
@@ -123,7 +127,7 @@ const Navbar = () => {
 
 
           </ul>
-          <div>
+          <div className={styles.cartdesk}>
             {teste()}
 
           </div>
