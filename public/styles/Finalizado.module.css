@@ -10,164 +10,166 @@
   cursor: pointer;
   border: 2px solid;
   border-color: blue;
-  }
-  
-  .mainAddButton:hover {
-    background-color: lightblue;
+}
+
+.mainAddButton:hover {
+  background-color: lightblue;
   color: white;
   transition: all 0.5S ease;
-  }
+}
 
-    .bebida {
-      text-align: center;
-      font-size: 25px;
-      margin-bottom: 15px;
-      margin-top: 15px;
-    }
-  
-    
-  
-    .inputinho {
-      width: 20px;
-      height: 20px;
-    }
-  
-      .central{
-        margin-left: 220px;
-      }
+.bebida {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
 
-  .container {
-    background-color: rgba(245, 240, 240, 0.52);
-    left: 0;
-    margin: 0 auto;
-    z-index: 999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 50px;
-  }
-  
-  .wrapper {
-    height: 100%;
-    width: 95%;
-    background-color: #ffffff00;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-  }
-  
-  .title2 {
-    text-align: center;
-    font-weight: 900;
-    display: flex;
-    align-items: center;
-    padding: 40px 40px 40px 10px;
-    }
 
-  .delete {
-    border-radius: 5px;
-    background: white;
-    border-color: red;
-    color: red;
-    cursor: pointer;
-  }
 
-  .delete:hover {
-    background: red;
-    color: white;
-    transition: all 0.5s ease;
-  }
+.inputinho {
+  width: 20px;
+  height: 20px;
+}
 
-  .close {
-    width: 50px;
-    height: 50px;
-    font-size: 27px;
-    background-color: black;
-    color: white;
-    border-radius: 50%;
-    position: absolute;
-    top: -3vw;
-    left: 20px;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-   
-  }
-  
-  .item {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-  }
-  
-  .label {
-    margin-bottom: 5px;
-    font-size: 14px;
-    font-weight: 500;
-  }
-  
-  .input {
-    border: none;
-    border-bottom: 1px solid gray;
-    outline: none;
-  }
-  
-  .priceContainer {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .inputSm {
-    width: 25%;
-  }
-  
-  .extra {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .extraItems {
-    margin: 10px 0px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .extraItem {
-    padding: 5px;
-    font-size: 14px;
-    border: 1px solid tomato;
-    background-color: white;
-    color: tomato;
-    margin-right: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-  }
-  
-  .addButton {
-    width: 25%;
-    border: none;
-    background-color: teal;
-    color: white;
-    font-weight: 500;
-    cursor: pointer;
-    padding: 5px 0;
-    align-self: flex-end;
-  }
-  
-  .tdTitle {
-    border: 2px solid black;
-    background: lavender;
-    text-align: center;
-    height: 40px;
-  }
-  .divTitle {
-    height: 10px;
-    width: 100%;
-    text-align: center;
-  }
-  
-  
+.central {
+  margin-left: 220px;
+
+  width: 100%;
+
+}
+
+.container {
+  background-color: rgba(245, 240, 240, 0.52);
+  left: 0;
+  margin: 0 auto;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.wrapper {
+  height: 100%;
+  width: 95%;
+  background-color: #ffffff00;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.title2 {
+  text-align: center;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  padding: 40px 40px 40px 10px;
+}
+
+.delete {
+  border-radius: 5px;
+  background: white;
+  border-color: red;
+  color: red;
+  cursor: pointer;
+}
+
+.delete:hover {
+  background: red;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.close {
+  width: 50px;
+  height: 50px;
+  font-size: 27px;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: -3vw;
+  left: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.label {
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.input {
+  border: none;
+  border-bottom: 1px solid gray;
+  outline: none;
+}
+
+.priceContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputSm {
+  width: 25%;
+}
+
+.extra {
+  display: flex;
+  justify-content: space-between;
+}
+
+.extraItems {
+  margin: 10px 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.extraItem {
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid tomato;
+  background-color: white;
+  color: tomato;
+  margin-right: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.addButton {
+  width: 25%;
+  border: none;
+  background-color: teal;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 5px 0;
+  align-self: flex-end;
+}
+
+.tdTitle {
+  border: 2px solid black;
+  background: lavender;
+  text-align: center;
+  height: 40px;
+}
+
+.divTitle {
+  height: 10px;
+  width: 100%;
+  text-align: center;
+}
