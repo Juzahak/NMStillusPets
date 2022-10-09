@@ -107,18 +107,18 @@ console.log(order)
                     <td className={styles.name}>
                       <span className={styles.name}>{produto?.title}</span>
                       <div className={styles.extrasmob}>
-                        <span></span>
+                        <div>Tamanho:</div>
                         {produto?.extras.map((extra) =>
-                          <span key={extra}> Tamanho: {extra} </span>
+                          <span key={extra}>  {extra} </span>
                         )}
                         {produto?.refri && <></>}
                       </div>
                     </td>
                     <td>
                       <span className={styles.extras}>
-                        <span></span>
+                        <div>Tamanho:</div>
                         {produto?.extras.map((extra) =>
-                          <span key={extra}>Tamanho: {extra} </span>
+                          <span key={extra}> {extra} </span>
                         )}
                         {produto?.refri && <></>}
                       </span>

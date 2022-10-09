@@ -143,13 +143,10 @@
   display: flex;
 }
 
-.margem {
-  margin-right: 20px;
-}
 
 .ingredients {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-bottom: 30px;
 }
 
@@ -186,8 +183,8 @@
 
 .button:hover {
 
-  background-color: #32cd32;
-  border-color: #32cd32;
+  background-color: #f6e4ff;
+  border-color: #f6e4ff;
   color: #f5f5f5;
   transition: all .5s ease;
 }
@@ -301,7 +298,6 @@
   }
 
   .ingredients {
-    flex-direction: row;
     align-items: center;
     text-align: center;
     justify-content: center;

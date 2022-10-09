@@ -23,7 +23,7 @@ const Finalizado = ({ orders }) => {
 
   return (
     <div className={styles.central}>
-    <div className="col-lg-12">
+    <div className="col-lg-12 d-flex h-100 justify-content-between flex-column">
     <div className={styles.container}>
       <div className={styles.wrapper}>
     <h1 className={styles.title2}>Finalizados</h1>

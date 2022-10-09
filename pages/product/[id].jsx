@@ -21,11 +21,74 @@ const Product = ({ productId }) => {
   const [close, setClose] = useState(true);
   const [price, setPrice] = useState(0);
   const [descri, setDescri] = useState("Loja");
+  const [tamanholist, setTamanho] = useState("");
+  const [valortmh, setvalortmh] = useState("");
   const [qtd, setQtd] = useState(1);
+  const [tamanhosele, setTamanhosele] = useState(false);
   const [quantity, setQuantity] = useState(1);
   const [extras, setExtras] = useState([]);
   const dispatch = useDispatch();
   const [trocaimgg, setTrocaimg] = useState("l");
+
+
+  const opcoes = [
+    {
+      tamanho: 'PP',
+      valor: '-0',
+    },
+    {
+      tamanho: 'PP',
+      valor: '00',
+    },
+    {
+      tamanho: 'P',
+      valor: '01',
+    },
+    {
+      tamanho: 'P',
+      valor: '02',
+    },
+    {
+      tamanho: 'P',
+      valor: '04',
+    },
+    {
+      tamanho: 'M',
+      valor: '06',
+    },
+    {
+      tamanho: 'M',
+      valor: '08',
+    },
+    {
+      tamanho: 'M',
+      valor: '10',
+    },
+    {
+      tamanho: 'M',
+      valor: '12',
+    },
+    {
+      tamanho: 'G',
+      valor: '14',
+    },
+    {
+      tamanho: 'G',
+      valor: '16',
+    },
+    {
+      tamanho: 'G',
+      valor: '18',
+    },
+    {
+      tamanho: 'GG',
+      valor: '20',
+    },
+    {
+      tamanho: 'GG',
+      valor: '22',
+    },
+  ];
 
   useEffect(() => {
     if (!pizza) return;
@@ -36,11 +99,41 @@ const Product = ({ productId }) => {
     setPrice(price + number);
   };
 
-  console.log(extras)
+  console.log(valortmh)
+
+
+
+  const construir = (e, text) => {
+    const checked = e.target.checked;
+    
+    
+    if(checked == true && tamanhosele == true) {
+      alert('selecione apenas uma opçao');
+      e.target.checked = false;
+      return
+    } else
+    if(checked == true && text !== "") {
+      setvalortmh(text);
+      console.log(valortmh);
+      setTamanhosele(true);
+      console.log(tamanhosele);
+      setExtras((prev) => [...prev, text]);
+      return;
+    }
+    if(checked == false && text !== "") {
+      setvalortmh("");
+      console.log(valortmh);
+      setTamanhosele(false);
+      console.log(tamanhosele);
+      setExtras(extras.filter(extras => extras !== text));
+      return
+    }
+    
+  }
 
   const handleChange = (e, option) => {
     const checked = e.target.checked;
-
+   
 
     if (pizza.refri == true && qtd <= 1) {
       setQtd(qtd + 1)
@@ -63,7 +156,8 @@ const Product = ({ productId }) => {
     if (pizza.refri == true && qtd <= 2) {
       setQtd(qtd - 1)
       changePrice(-option.price);
-      setExtras(extras.filter(extras => extras !== option.text));
+      setExtras([]);
+      setTamanhosele(false);
     }
 
 
@@ -79,7 +173,8 @@ const Product = ({ productId }) => {
     if (checked == false && qtd <= 2) {
       setQtd(qtd - 1)
       changePrice(-option.price);
-      setExtras(extras.filter(extras => extras !== option.text));
+      setExtras([]);
+      setTamanhosele(false);
     }
     if (checked == true && qtd == 2) {
       e.target.checked = false;
@@ -91,10 +186,18 @@ const Product = ({ productId }) => {
       setExtras(extras.filter(extras => extras !== option.text));
       return false;
     }
+    if (checked == true) {
+      setTamanho(option.text);
+    }else{
+      setTamanho("");
+    }
   };
 
 
   const handleClick = () => {
+
+   
+
     if (qtd === 1) {
       alert('Escolha um Tamanho');
       return
@@ -263,20 +366,38 @@ const Product = ({ productId }) => {
                 <div className={styles.margem}>
                   <h3 className={styles.choose}>Adicione</h3>
                   <div className={styles.ingredients} name='form1'>
+                    <div className="d-flex mb-4">
+                      {pizza?.extraOptions.map((option) => (
 
-                    {pizza?.extraOptions.map((option) => (
-
-                      <div className={styles.option} key={option._id}>
-                        <input
-                          type="checkbox"
-                          id={option.text}
-                          name={option.text}
-                          className={styles.checkbox}
-                          onChange={(e) => handleChange(e, option)}
-                        />
-                        <label htmlFor="double">{option.text}</label>
-                      </div>
-                    ))}
+                        <div className={styles.option} key={option._id}>
+                          <input
+                            type="checkbox"
+                            id={option.text}
+                            name={option.text}
+                            className={styles.checkbox}
+                            onChange={(e) => handleChange(e, option)}
+                          />
+                          <label htmlFor="double">{option.text}</label>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="d-flex">
+                      {opcoes?.map(listaTamanho =>
+                        listaTamanho.tamanho === tamanholist ?
+                          <div className={styles.option} key={tamanholist.valor}>
+                            <input
+                              type="checkbox"
+                              id={listaTamanho.valor}
+                              name={listaTamanho.tamanho}
+                              className={styles.checkbox}
+                              onChange={(e) => construir(e, listaTamanho.valor)}
+                            />
+                            <label htmlFor="double">{listaTamanho.valor}</label>
+                          </div>
+                          :
+                          <></>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>

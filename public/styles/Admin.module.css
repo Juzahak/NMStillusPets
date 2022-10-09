@@ -66,8 +66,13 @@
 }
 .item6 {
   flex: 0 0 auto;
-  margin: 0 auto;
-  margin-left: 220px;
+    margin: 0 auto;
+    margin-left: 220px;
+ 
+    height: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .table {

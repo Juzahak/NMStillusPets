@@ -63,7 +63,7 @@ const Cart = () => {
 
   return (
     <>
-    <Navbar />
+      <Navbar />
       <section id="page-title" className={styles.estilo}>
 
         <div className="container clearfix dark">
@@ -118,11 +118,15 @@ const Cart = () => {
                   </td>
                   <td>
                     <span className={styles.extras}>
-
-                      {product.extras.map((extra) =>
-                        <span key={extra._id} >Tamanho: {extra} </span>
-                      )}
-                      {product.refri && <></>}
+                      <div>
+                      Tamanho:
+                      </div>
+                      <div>
+                        {product.extras.map((extra) =>
+                          <span key={extra._id} > {extra} </span>
+                        )}
+                        {product.refri && <></>}
+                      </div>
                     </span>
                   </td>
                   <td className="m-0">
@@ -163,17 +167,17 @@ const Cart = () => {
             </div>
             {select === "Mercado Livre" ?
               <>
-              <div className={styles.totalText}>
+                <div className={styles.totalText}>
 
-                <span className={styles.totalTextTitle}>ENTREGA:</span>para fora de serra negra pedimos para que realize o pedido pelo mercado livre, preparamos a página para que você possa economizar no frete!
-              </div>
-              <div className={styles.paymentMethods}>
-                <a className={styles.payButton2} target="_blank" rel="noreferrer" href="https://nmstilluspets.mercadoshops.com.br/?preview.com.br/">Mercado Livre
-              <Image src="/img/mercadolivre.png" alt="" width="50" height="30" />
-                </a>
+                  <span className={styles.totalTextTitle}>ENTREGA:</span>para fora de serra negra pedimos para que realize o pedido pelo mercado livre, preparamos a página para que você possa economizar no frete!
+                </div>
+                <div className={styles.paymentMethods}>
+                  <a className={styles.payButton2} target="_blank" rel="noreferrer" href="https://nmstilluspets.mercadoshops.com.br/?preview.com.br/">Mercado Livre
+                    <Image src="/img/mercadolivre.png" alt="" width="50" height="30" />
+                  </a>
 
-              </div>
-            </>
+                </div>
+              </>
               :
               <>
                 <div className={styles.totalText}>
@@ -191,7 +195,7 @@ const Cart = () => {
 
                 </div>
               </>
-              
+
             }
           </div>
         </div>
