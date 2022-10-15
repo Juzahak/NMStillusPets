@@ -153,7 +153,7 @@ const Editar = ({ setClose2, pizzaId, products, extras, title, desc2, prices2, e
                     {produto?.extraOptions.map((option, Index) => (
 
                       <span key={Index} className={styles.extraItem}>
-                        {option?.text} : R${option?.price}
+                        {option?.text} : R${option?.price.toFixed(2)}
 
                       </span>
                     ))}
@@ -161,7 +161,7 @@ const Editar = ({ setClose2, pizzaId, products, extras, title, desc2, prices2, e
                   <div> NOVOS:
                     {extraOptions?.map((option, Index) => (
                       <span key={Index} className={styles.extraItem}>
-                        {option?.text}: R${option?.price}
+                        {option?.text}: R${option?.price.toFixed(2)}
 
                       </span>
                     ))}

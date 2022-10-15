@@ -52,15 +52,15 @@ const Printss = ({ setClose3, order, orderId }) => {
                 
                 
                 ))}
-                <div className={styles.position4}>Sub-Total: R${pedidos.total}</div>
-                <div className={styles.position4}>Tax-Entreg: R${pedidos.price}</div>
-                <div className={styles.position4}>Total: R${pedidos.total}</div>
+                <div className={styles.position4}>Sub-Total: R${pedidos.total.toFixed(2)}</div>
+                <div className={styles.position4}>Tax-Entreg: R${pedidos.price.toFixed(2)}</div>
+                <div className={styles.position4}>Total: R${pedidos.total.toFixed(2)}</div>
                 {pedidos.metodo == 1 ?
                 <div className={styles.position4}>Método: Dinheiro/Cartão</div>
                 :
                 <div className={styles.position4}>Método: Mercado Livre</div>
                 }
-                <div className={styles.position4}>Troco Para: R${pedidos.troco}</div>
+                <div className={styles.position4}>Troco Para: R${pedidos.troco.toFixed(2)}</div>
                 <div className={styles.position3}></div>
                 <div className={styles.image}>
                 <Image src="/img/NMLogo.png" alt="" width="150px" height="120px"/>

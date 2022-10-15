@@ -89,7 +89,7 @@ const Produtos = () => {
                     </td>
                     <td className={styles.tdTitle}>{product?.title}</td>
                     <td className={styles.tdTitle}>
-                      R${product?.prices[0]}
+                      R${product?.prices[0].toFixed(2)}
                     </td>
                     <td className={styles.tdTitle}>
                       <button onClick={() => setIde(product?._id)}>

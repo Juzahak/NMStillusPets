@@ -41,7 +41,7 @@ const PizzaCard = ({pizza}) => {
 
       <Link href={`/product/${pizza._id}`} passHref>
       <a className={styles.price}>
-      <span className={styles.price}>R$ {pizza.prices[0]}</span>
+      <span className={styles.price}>R$ {pizza.prices[0].toFixed(2)}</span>
       </a>
       </Link>
       </div>

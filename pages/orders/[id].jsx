@@ -133,17 +133,17 @@ console.log(order)
                       </span>
                     </td>
                     <td className={styles.carttd}>
-                      <span className={styles.price}>R${produto?.price}  </span>
+                      <span className={styles.price}>R${produto?.price.toFixed(2)}  </span>
                       <div className={styles.quantity}>Quantidade: {produto?.quantity}</div>
                     </td>
                     <td className={styles.cartdt}>
-                      <span className={styles.price}>R${produto?.price}</span>
+                      <span className={styles.price}>R${produto?.price.toFixed(2)}</span>
                     </td>
                     <td className={styles.cartdt}>
-                      <span className={styles.quantity}>{produto?.quantity}</span>
+                      <span className={styles.quantity}>{produto?.quantity.toFixed(2)}</span>
                     </td>
                     <td>
-                      <span className={styles.total}>R${produto?.price * produto?.quantity}</span>
+                      <span className={styles.total}>R${(produto?.price * produto?.quantity).toFixed(2)}</span>
                     </td>
                   </tr>
                 )}
@@ -228,16 +228,16 @@ console.log(order)
               {checked()}
             </div>
             <div className={styles.totalText}>
-              <b className={styles.totalTextTitle}>SUBTOTAL:</b>R${order?.total}
+              <b className={styles.totalTextTitle}>SUBTOTAL:</b>R${order?.total.toFixed(2)}
             </div>
             <div className={styles.totalText}>
-              <b className={styles.totalTextTitle}>ENTREGA:</b>R${order?.entrega}
+              <b className={styles.totalTextTitle}>ENTREGA:</b>R${order?.entrega.toFixed(2)}
             </div>
             <div className={styles.totalText}>
-              <b className={styles.totalTextTitle}>TROCO PARA:</b>R${order?.troco}
+              <b className={styles.totalTextTitle}>TROCO PARA:</b>R${order?.troco.toFixed(2)}
             </div>
             <div className={styles.totalText}>
-              <b className={styles.totalTextTitle}>TOTAL:</b>R${order?.total + order?.entrega}
+              <b className={styles.totalTextTitle}>TOTAL:</b>R${(order?.total + order?.entrega).toFixed(2)}
             </div>
             <div className={styles.totalText}>
               <b className={styles.totalTextTitle}>MSG:</b> Seu pedido foi recebido, em breve entraremos em contato!

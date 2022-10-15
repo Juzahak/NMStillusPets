@@ -105,7 +105,7 @@ const Sidebar = () => {
                           </div>
                           <div>
                             <div>
-                              <span>Valor: R${sla?.price}</span>
+                              <span>Valor: R${sla?.price.toFixed(2)}</span>
                             </div>
                           </div>
                           Descrição: {sla?.descri}
@@ -124,8 +124,8 @@ const Sidebar = () => {
 
                     </td>
                     <td className={styles.metodoTitle}>
-                      <div>Total: R$ {order?.total}</div>
-                      {order?.metodo === 1 ? <span>Dinheiro/Cartão (troco para: {order?.troco}R$)</span> : <span>Mercado Livre</span>}
+                      <div>Total: R$ {order?.total.toFixed(2)}</div>
+                      {order?.metodo === 1 ? <span>Dinheiro/Cartão (troco para: R${order?.troco.toFixed(2)})</span> : <span>Mercado Livre</span>}
                     </td>
                     <td className={styles.tdTitle}>
                       <div className={styles.statinho}>{status[order?.status]}</div>

@@ -53,9 +53,9 @@ const Finalizado = ({ orders }) => {
                         <span className={styles.spanTitle} key={Index}>{sla.title}, </span>
                     )}
                   </td>
-                  <td className={styles.tdTitle}>R${order.total}</td>
+                  <td className={styles.tdTitle}>R${order.total.toFixed(2)}</td>
                   <td className={styles.tdTitle}>
-                    {order?.metodo === 1 ? <span>Dinheiro/Cartão ({order?.troco}R$)</span> : <span>Mercado Livre</span>}
+                    {order?.metodo === 1 ? <span>Dinheiro/Cartão (R${order?.troco.toFixed(2)})</span> : <span>Mercado Livre</span>}
                   </td>
                   
                   <td className={styles.tdTitle}>

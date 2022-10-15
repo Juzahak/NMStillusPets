@@ -275,7 +275,7 @@ const Add = ({ setClose, lista }) => {
           <div className={styles.extraItems}>
             {extraOptions.map((option) => (
               <span key={option.text} className={styles.extraItem}>
-                {option.text}: R${option.price}
+                {option.text}: R${option.price.toFixed(2)}
               </span>
             ))}
           </div>
