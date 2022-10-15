@@ -33,7 +33,7 @@ const Pratododia = ({ pizza, verdade }) => {
               </Link>
               <Link href={`/product/${pizza._id}`} passHref>
               <a className="text-decoration-none p-3">
-              <span className={styles.price}>A partir de R${pizza.prices[0]}.00</span>
+              <span className={styles.price}>A partir de R${pizza.prices[0]}</span>
               </a>
               </Link>
               <div className={styles.titext2}>

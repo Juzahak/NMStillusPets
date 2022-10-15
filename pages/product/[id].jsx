@@ -357,7 +357,7 @@ const Product = ({ productId }) => {
         </div>
         <div className={styles.right}>
           <h1 className={styles.title}>{pizza?.title}</h1>
-          <span className={styles.price}>R$ {price}.00</span>
+          <span className={styles.price}>R$ {price}</span>
 
           <p className={styles.desc}>{pizza?.desc}</p>
           {pizza?.refri && (

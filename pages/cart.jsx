@@ -135,17 +135,17 @@ const Cart = () => {
                     </p>
                   </td>
                   <td className={styles.carttd}>
-                    <span className={styles.price}>R${product.price}.00 </span>
+                    <span className={styles.price}>R${product.price} </span>
                     <p className={styles.quantity}>Quantidade: {product.quantity}</p>
                   </td>
                   <td className={styles.cartdt}>
-                    <span className={styles.price}>R${product.price}.00</span>
+                    <span className={styles.price}>R${product.price}</span>
                   </td>
                   <td className={styles.cartdt}>
                     <span className={styles.quantity}>{product.quantity}</span>
                   </td>
                   <td>
-                    <span className={styles.total}>R${product.price * product.quantity}.00</span>
+                    <span className={styles.total}>R${product.price * product.quantity}</span>
                   </td>
                   <td>
                     <button className={styles.removebtn} onClick={() => { dispatch(removeProduct(product)) }}>REMOVER</button>
@@ -160,7 +160,7 @@ const Cart = () => {
           <div className={styles.wrapper}>
             <h3 className={styles.title}>Valores</h3>
             <div className={styles.totalText}>
-              <span className={styles.totalTextTitle}>SUBTOTAL:</span>R${cart.total}.00
+              <span className={styles.totalTextTitle}>SUBTOTAL:</span>R${cart.total}
             </div>
             <div className={styles.totalText}>
               <Dropdown2 select={select} setSelect={setSelect} setPrice={setPrice} price={price} />
@@ -182,11 +182,11 @@ const Cart = () => {
               <>
                 <div className={styles.totalText}>
 
-                  <span className={styles.totalTextTitle}>ENTREGA:</span>R${price}.00
+                  <span className={styles.totalTextTitle}>ENTREGA:</span>R${price}
 
                 </div>
                 <div className={styles.totalText}>
-                  <span className={styles.totalTextTitle}>TOTAL:</span>R${cart.total + price}.00
+                  <span className={styles.totalTextTitle}>TOTAL:</span>R${cart.total + price}
                 </div>
 
 

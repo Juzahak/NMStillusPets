@@ -133,17 +133,17 @@ console.log(order)
                       </span>
                     </td>
                     <td className={styles.carttd}>
-                      <span className={styles.price}>R${produto?.price}.00  </span>
+                      <span className={styles.price}>R${produto?.price}  </span>
                       <div className={styles.quantity}>Quantidade: {produto?.quantity}</div>
                     </td>
                     <td className={styles.cartdt}>
-                      <span className={styles.price}>R${produto?.price}.00</span>
+                      <span className={styles.price}>R${produto?.price}</span>
                     </td>
                     <td className={styles.cartdt}>
                       <span className={styles.quantity}>{produto?.quantity}</span>
                     </td>
                     <td>
-                      <span className={styles.total}>R${produto?.price * produto?.quantity}.00</span>
+                      <span className={styles.total}>R${produto?.price * produto?.quantity}</span>
                     </td>
                   </tr>
                 )}
@@ -228,16 +228,16 @@ console.log(order)
               {checked()}
             </div>
             <div className={styles.totalText}>
-              <b className={styles.totalTextTitle}>SUBTOTAL:</b>R${order?.total}.00
+              <b className={styles.totalTextTitle}>SUBTOTAL:</b>R${order?.total}
             </div>
             <div className={styles.totalText}>
-              <b className={styles.totalTextTitle}>ENTREGA:</b>R${order?.entrega}.00
+              <b className={styles.totalTextTitle}>ENTREGA:</b>R${order?.entrega}
             </div>
             <div className={styles.totalText}>
-              <b className={styles.totalTextTitle}>TROCO PARA:</b>R${order?.troco}.00
+              <b className={styles.totalTextTitle}>TROCO PARA:</b>R${order?.troco}
             </div>
             <div className={styles.totalText}>
-              <b className={styles.totalTextTitle}>TOTAL:</b>R${order?.total + order?.entrega}.00
+              <b className={styles.totalTextTitle}>TOTAL:</b>R${order?.total + order?.entrega}
             </div>
             <div className={styles.totalText}>
               <b className={styles.totalTextTitle}>MSG:</b> Seu pedido foi recebido, em breve entraremos em contato!
