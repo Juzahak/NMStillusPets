@@ -52,7 +52,7 @@ console.log(name);
 
       <div className={styles.container}>
         
-      {lista.slice(0, 2).map((listt) => (
+      {lista.slice(-2).map((listt) => (
         <div key={listt._id}>
         
           <h1 className={styles.title} key={listt._id}>{listt.list}</h1>
@@ -78,7 +78,7 @@ console.log(name);
         
         </div>
         </div>
-      ))}
+      )).reverse()}
       
             <Link href="/produtos/[id].jsx" passHref >
               <div className={styles.vertodos}>VER TODOS</div>
