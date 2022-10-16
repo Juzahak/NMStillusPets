@@ -147,7 +147,7 @@
 
 .ingredients {
   display: flex;
-  flex-direction: ROW;
+  flex-direction: column;
   margin-bottom: 30px;
 }
 

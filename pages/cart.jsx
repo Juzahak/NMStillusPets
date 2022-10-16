@@ -12,6 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import swal from 'sweetalert';
 
 const Cart = () => {
 
@@ -41,7 +42,7 @@ const Cart = () => {
 
   const estaSel = () => {
     if (cart.quantity == 0) {
-      alert("Adicione pelo menos um item!")
+      swal("Adicione pelo menos um item!");
       return
     }
     else {
@@ -50,8 +51,8 @@ const Cart = () => {
     }
   }
   const estaSel2 = () => {
-    if (cart.quantity == 0) {
-      alert("Adicione pelo menos um item!")
+    if (cart.quantity == 0) { 
+      swal("Adicione pelo menos um item!");
       return
 
     } else {

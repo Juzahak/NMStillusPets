@@ -9,7 +9,7 @@ import useSwr from 'swr'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-
+import swal from 'sweetalert';
 
 
 
@@ -108,7 +108,7 @@ const Product = ({ productId }) => {
     
     
     if(checked == true && tamanhosele == true) {
-      alert('selecione apenas uma opçao');
+      swal("Por favor, apenas uma opção");
       e.target.checked = false;
       return
     } else
@@ -145,8 +145,7 @@ const Product = ({ productId }) => {
     if (pizza.refri == true && qtd == 2 && e.target.checked == true) {
       e.target.checked = false;
 
-      alert("Por favor, selecione até uma opcão")
-
+      swal("Por favor, selecione até uma opção");
 
       changePrice(-option.price);
       setExtras(extras.filter(extras => extras !== option.text));
@@ -178,8 +177,7 @@ const Product = ({ productId }) => {
     }
     if (checked == true && qtd == 2) {
       e.target.checked = false;
-
-      alert("Por favor, selecione até uma opção")
+      swal("Por favor, selecione até uma opção");
 
 
       changePrice(-option.price);
@@ -199,15 +197,15 @@ const Product = ({ productId }) => {
    
 
     if (qtd === 1) {
-      alert('Escolha um Tamanho');
+      swal("Escolha um tamanho.");
       return
     }
     if (pizza.refri == false && qtd >= 1 && quantity <= pizza?.estoque) {
-      alert('Item adicionado com sucesso');
+      swal("Adicionado!", "Item adicionado com sucesso!", "success");
       dispatch(addProduct({ ...pizza, extras, price, quantity, descri }));
     }
     if (pizza.refri == true && quantity <= pizza?.estoque) {
-      alert('Item adicionado com sucesso');
+      swal("Adicionado!", "Item adicionado com sucesso!", "success");
       dispatch(addProduct({ ...pizza, extras, price, quantity, descri }));
     }
     if (qtd <= 1 && quantity <= pizza?.estoque) {
@@ -217,8 +215,9 @@ const Product = ({ productId }) => {
 
     if (quantity > pizza?.estoque) {
       if (pizza?.estoque === 0) {
-        alert('Produto sem estoque!');
-      } else { alert('Quantidade maior que estoque!'); }
+      swal("Produto sem estoque!");
+      } else {
+      swal("Quantidade maior que estoque!"); }
 
     }
   }
