@@ -3,6 +3,7 @@ import styles from "../public/styles/OrderDetail.module.css";
 import { useDispatch } from 'react-redux';
 import useSwr, { mutate } from 'swr';
 import axios from "axios";
+import emailjs from 'emailjs-com';
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
@@ -19,8 +20,20 @@ const OrderDetail = ({ total, createOrder, produto, setCash, metodo, entrega }) 
 
   console.log(produto)
 
+  var templateParams = {
+    name: 'James',
+    notes: 'Check this out!'
+};
 
   const handleClick = async () => {
+
+
+    emailjs.send('GmailMessage', 'template_t3gww1i', templateParams, 'fT74yRgCrm7AhruDb')
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
 
     produto.map(prod => {
       const id = prod._id;
