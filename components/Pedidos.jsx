@@ -36,7 +36,7 @@ const Sidebar = () => {
   };
   return (
     <>
-      <div className="col-lg-12 d-flex justify-content-center flex-column">
+      <div className="col-lg-10 d-flex justify-content-center flex-column">
         <div className={styles.item6}>
           <table className={styles.table}>
           <div className={styles.alinhado}>

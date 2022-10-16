@@ -65,6 +65,11 @@
 .item2{
   display: none;
 }
+.maps{
+  position: absolute;
+  right: 25px;
+  top: 12%;
+}
 
 @media screen and (max-width: 850px) {
   .container {
@@ -86,7 +91,9 @@
     display: none;
 
   }
-
+  .maps{
+    display: none;
+  }
   .item:first-child {
     display: none;
   }
