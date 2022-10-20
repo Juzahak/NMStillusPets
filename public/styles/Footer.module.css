@@ -13,7 +13,7 @@
 }
 
 .container {
-  height: calc(95vh - 100px);
+  height: calc(100vh - 100px);
   background: #f6e4ff;
   display: flex;
 }
