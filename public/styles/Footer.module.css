@@ -16,6 +16,8 @@
   height: calc(100vh - 100px);
   background: #f6e4ff;
   display: flex;
+  width: 400px;
+    height: 450px;
 }
 
 .mapContainer {
