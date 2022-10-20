@@ -68,7 +68,7 @@
 .maps{
   position: absolute;
   right: 25px;
-  top: 12%;
+  top: 5%;
 }
 
 @media screen and (max-width: 850px) {
