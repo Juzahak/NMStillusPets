@@ -56,7 +56,6 @@ const Navbar = () => {
 
   return (
     <div className={styles.container}>
-    <DocumentMeta {...meta} />
       <div className={styles.dropdown}>
         <Dropdown pedidinho={pedidinho} />
       </div>
