@@ -23,7 +23,7 @@ export const getServerSideProps = async (ctx) => {
     admin = true;
   }
   
-export const meta = {
+ const meta = {
     title: 'NM Stillus Pet',
     description: 'Seja Bem vindo a nossa loja!, aproveite oque tem de melhor para o seu companheiro.',
     canonical: 'https://www.nmstillusmodapetemgeral.com.br/',
