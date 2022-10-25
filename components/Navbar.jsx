@@ -10,16 +10,6 @@ const Navbar = () => {
   const [data, setData] = useState();
   const quantity = useSelector((state) => state.cart.quantity);
 
-const meta = {
-    title: 'NM Stillus Pet',
-    description: 'Seja Bem vindo a nossa loja!, aproveite oque tem de melhor para o seu companheiro.',
-    canonical: 'https://www.nmstillusmodapetemgeral.com.br/',
-    meta: {
-        charset: 'utf-8',
-        name: {
-            keywords: 'roupas,pet,vestido,camisa,blusa,cachorro,gato,moda,carinho,quentinha,caminha,cama,paracachorro,roupapet,roupaanimal,roupacachorro,roupagato,gato,coelho,papagaio,periquito,frio,inverno,roupainverno,promoção,promoções,aproveite,barata,roupabarata'
-        }
-    }
 
   useEffect(() => {
 
