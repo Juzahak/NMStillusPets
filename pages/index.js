@@ -43,15 +43,15 @@ export default function Home({ admin }) {
         <div className={styles.container}>
           <Head>
             <title>NM Stillus Pets</title>
-            <meta name="description" content="Bem vindos a nossa loja de moda pet, material de qualidade e tudo que seu pet vai precisar para ficar sempre na moda e quentinho." >
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"} >
-            <meta name="keywords" content="NM, stillus, moda, pet, geral, nmstillusmodapetemgeral, roupa pet, moda pet, conjunto pet, em geral, roupa de cachorro, roupa de gato, roupinhas, moda em geral, roupinha de frio, roupa pet de frio, cama pet">
-            <meta name="author" content="Edevaldo - WebServices">
+            <meta name="description" content="Bem vindos a nossa loja de moda pet, material de qualidade e tudo que seu pet vai precisar para ficar sempre na moda e quentinho."/>
+            <meta charset="utf-8"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"}/>
+            <meta name="keywords" content="NM, stillus, moda, pet, geral, nmstillusmodapetemgeral, roupa pet, moda pet, conjunto pet, em geral, roupa de cachorro, roupa de gato, roupinhas, moda em geral, roupinha de frio, roupa pet de frio, cama pet"/>
+            <meta name="author" content="Edevaldo - WebServices"/>
 
-            <meta property="og:title" content="NM Stillus moda pet">
-            <meta property="og:description" content="NM Stillus moda pet - Serra Negra">
-            <meta property="og:type" content="website">
+            <meta property="og:title" content="NM Stillus moda pet"/>
+            <meta property="og:description" content="NM Stillus moda pet - Serra Negra"/>
+            <meta property="og:type" content="website"/>
               
             <link rel="icon" href="/favicon.ico" />
           </Head>
